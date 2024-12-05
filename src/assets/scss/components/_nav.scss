@@ -1,0 +1,57 @@
+.nav-pills {
+  gap: 8px;
+  margin-bottom: 1rem;
+  .nav-link {
+    line-height: 1.6;
+    border-radius: 50rem;
+    border: 1px solid $border-color;
+    padding: 7px 23px;
+    text-decoration: none;
+    &.active {
+      border-color: #1e7d63;
+      background: #1e7d63;
+      color: #fff;
+    }
+  }
+}
+
+.nav-tabs {
+  border-bottom: 2px solid var(--gray6);
+  --bs-nav-tabs-link-active-border-color: 0;
+  --bs-nav-tabs-border-radius: 8px;
+  --bs-nav-link-color: var(--gray3);
+  --bs-nav-tabs-border-width: 0;
+  --bs-nav-tabs-link-active-color: var(--blue500);
+  .nav-link {
+    position: relative;
+    &.active {
+      font-weight: 700;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 3px;
+        background-color: $brand;
+      }
+    }
+    &:hover {
+      color: $brand;
+      text-decoration: inherit;
+    }
+    @include media-breakpoint-up(lg) {
+      @include typography(16px);
+      min-width: 120px;
+      text-align: center;
+    }
+  }
+  &.w-auto {
+    .nav-link {
+      @include media-breakpoint-up(lg) {
+        @include typography(16px);
+        min-width: auto;
+      }
+    }
+  }
+}

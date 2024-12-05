@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"title": "대회 관리"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "대회 관리", "dep2" : "" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">대회 관리</h1>
+        </div>
+        <div class="contents">
+          <div class="contents-header">
+            <h2 class="contents-title">대회 기본정보</h2>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-details table-fixed">
+                <colgroup>
+                  <col style="width: 130px">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>대회명</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="대회명 입력">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="contents-header">
+            <h2 class="contents-title">주최 기관 정보</h2>
+            <button type="button" aria-label="접기/펼치기" class="contents-toggler" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="true">
+              <i class="icon-toggler"></i>
+            </button>
+          </div>
+          <div class="collapse show" id="c1">
+            <ul class="guide-text disc">
+              <li>기업(담당자) 정보는 회원가입 시 등록하신 내용이 자동 입력됩니다.</li>
+              <li class="text-danger">주최/주관/후원사명을 입력해 주세요. + 버튼을 통해 추가 입력하실 수 있습니다.</li>
+            </ul>
+            <h3 class="table-title mt-8">기업(담당자) 정보</h3>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table table-details table-fixed">
+                  <colgroup>
+                    <col style="width: 130px">
+                    <col>
+                    <col style="width: 130px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>회사명</th>
+                      <td colspan="3">
+                        <input type="text" class="form-control" placeholder="대회명 입력" disabled>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>담당자명</th>
+                      <td>
+                        <input type="text" class="form-control" placeholder="담당자명 입력" disabled>
+                      </td>
+                      <th>이메일</th>
+                      <td>
+                        <input type="email" class="form-control" placeholder="이메일 입력" disabled>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <h3 class="table-title mt-6">주최/주관/후원 정보</h3>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table table-details table-fixed">
+                  <colgroup>
+                    <col style="width: 130px">
+                    <col>
+                    <col style="width: 130px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>주최사 유형 <strong class="text-danger">*</strong></th>
+                      <td colspan="3">
+                        <div class="py-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType1">
+                            <label class="form-check-label" for="hostType1">중앙정부/기관</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType2">
+                            <label class="form-check-label" for="hostType2">지방자치단체</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType3">
+                            <label class="form-check-label" for="hostType3">학교/재단/협회</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType4">
+                            <label class="form-check-label" for="hostType4">신문/방송/언론</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType5">
+                            <label class="form-check-label" for="hostType5">공기업</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType6">
+                            <label class="form-check-label" for="hostType6">대기업</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType7">
+                            <label class="form-check-label" for="hostType7">중소/벤처기업</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType8">
+                            <label class="form-check-label" for="hostType8">학회/비영리단체</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hostType9">
+                            <label class="form-check-label" for="hostType9">기타</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>주최사명 <strong class="text-danger">*</strong></th>
+                      <td colspan="3">
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="주최사명 입력">
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="추가"><i class="icon-plus"></i></button>
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="삭제"><i class="icon-minus"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>주관사명</th>
+                      <td colspan="3">
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="주관사명 입력">
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="추가"><i class="icon-plus"></i></button>
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="삭제"><i class="icon-minus"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>후원사명</th>
+                      <td colspan="3">
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="후원사명 입력">
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="추가"><i class="icon-plus"></i></button>
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="삭제"><i class="icon-minus"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="contents-header">
+            <h2 class="contents-title">기본정보</h2>
+            <button type="button" aria-label="접기/펼치기" class="contents-toggler" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="true">
+              <i class="icon-toggler"></i>
+            </button>
+          </div>
+          <div class="collapse show" id="c2">
+            <ul class="guide-text disc">
+              <li>프로젝트 기본정보를 입력해 주세요.</li>
+            </ul>
+            <h3 class="table-title mt-8">모집분야</h3>
+            <div class="scroll-layout">
+              <div class="scroll-content">
+                <table class="table table-details table-fixed">
+                  <colgroup>
+                    <col style="width: 130px">
+                    <col>
+                    <col style="width: 130px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>대분류 <strong class="text-danger">*</strong></th>
+                      <td colspan="3">
+                        <select class="form-select">
+                          <option value="">대회/공모전</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>소분류 <strong class="text-danger">*</strong></th>
+                      <td colspan="3">
+                        <select class="form-select">
+                          <option value="">건축/건설</option>
+                        </select>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                          <div class="badge text-gray rounded-pill py-1 d-inline-flex gap-1">
+                            <span>건축/건설</span>
+                            <button type="button"><i class="icon-input-close"></i></button>
+                          </div>
+                          <div class="badge text-gray rounded-pill py-1 d-inline-flex gap-1">
+                            <span>건축/건설</span>
+                            <button type="button"><i class="icon-input-close"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>대회지역</th>
+                      <td colspan="3">
+                        <div class="py-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location0">
+                            <label class="form-check-label" for="location0">전체</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location1">
+                            <label class="form-check-label" for="location1">서울</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location2">
+                            <label class="form-check-label" for="location2">경기</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location3">
+                            <label class="form-check-label" for="location3">충북</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location4">
+                            <label class="form-check-label" for="location4">충남</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location5">
+                            <label class="form-check-label" for="location5">전북</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location6">
+                            <label class="form-check-label" for="location6">전남</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location7">
+                            <label class="form-check-label" for="location7">경북</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location8">
+                            <label class="form-check-label" for="location8">경남</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location9">
+                            <label class="form-check-label" for="location9">강원</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="location10">
+                            <label class="form-check-label" for="location10">제주</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>모집대상 <strong class="text-danger">*</strong></th>
+                      <td colspan="3">
+                        <div class="py-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target0">
+                            <label class="form-check-label" for="target0">제한없음</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target1">
+                            <label class="form-check-label" for="target1">대학(원)생</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target2">
+                            <label class="form-check-label" for="target2">일반인</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target3">
+                            <label class="form-check-label" for="target3">고등학생</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target4">
+                            <label class="form-check-label" for="target4">중학생</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target5">
+                            <label class="form-check-label" for="target5">초등학생</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target6">
+                            <label class="form-check-label" for="target6">유·아동</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target7">
+                            <label class="form-check-label" for="target7">경북</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="target8">
+                            <label class="form-check-label" for="target8">기타</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>모집기간 <strong class="text-danger">*</strong></th>
+                      <td>
+                        <div class="row align-items-center">
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date">
+                          </div>
+                          <div class="col-auto">~</div>
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date">
+                          </div>
+                        </div>
+                      </td>
+                      <th></th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>수상자 발표일</th>
+                      <td>
+                        <div class="row align-items-center">
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date">
+                          </div>
+                          <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="afterNoti">
+                              <label class="form-check-label" for="afterNoti">추후공지</label>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <th>시상식 예정일</th>
+                      <td>
+                        <div class="row align-items-center">
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date">
+                          </div>
+                          <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="afterNoti">
+                              <label class="form-check-label" for="afterNoti">추후공지</label>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>총 상장수</th>
+                      <td>
+                        <input type="text" class="form-control" placeholder="총 상장수 입력">
+                      </td>
+                      <th>총 상금</th>
+                      <td>
+                        <input type="text" class="form-control" placeholder="총 상금 입력">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="contents-header">
+            <h2 class="contents-title">상세정보</h2>
+            <button type="button" aria-label="접기/펼치기" class="contents-toggler" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="true">
+              <i class="icon-toggler"></i>
+            </button>
+          </div>
+          <div class="collapse show" id="c3">
+            <ul class="guide-text disc">
+              <li>홍보 페이지에 노출되는 설명 정보입니다.</li>
+            </ul>
+            <div class="mt-8">
+              <textarea name="" id="" class="form-control">에디터</textarea>
+            </div>
+            <h3 class="table-title mt-8">이미지/파일 등록</h3>
+            <ul class="guide-text disc">
+              <li>업로드 된 파일은 홍보페이지에 출품자가 다운로드 받을 수 있도록 활성화 됩니다.</li>
+              <li>이전 수상작 내역 업로드 시 홍보페이지에 다운로드 받을 수 있게 활성화 됩니다. 없을 경우 넘어가셔도 됩니다.</li>
+            </ul>
+            <div class="scroll-layout mt-6">
+              <div class="scroll-content">
+                <table class="table table-details table-fixed">
+                  <colgroup>
+                    <col style="width: 130px">
+                    <col>
+                    <col style="width: 130px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>포스터</th>
+                      <td>
+                        <div class="row">
+                          <div class="col">
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="추가"><i class="icon-plus"></i></button>
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="삭제"><i class="icon-minus"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>썸네일</th>
+                      <td>
+                        <div class="row">
+                          <div class="col">
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="추가"><i class="icon-plus"></i></button>
+                          </div>
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-outline-secondary px-2" aria-label="삭제"><i class="icon-minus"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="contents-header">
+            <h2 class="contents-title">홈페이지 (필수)</h2>
+            <button type="button" aria-label="접기/펼치기" class="contents-toggler" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="true">
+              <i class="icon-toggler"></i>
+            </button>
+          </div>
+          <div class="collapse show" id="c4">
+            <ul class="guide-text disc">
+              <li>업로드 된 파일은 홍보페이지에 출품자가 다운로드 받을 수 있도록 활성화 됩니다.</li>
+              <li>이전 수상작 내역 업로드 시 홍보페이지에 다운로드 받을 수 있게 활성화 됩니다. 없을 경우 넘어가셔도 됩니다.</li>
+            </ul>
+            <div class="scroll-layout mt-6">
+              <div class="scroll-content">
+                <table class="table table-details table-fixed">
+                  <colgroup>
+                    <col style="width: 130px">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>홈페이지 주소</th>
+                      <td>
+                        <input class="form-control" type="text">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex pt-6 align-items-center justify-content-between">
+          <button type="button" class="btn btn-secondary">목록</button>
+          <div class="hstack gap-2">
+            <button type="button" class="btn btn-primary">저장</button>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

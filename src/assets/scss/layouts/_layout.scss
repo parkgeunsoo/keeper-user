@@ -1,0 +1,36 @@
+#wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  background: var(--gray7);
+}
+
+#main {
+  display: flex;
+  flex: 1;
+  padding-top: $navbar-height;
+  padding-left: $sidebar-width;
+  html.sidebar-collapsed & {
+    padding-left: $sidebar-slim-width;
+  }
+}
+
+#container {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 32px;
+}
+
+.row > * {
+  min-width: 0;
+}
+
+@include media-breakpoint-up(sm) {
+  .hstack > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}

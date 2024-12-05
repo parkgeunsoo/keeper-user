@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"title": "상장 관리"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "상장 관리", "dep2" : "" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">상장 관리</h1>
+        </div>
+        <div class="contents">
+          <div class="table-top">
+            <div class="hstack gap-2">
+              <select class="form-select w-auto">
+                <option selected>10개씩</option>
+                <option value="1">20개씩</option>
+                <option value="2">50개씩</option>
+              </select>
+              <select class="form-select w-auto">
+                <option selected>진행상태</option>
+                <option value="">등록대기</option>
+                <option value="">서명대기</option>
+                <option value="">등록완료</option>
+              </select>
+            </div>
+            <div class="form-field search d-flex gap-2">
+              <div class="input-form">
+                <i class="icon-search"></i>
+                <input type="text" class="form-control search-form" placeholder="대회/행사명, 기관명" />
+                <button type="button" class="clear-button"> <i class="icon-input-close"></i> </button>
+              </div>
+              <button type="button" class="btn btn-dark">검색</button>
+            </div>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">대회/행사명</th>
+                  <th class="text-center">기관명</th>
+                  <th class="text-center">상격</th>
+                  <th class="text-center">상장 수여자</th>
+                  <th class="text-center">등록일</th>
+                  <th class="text-center">진행상태</th>
+                </thead>
+                <tbody>
+                  <tr class="cursor-pointer" onclick="document.location.href='certificate-form1.html'">
+                    <td class="text-center">1</td>
+                    <td class="text-start">[추천공모전]제17회 동물사랑 사진 공모전</td>
+                    <td class="text-center">비에이비</td>
+                    <td class="text-center">최우수상</td>
+                    <td class="text-center">홍길동</td>
+                    <td class="text-center">2024.02.14</td>
+                    <td class="text-center">
+                      <span class="badge rounded-pill text-primary">서명대기</span>
+                    </td>
+                  </tr>
+                  <tr class="cursor-pointer" onclick="document.location.href='certificate-form2.html'">
+                    <td class="text-center">1</td>
+                    <td class="text-start">[추천공모전]제17회 동물사랑 사진 공모전</td>
+                    <td class="text-center">비에이비</td>
+                    <td class="text-center">최우수상</td>
+                    <td class="text-center">홍길동</td>
+                    <td class="text-center">2024.02.14</td>
+                    <td class="text-center">
+                      <span class="badge rounded-pill bg-primary">등록대기</span>
+                    </td>
+                  </tr>
+                  <tr class="cursor-pointer" onclick="document.location.href='certificate-form3.html'">
+                    <td class="text-center">1</td>
+                    <td class="text-start">[추천공모전]제17회 동물사랑 사진 공모전</td>
+                    <td class="text-center">비에이비</td>
+                    <td class="text-center">최우수상</td>
+                    <td class="text-center">홍길동</td>
+                    <td class="text-center">2024.02.14</td>
+                    <td class="text-center">
+                      <span class="badge rounded-pill text-secondary">등록완료</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

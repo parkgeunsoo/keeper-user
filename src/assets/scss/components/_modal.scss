@@ -1,0 +1,61 @@
+.modal {
+  --bs-modal-border-radius: 0.625rem;
+  --bs-modal-header-padding: 1.5rem;
+  --bs-modal-padding: 1.5rem;
+  @include media-breakpoint-down(lg) {
+    --bs-modal-header-padding: 1.25rem;
+    --bs-modal-padding: 1.25rem;
+  }
+  .modal-xxl {
+    max-width: 1200px;
+  }
+}
+.btn-close {
+  opacity: 1;
+}
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-body {
+  .scroll-layout {
+    @include media-breakpoint-down(xl) {
+      overflow: auto;
+      .scroll-content {
+        min-width: 1080px;
+        &.sm-scroll {
+          min-width: 550px;
+        }
+        &.xs-scroll {
+          min-width: 350px;
+        }
+      }
+    }
+  }
+}
+
+.modal-title {
+  @include typography(16px, 700);
+  @include media-breakpoint-down(lg) {
+    @include typography(16px);
+  }
+}
+
+.modal-footer {
+  border-top: 0;
+  width: 100%;
+  padding: 1.5rem;
+  @include media-breakpoint-down(lg) {
+    padding: 1.25rem;
+  }
+  > * {
+    margin: 0;
+  }
+  .d-flex {
+    width: 100%;
+    gap: 0.5rem;
+    > .btn {
+      flex: 1;
+    }
+  }
+}

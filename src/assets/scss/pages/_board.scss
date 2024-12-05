@@ -1,0 +1,28 @@
+.board-title{
+  @include typography(24px, 700);
+  margin-bottom: 24px;
+}
+
+.board-content{
+  margin-bottom: 40px;
+}
+
+.board-reply{
+  background: $bg-secondary;
+  border-top: 1px solid $border-color;
+  padding: 1rem 1rem 1rem 2.5rem;
+  display: flex;flex-direction: column;gap: 8px;
+  position: relative;
+  &::before{
+    content: '';
+    width: 20px;height: 20px;
+    position: absolute;left: 1rem;top: 1rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3661 13.75L12.0583 17.0578C11.9411 17.175 11.875 17.3342 11.875 17.5C11.875 17.51 11.8752 17.52 11.8757 17.53C11.8832 17.6852 11.9482 17.8321 12.0581 17.9419C12.1753 18.0592 12.3342 18.125 12.5 18.125C12.6658 18.125 12.8247 18.0592 12.9419 17.9419L16.6919 14.1919C16.8092 14.0747 16.875 13.9158 16.875 13.75C16.875 13.5842 16.8092 13.4253 16.6919 13.3081L12.942 9.55813C12.8247 9.44085 12.6658 9.375 12.5 9.375C12.3342 9.375 12.1753 9.44085 12.0581 9.55806C11.9408 9.67527 11.875 9.83424 11.875 10C11.875 10.1658 11.9408 10.3247 12.0581 10.4419L15.3661 13.75Z' fill='%23262D34'/%3E%3Cpath d='M5 14.375H16.25C16.5952 14.375 16.875 14.0952 16.875 13.75C16.875 13.4048 16.5952 13.125 16.25 13.125H5.625V2.5C5.625 2.15482 5.34518 1.875 5 1.875C4.65482 1.875 4.375 2.15482 4.375 2.5V13.75C4.375 14.0952 4.65482 14.375 5 14.375Z' fill='%23262D34'/%3E%3C/svg%3E%0A");
+  }
+  .writer{
+    color: $dark;
+    @include typography(14px, 700);
+  }
+}

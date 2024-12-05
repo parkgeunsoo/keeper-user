@@ -1,0 +1,24 @@
+.input-group{
+  position: relative;
+  height: 100%;
+  &:focus-within{
+
+  }
+  .form-control{
+    &:focus{z-index: initial;}
+  }
+
+  .form-control{
+    & ~ .btn{
+      background: transparent;
+      border-color: $border-color;
+      border-left: 1px solid var(--bs-body-bg);
+      padding: 0 11px;
+      height: 100%;
+    }
+    &[disabled] ~ .btn{
+      background-color: var(--gray6);
+      border-left: 1px solid var(--bs-gray6);
+    }
+  }
+}

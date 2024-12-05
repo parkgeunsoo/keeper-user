@@ -1,0 +1,41 @@
+.contents {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: $container-padding-x-lg 0;
+  & + .contents {
+    margin-top: 24px;
+  }
+}
+
+.contents-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: space-between;
+  & + * {
+    margin-top: 1rem;
+  }
+}
+
+.contents-title {
+  color: $primary;
+  @include typography(18px, 700);
+}
+
+.contents-desc {
+  @include typography(14px, 500);
+}
+
+.contents-toggler {
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: 0.15s;
+  &:hover {
+    background: $background-primary;
+  }
+  &[aria-expanded="true"] {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}

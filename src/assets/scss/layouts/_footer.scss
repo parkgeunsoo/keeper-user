@@ -1,0 +1,12 @@
+#footer{
+  display: none;
+  @include media-breakpoint-up(lg){
+    padding-left: calc($sidebar-width + $container-padding-x-lg);
+    padding-right: $container-padding-x-lg;
+    padding-top: $container-padding-x-lg;
+    padding-bottom: $container-padding-x-lg;
+    html.sidebar-collapsed &{
+      padding-left: calc($sidebar-slim-width + $container-padding-x-lg);
+    }
+  }
+}

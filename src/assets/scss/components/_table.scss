@@ -1,0 +1,149 @@
+.table {
+  margin-bottom: 0;
+  border-top: 2px solid $dark;
+  @include media-breakpoint-down(md) {
+    @include typography(13px);
+  }
+  th,
+  td {
+    vertical-align: middle;
+  }
+  th {
+    @include typography(14px, 600);
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  td {
+    color: $text-secondary;
+    @include typography(14px, 500);
+  }
+  thead th {
+  }
+  &.normal {
+    th,
+    td {
+      border: 1px solid var(--gray5);
+    }
+  }
+  .form-check {
+    flex-shrink: 0;
+  }
+}
+
+.table-borderless {
+  th,
+  td {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  th {
+    vertical-align: top;
+    > span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 9px;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $dark;
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+.table-bordered {
+  tbody {
+    th {
+      background: var(--gray7);
+    }
+  }
+}
+
+.table-details {
+  border: 0;
+  th,
+  td {
+    border: 0;
+    vertical-align: text-top;
+  }
+  th {
+    padding: 6px 20px;
+  }
+  td {
+    padding: 6px 20px;
+  }
+}
+
+.table-fixed {
+  table-layout: fixed;
+  @include media-breakpoint-down(lg) {
+    table-layout: auto;
+  }
+}
+
+.table-row-count {
+  strong {
+    color: var(--main);
+  }
+}
+
+.table-y-scroll {
+  max-height: var(--max-height);
+  overflow-y: auto;
+  // border-bottom: 1px solid $border-color;
+}
+.table-sticky {
+  border-top: 0;
+  thead {
+    th {
+      position: sticky;
+      top: 0;
+      border-top: 0;
+      // &::before {
+      //   content: "";
+      //   width: 100%;
+      //   height: 1px;
+      //   background: $border-color;
+      //   position: absolute;
+      //   left: 0;
+      //   top: 0;
+      // }
+    }
+  }
+}
+
+.scroll-layout {
+  overflow: auto;
+  .table {
+    min-width: 1400px;
+  }
+}
+
+.table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.table-max-line-2 {
+  @include ellipsis-multiline(14, 1.6, 2);
+}
+
+.filter-wrap {
+  background-color: #00000005;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid $gray6;
+  margin-bottom: 16px;
+  .table {
+    border-top: $border-color;
+  }
+}

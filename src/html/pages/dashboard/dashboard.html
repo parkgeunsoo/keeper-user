@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "dashboard"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "dashboard"})
+      <div id="container">
+        <div class="vstack gap-5 pt-10">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <div class="card product">
+                <div class="card-header">
+                  <div class="hstack align-items-center justify-content-between gap-2">
+                    <div class="card-title">제품개발 요청</div>
+                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="card-body w-100">
+                  <div class="cnt-box">
+                    <p class="cnt">2</p>
+                    <p class="desc">답변대기건</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card business">
+                <div class="card-header">
+                  <div class="hstack align-items-center justify-content-between gap-2">
+                    <div class="card-title">영업관련 요청</div>
+                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="card-body w-100">
+                  <div class="cnt-box">
+                    <p class="cnt">4</p>
+                    <p class="desc">답변대기건</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card etc">
+                <div class="card-header">
+                  <div class="hstack align-items-center justify-content-between gap-2">
+                    <div class="card-title">기타 문의</div>
+                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="card-body w-100">
+                  <div class="cnt-box">
+                    <p class="cnt">0</p>
+                    <p class="desc">답변대기건</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 발주 및 배송 리스트  -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="hstack align-items-center justify-content-between gap-2">
+                    <div class="card-title">발주 및 배송 리스트</div>
+                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="card-body w-100">
+                  <div class="row align-items-center g-6">
+                    <div class="col-12">
+                      <div class="scroll-layout">
+                        <div class="scroll-content">
+                          <table class="table table-hover mt-2">
+                            <colgroup>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                            </colgroup>
+                            <thead class="bg-body-tertiary">
+                              <th class="text-center">번호</th>
+                              <th class="text-center">업체명</th>
+                              <th class="text-center">발주<br>구분</th>
+                              <th class="text-center">묶음<br>배송</th>
+                              <th class="text-center">발주일</th>
+                              <th class="text-center">발주번호</th>
+                              <th class="text-center">발주처리 단계</th>
+                              <th class="text-center">발주 수정<br>상태</th>
+                              <th class="text-center">발주 취소/ <br>배송 정보 수정</th>
+                              <th class="text-center">발주금액</th>
+                              <th class="text-center">배송방법</th>
+                              <th class="text-center">발송일</th>
+                              <th class="text-center">배송 완료일</th>
+                              <th class="text-center">선적<br> 서류</th>
+                              <th class="text-center">입고단계</th>
+                              <th class="text-center">담당자</th>
+                            </thead>
+                            <tbody>
+                              @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                <td class="text-center">
+                                  `+i+`
+                                </td>
+                                <td>
+                                  Smart Light Solution
+                                </td>
+                                <td class="text-center">일반</td>
+                                <td class="text-center">
+                                  묶음배송
+                                </td>
+                                <td class="text-center">
+                                  2024/05/06
+                                </td>
+                                <td class="text-center">
+                                  <a href="">2023/05/06-2</a>
+                                </td>
+                                <td class="text-center">수정 상품 준비중</td>
+                                <td class="text-center">
+                                  <p>발주 수정 요청(<span>2</span>)</p>
+                                </td>
+                                <td class="text-center">
+                                  <a href="">배송정수 수정요청</a>
+                                </td>
+                                <td class="text-center">6,458,000</td>
+                                <td class="text-center">DHL</td>
+                                <td class="text-center">2022/04/29</td>
+                                <td class="text-center">2022/04/29</td>
+                                <td class="text-center">
+                                  <a href="">보기</a>
+                                </td>
+                                <td class="text-center">
+                                  입고 전
+                                </td>
+                                <td class="text-center">홍길동</td>
+
+                                </tr>
+                                }
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 입고리스트​  -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="hstack align-items-center justify-content-between gap-2">
+                    <div class="card-title">입고리스트​</div>
+                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="card-body w-100">
+                  <div class="row align-items-center g-6">
+                    <div class="col-12">
+                      <div class="scroll-layout">
+                        <div class="scroll-content">
+                          <table class="table table-hover mt-2">
+                            <colgroup>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                            </colgroup>
+                            <thead class="bg-body-tertiary">
+                              <th class="text-center">번호</th>
+                              <th class="text-center">업체명</th>
+                              <th class="text-center">발주<br>구분</th>
+                              <th class="text-center">묶음<br>배송</th>
+                              <th class="text-center">발주번호</th>
+                              <th class="text-center">발주<br>수량</th>
+                              <th class="text-center">발주금액</th>
+                              <th class="text-center">배송<br>방법</th>
+                              <th class="text-center">발송일</th>
+                              <th class="text-center">배송<br>완료일</th>
+                              <th class="text-center">선적<br>서류</th>
+                              <th class="text-center">입고<br>완료일</th>
+                              <th class="text-center">입고단계</th>
+                              <th class="text-center">입고번호</th>
+                              <th class="text-center">담당자</th>
+                            </thead>
+                            <tbody>
+                              @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                <td class="text-center">
+                                  `+i+`
+                                </td>
+                                <td>
+                                  Smart Light Solution
+                                </td>
+                                <td class="text-center">일반</td>
+                                <td class="text-center">
+                                  묶음배송
+                                </td>
+                                <td class="text-center">
+                                  <a href="">2022/10/06-2</a>
+                                </td>
+                                <td class="text-center">
+                                  <a href="">653</a>
+                                </td>
+                                <td class="text-center">6,458,000</td>
+                                <td class="text-center">DHL</td>
+                                <td class="text-center">2022/04/29</td>
+                                <td class="text-center">2022/04/29</td>
+                                <td class="text-center"><a href="">보기</a></td>
+                                <td class="text-center">2022/04/29</td>
+                                <td class="text-center">입고 전</td>
+                                <td class="text-center"></td>
+                                <td class="text-center">홍길동</td>
+                                </tr>
+                                }
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 정산 및 결재 리스트​  -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="hstack align-items-center justify-content-between gap-2">
+                    <div class="card-title">정산 및 결재 리스트​</div>
+                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="card-body w-100">
+                  <div class="row align-items-center g-6">
+                    <div class="col-12">
+                      <div class="scroll-layout">
+                        <div class="scroll-content">
+                          <table class="table table-hover mt-2">
+                            <colgroup>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                              <col>
+                            </colgroup>
+                            <thead class="bg-body-tertiary">
+                              <th class="text-center">번호</th>
+                              <th class="text-center">업체명</th>
+                              <th class="text-center">발주<br>구분</th>
+                              <th class="text-center">발주번호</th>
+                              <th class="text-center">진행상태</th>
+                              <th class="text-center">발송일</th>
+                              <th class="text-center">배송<br>완료일</th>
+                              <th class="text-center">정산기준</th>
+                              <th class="text-center">결재주기</th>
+                              <th class="text-center">결재예정일</th>
+                              <th class="text-center">결재상태</th>
+                              <th class="text-center">미수일</th>
+                              <th class="text-center">증빙파일</th>
+                              <th class="text-center">관리자<br>확인</th>
+                              <th class="text-center">담당자</th>
+                            </thead>
+                            <tbody>
+                              @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                <td class="text-center">
+                                  `+i+`
+                                </td>
+                                <td>
+                                  Smart Light Solution
+                                </td>
+                                <td class="text-center">일반</td>
+                                <td class="text-center">
+                                  <a href="">2023/05/06-2</a>
+                                </td>
+                                <td class="text-center">
+                                  입고완료
+                                </td>
+                                <td class="text-center">
+                                  2024/05/06
+                                </td>
+                                <td class="text-center">
+                                  2024/05/06
+                                </td>
+                                <td class="text-center">
+                                  <a href="">2023/05/06-2</a>
+                                </td>
+                                <td class="text-center">
+                                  45Day
+                                </td>
+                                <td class="text-center">2023/04/29</td>
+                                <td class="text-center">결재예정</td>
+                                <td class="text-center">
+                                  <span class="text-danger">-30 Day</span>
+                                </td>
+                                <td class="text-center">
+                                  <a href="">보기</a>
+                                </td>
+                                <td class="text-center">
+                                  Y
+                                </td>
+                                <td class="text-center">홍길동</td>
+
+                                </tr>
+                                }
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.list-item{
+  border: 1px solid var(--gray5);
+  padding: 1rem;
+  border-radius: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background .15s;
+  &:hover{
+    text-decoration: none;
+    background: var(--gray7);
+  }
+  .number{
+    @include typography(14px, 500);
+    color: var(--gray1);
+  }
+  .title{
+    @include typography(16px, 700);
+    color: var(--gray1);
+  }
+  .date{
+    @include typography(14px, 400);
+    color: var(--gray2);
+  }
+  .d-day{
+    @include typography(14px, 700);
+    color: var(--red500);
+  }
+  @include media-breakpoint-up(lg){
+    padding: 24px;
+  }
+}

@@ -1,0 +1,115 @@
+.form-control {
+  min-width: var(--min-width);
+  background-color: #fff;
+  &.price-form-control{
+    background-color: var(--gray7);
+    text-align: right;
+    padding-right: 12px !important;
+  }
+}
+
+[data-picker="date"],
+[data-picker="datetime"] {
+  background-image: url("../images/icon-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 11px top 50%;
+  display: inline-block;
+  background-color: #fff;
+  color: var(--gray1);
+}
+[data-picker="date"] {
+  width: 150px;
+}
+[data-picker="datetime"] {
+  width: 200px;
+}
+
+@include media-breakpoint-down(lg) {
+  [data-picker="date"] {
+    width: 135px;
+  }
+  [data-picker="datetime"] {
+    width: 180px;
+  }
+}
+
+.form-field{
+  .input-form{
+    position: relative;
+    &.flex-form{
+      display: flex; align-items: center; gap: 4px;
+    }
+    .form-control{ background-color: #fff;}
+  }
+  .form-control{
+    padding-right: 34px;
+  }
+  .clear-button{
+    line-height: 1;
+    position: absolute;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+  }
+  .invalid-feedback{
+    color: $danger;
+    display: none;
+    align-items: center;
+    gap: 4px;
+  }
+  &.error{
+    .form-control{
+      border-color: $danger;
+    }
+    .invalid-feedback{
+      display: flex;
+    }
+  }
+  &.search{
+    position: relative;
+    .icon-search{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+    }
+    .form-control{
+      padding-left: 36px;
+      padding-right: 34px;
+      @include media-breakpoint-up(lg) {
+        min-width: 240px;
+      }
+    }
+    .search-result-box{
+      padding: 12px; border-radius: 8px; border:1px solid $brand;
+      position: absolute; width: 100%; background-color: #fff; z-index: 999; display: none;
+      ul{
+        .result{
+          padding: 8px 12px;
+          font-size: 15px;
+          .search-word{
+            font-weight: 600;
+            color: $brand;
+          }
+          &:hover{
+            background-color: var(--blue50);
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+  .price-txt{
+    font-size: 14px; color: var(--gray2);
+  }
+}
+
+textarea.form-textarea{
+  background-color: #fff;
+  min-height: 145px;
+  @include media-breakpoint-down(lg){
+    font-size: 14px;
+    min-height: 100px;
+  }
+}

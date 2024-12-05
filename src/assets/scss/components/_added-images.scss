@@ -1,0 +1,31 @@
+.added-images{
+  display: flex;flex-wrap: wrap;
+  margin: -0.5rem;
+  .item{
+    flex: 0 0 auto;
+    width: 50%;
+    padding: .5rem;
+    display: flex;flex-direction: column;gap: .25rem;
+    color: var(--5_66);
+    text-align: center;
+    img{
+      object-fit: contain;
+      background: $dark;
+    }
+    @include media-breakpoint-up(sm){
+      width: 33.33333%;
+    }
+    @include media-breakpoint-up(md){
+      width: 25%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 20%;
+    }
+    @include media-breakpoint-up(xxl){
+      width: 16.66666%;
+    }
+    @include media-breakpoint-up(xxxl){
+      width: 14.2857%;
+    }
+  }
+}

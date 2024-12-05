@@ -1,0 +1,36 @@
+.btn{
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: inline-flex;align-items: center;justify-content: center;gap: 8px;
+  &:hover{
+    text-decoration: none;
+  }
+  &:disabled{
+    opacity: 0.3;
+  }
+  .input-group > &{
+    min-width: 0;
+  }
+}
+
+.btn-sm{
+  --bs-btn-line-height: 1.7;
+}
+
+[class*=btn-outline-]{
+  --bs-btn-hover-color: var(--bs-btn-color);
+  --bs-btn-hover-bg: var(--bs-btn-bg);
+  --bs-btn-hover-border-color: var(--bs-btn-border-color);
+  &:hover{
+    opacity: .8;
+  }
+}
+
+.close-btn{
+  border: 1px solid var(--gray3);
+  border-radius: 8px;
+  padding: 4px;
+
+}
+
+

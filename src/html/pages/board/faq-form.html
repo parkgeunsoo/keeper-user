@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"title": "자주묻는 질문"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "게시판 관리", "dep2" : "자주묻는 질문" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">자주묻는 질문</h1>
+        </div>
+        <div class="contents">
+          <div class="mb-6 border-bottom pb-4">
+            <p class="text-gray">작성일 2023.12.01</p>
+          </div>
+          <div class="mb-4">
+            <label for="formType" class="form-label">구분 선택</label>
+            <div>
+              <input type="radio" class="btn-check" id="type1" autocomplete="off" name="faqType" checked>
+              <label class="btn btn-outline-secondary btn-sm" for="type1">주최사가 자주 묻는 질문</label>
+              <input type="radio" class="btn-check" id="type2" autocomplete="off" name="faqType">
+              <label class="btn btn-outline-secondary btn-sm" for="type2">참여자가 자주 묻는 질문</label>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="formTitle" class="form-label">제목</label>
+            <input type="text" class="form-control" id="formTitle">
+          </div>
+          <div class="mb-4">
+            <label for="formContent" class="form-label">내용<small class="ms-1 text-gray">(0/2,000byte)</small></label>
+            <textarea class="form-control" id="formContent"></textarea>
+          </div>
+          <div class="d-flex pt-6 align-items-center justify-content-between">
+            <button type="button" class="btn btn-secondary">목록</button>
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-outline-secondary">삭제</button>
+              <button type="button" class="btn btn-primary">등록</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

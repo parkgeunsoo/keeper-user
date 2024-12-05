@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "회원관리​"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "회원관리"})
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">회원관리​</h1>
+        </div>
+        <div class="contents">
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">이름</th>
+                  <th class="text-center">부서​</th>
+                  <th class="text-center">ID</th>
+                  <th class="text-center">이메일</th>
+                  <th class="text-center">레벨​</th>
+                  <th class="text-center">가입일​</th>
+                  <th class="text-center">삭제​</th>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 4; i++){ <tr>
+                    <td class="text-center">
+                      <input class="form-check-input check-all" type="checkbox">
+                    </td>
+                    <td class="text-center">홍길동</td>
+                    <td class="text-center">유통사업팀</td>
+                    <td class="text-center">s5deng</td>
+                    <td class="text-center">s5deng@comxi.com</td>
+                    <td class="text-center">Admin</td>
+                    <td class="text-center">2024-08-01​</td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-sm btn-outline-danger">삭제</button>
+                    </td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="d-flex pt-6 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modal-add-admin">관리자 추가</button>
+              <button type="button" class="btn btn-primary">선택 삭제​</button>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

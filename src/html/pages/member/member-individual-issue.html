@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"title": "개인회원"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "회원 관리", "dep2" : "개인회원" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">개인회원</h1>
+        </div>
+        <ul class="nav nav-pills mb-6">
+          <li class="nav-item">
+            <a class="nav-link" href="member-individual-details.html">회원정보</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="member-individual-award.html">수상이력</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="member-individual-issue.html">발급내역</a>
+          </li>
+        </ul>
+        <div class="contents">
+          <div class="table-top">
+            <div class="hstack gap-2">
+              <select class="form-select w-auto">
+                <option selected>10개씩</option>
+                <option value="1">20개씩</option>
+                <option value="2">50개씩</option>
+              </select>
+            </div>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">발급번호</th>
+                  <th class="text-center">행사명</th>
+                  <th class="text-center">기관명</th>
+                  <th class="text-center">수상날짜</th>
+                </thead>
+                <tbody>
+                  @@for(i=1; i < 5; i++){ <tr>
+                    <td class="text-center">
+                      `+i+`
+                    </td>
+                    <td class="text-center">2023-0000002</td>
+                    <td class="text-center">[추천공모전]제17회 동물사랑 사진 공모전</td>
+                    <td class="text-center">비에</td>
+                    <td class="text-center">2023.12.01</td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

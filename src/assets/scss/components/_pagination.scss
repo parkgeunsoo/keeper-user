@@ -1,0 +1,54 @@
+.pagination{
+  flex-wrap: wrap;
+  margin: 1.5rem 0 0; gap: .5rem;
+  .material-symbols-outlined{
+    font-size: 18px;vertical-align: middle;
+  }
+}
+
+[class^=icon-pagination]{
+  width: 34px;height: 34px;
+}
+.icon-pagination-first{
+  background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8184 20.2696L20.4939 20.6365L17.182 17.0001L20.4939 13.3638L20.8184 13.7307L17.8409 17.0001L20.8184 20.2696Z' fill='black' stroke='black'/%3E%3Cpath d='M16.8184 20.2696L16.4939 20.6365L13.182 17.0001L16.4939 13.3638L16.8184 13.7307L13.8409 17.0001L16.8184 20.2696Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A");
+}
+.icon-pagination-prev{
+  background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.644 20.5517L18.3127 20.9265L14.9303 17.2128L18.3127 13.499L18.644 13.8738L15.6032 17.2128L18.644 20.5517Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A");
+}
+.icon-pagination-next{
+  background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9307 13.8735L15.262 13.4988L18.6444 17.2125L15.262 20.9263L14.9307 20.5515L17.9715 17.2125L14.9307 13.8735Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A");
+}
+.icon-pagination-last{
+  background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1816 13.7304L13.5061 13.3635L16.818 16.9999L13.5061 20.6362L13.1816 20.2693L16.1591 16.9999L13.1816 13.7304Z' fill='black' stroke='black'/%3E%3Cpath d='M17.1816 13.7304L17.5061 13.3635L20.818 16.9999L17.5061 20.6362L17.1816 20.2693L20.1591 16.9999L17.1816 13.7304Z' fill='black' stroke='black'/%3E%3C/svg%3E%0A");
+}
+
+.page-link{
+  text-decoration: none;
+  border-radius: 10rem;width: 34px;height: 34px;
+  display: flex;align-items: center;justify-content: center;
+  border-color: transparent;
+  @include typography(16px, 500);
+  color: #000;
+  @include media-breakpoint-down(md){
+    width: 24px; height: 24px;
+    padding: 0;
+    font-size: 12px;
+  }
+  &[aria-label]{
+    border-color: 0;
+  }
+  &[aria-label="Previous"]{
+    margin-right: .5rem;
+  }
+  &[aria-label="Last"]{
+    margin-left: .5rem;
+  }
+  &:focus{
+    --bs-pagination-focus-bg: transparent;
+  }
+  &:hover{
+    --bs-pagination-hover-bg: transparent;
+    --bs-pagination-hover-border-color: transparent;
+    text-decoration: none;
+  }
+}

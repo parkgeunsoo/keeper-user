@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "회원관리​"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "회원관리"})
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">회원관리​</h1>
+        </div>
+        <div class="contents">
+          <div class="filter-wrap">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col style="width: 216px">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">검색분류</th>
+                  <td>
+                    <div class="hstack gap-2">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected="">전체</option>
+                        <option value="1">전체</option>
+                        <option value="2">전체</option>
+                        <option value="3">전체</option>
+                      </select>
+                      <input type="text" class="form-control" value="">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">ID 상태​</th>
+                  <td>
+                    <input type="text" class="form-control" value="">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex mt-2 align-items-center justify-content-end">
+              <div class="hstack gap-2">
+                <button type="button" class="btn btn-gray">검색</button>
+                <button type="button" class="btn btn-outline-gray px-2" aria-label="초기화">
+                  <i class="icon-reset"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover table-sticky">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">이름</th>
+                  <th class="text-center">부서​</th>
+                  <th class="text-center">ID</th>
+                  <th class="text-center">이메일</th>
+                  <th class="text-center">레벨​</th>
+                  <th class="text-center">가입일​</th>
+                  <th class="text-center">삭제​</th>
+                </thead>
+                <tbody>
+                  @@for( i=1; i < 4; i++){ <tr>
+                    <td class="text-center">
+                      <input class="form-check-input check-all" type="checkbox">
+                    </td>
+                    <td class="text-center">홍길동</td>
+                    <td class="text-center">유통사업팀</td>
+                    <td class="text-center">s5deng</td>
+                    <td class="text-center">s5deng@comxi.com</td>
+                    <td class="text-center">Admin</td>
+                    <td class="text-center">2024-08-01​</td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-sm btn-outline-danger">삭제</button>
+                    </td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1" : "광고 관리", "dep2" : "컨텐츠 광고", "dep3" : "광고 관리"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "광고 관리", "dep2" : "컨텐츠 광고" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">컨텐츠 광고</h1>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-contest-list">광고 항목 추가</button>
+        </div>
+        <div class="contents">
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover" id="tableContentsAdv">
+                <thead>
+                  <th class="text-center">
+                    <input class="form-check-input check-all" type="checkbox">
+                  </th>
+                  <th class="text-center">광고 순서</th>
+                  <th class="text-center">분야</th>
+                  <th class="text-center">대회/행사명</th>
+                  <th class="text-center">광고기간</th>
+                  <th class="text-center">진행상태</th>
+                  <th class="text-center">상세보기</th>
+                </thead>
+                <tbody>
+                  @@for(i=1; i < 16; i++){ <tr>
+                    <td class="text-center">
+                      <input class="form-check-input" type="checkbox">
+                    </td>
+                    <td class="text-center">
+                      `+i+`
+                    </td>
+                    <td class="text-center">예술</td>
+                    <td class="text-center">[추천공모전] 2024년 인권문화 참여·확산을 위한 인권공모전</td>
+                    <td class="text-center">2023.12.40 ~ 2024.02.14</td>
+                    <td class="text-center">
+                      <span class="badge rounded-pill text-primary">진행중</span>
+                      <span class="badge rounded-pill text-secondary">종료</span>
+                    </td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-sm lh-1">
+                        <i class="icon-new-window align-top"></i>
+                      </button>
+                    </td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+              <script>
+                var $checkAll = $("#tableContentsAdv .check-all");
+                var $checkItems = $("#tableContentsAdv tbody .form-check-input");
+                $checkAll.on("change", function () {
+                  isChecked = $(this).is(':checked');
+                  $checkItems.prop("checked", isChecked);
+                });
+                $checkItems.on("change", function () {
+                  if ($checkItems.filter(":checked").length == $checkItems.length) {
+                    $checkAll.prop('checked', true);
+                  } else {
+                    $checkAll.prop('checked', false);
+                  }
+                })
+              </script>
+            </div>
+          </div>
+          <div class="d-flex pt-6 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-outline-secondary">삭제</button>
+              <button type="button" class="btn btn-gray" data-bs-toggle="modal" data-bs-target="#modal-contents-order">순서변경</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

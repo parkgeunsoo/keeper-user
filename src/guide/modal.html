@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>(modal) 관리자</title>
+  @@include('@@webRoot/html/_include/_head.html')
+  <style>
+    body {
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal {
+      display: block !important;
+      position: static !important;
+      opacity: 1 !important;
+      margin-top: .5rem;
+      min-height: auto;
+      height: auto;
+      margin: 0 0 1.25rem;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .modal-dialog {
+      margin: 0 auto;
+      transform: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

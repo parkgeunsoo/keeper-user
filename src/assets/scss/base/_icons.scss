@@ -1,0 +1,68 @@
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  flex-shrink: 0 !important;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* gnb 아이콘 */
+// $gnb-icons: reservation, fee, payment, platform, setting, statistics, notice;
+// @each $icon in $gnb-icons {
+//   .icon-gnb-#{$icon} {
+//     background-image: url("../images/icon-gnb-#{$icon}.svg");
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
+.icon-arrow {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.64645 3.64645C5.84171 3.45118 6.15829 3.45118 6.35355 3.64645L10.3536 7.64645C10.5488 7.84171 10.5488 8.15829 10.3536 8.35355L6.35355 12.3536C6.15829 12.5488 5.84171 12.5488 5.64645 12.3536C5.45118 12.1583 5.45118 11.8417 5.64645 11.6464L9.29289 8L5.64645 4.35355C5.45118 4.15829 5.45118 3.84171 5.64645 3.64645Z' fill='%23828282'/%3E%3C/svg%3E%0A");
+  width: 16px;
+  height: 16px;
+}
+.icon-img-close{
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM13.5913 11.9955L16.017 14.232L16.013 14.2393C16.368 14.5629 16.3641 15.0939 16.013 15.4212C15.662 15.7485 15.0862 15.7485 14.7312 15.4212L12.3056 13.1846L9.87598 15.4248C9.51706 15.7449 8.96094 15.7449 8.60597 15.4248L8.59808 15.4176C8.43243 15.2612 8.33383 15.0539 8.33383 14.8357C8.32988 14.6102 8.42454 14.3993 8.59414 14.2393L11.0237 11.9991L8.59808 9.76254C8.24311 9.43888 8.24706 8.90793 8.59808 8.58063C8.94911 8.25333 9.52495 8.25333 9.87992 8.58063L12.3056 10.8135L14.7351 8.57335C15.094 8.25333 15.6502 8.25333 16.0051 8.57335L16.013 8.58063C16.3601 8.90429 16.368 9.42797 16.0209 9.75527L13.5913 11.9955Z' fill='%23262D34'/%3E%3C/svg%3E%0A");
+}
+.icon-menu{
+  width: 24px; height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.25 6C2.25 5.58579 2.58579 5.25 3 5.25H21C21.4142 5.25 21.75 5.58579 21.75 6C21.75 6.41421 21.4142 6.75 21 6.75H3C2.58579 6.75 2.25 6.41421 2.25 6ZM2.25 12C2.25 11.5858 2.58579 11.25 3 11.25H15C15.4142 11.25 15.75 11.5858 15.75 12C15.75 12.4142 15.4142 12.75 15 12.75H3C2.58579 12.75 2.25 12.4142 2.25 12ZM2.25 18C2.25 17.5858 2.58579 17.25 3 17.25H17C17.4142 17.25 17.75 17.5858 17.75 18C17.75 18.4142 17.4142 18.75 17 18.75H3C2.58579 18.75 2.25 18.4142 2.25 18Z' fill='%23262D34'/%3E%3C/svg%3E%0A");
+}
+
+/* 16px 아이콘 */
+$icons-16px: input-mail, input-key, check, inf, reply, more-arrow;
+@each $icon in $icons-16px {
+  .icon-#{$icon} {
+    background-image: url("../images/icon-#{$icon}.svg");
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 20px 아이콘 */
+$icons-20px: input-close, error, reset, edit, minus, plus, search, image, trash, file, new-window, up, down;
+@each $icon in $icons-20px {
+  .icon-#{$icon} {
+    background-image: url("../images/icon-#{$icon}.svg");
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 24px 아이콘 */
+$icons-24px: delete, g-back, toggler;
+@each $icon in $icons-24px {
+  .icon-#{$icon} {
+    background-image: url("../images/icon-#{$icon}.svg");
+    width: 24px;
+    height: 24px;
+  }
+}

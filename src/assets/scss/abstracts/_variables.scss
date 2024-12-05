@@ -1,0 +1,57 @@
+:root {
+  --sat: env(safe-area-inset-top);
+  --sar: env(safe-area-inset-right);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+
+  --white: #fff;
+
+  --brand700: #0c5764;
+  --brand500: #117c8f;
+  --brand200: #e2eff2;
+  --brand50: #f3f8f9;
+
+  --blue700: #05468a;
+  --blue500: #0076f3;
+  --blue200: #e2ecf8;
+  --blue50: #f1f7fc;
+
+  --yellow500: #fdc022;
+  --yellow200: #ffe5a3;
+  --yellow50: #fff9ea;
+
+  --green700: #117d10;
+  --green500: #38af21;
+  --green200: #c6f7a6;
+  --green50: #f2ffe8;
+
+  --red700: #a40a24;
+  --red500: #e51414;
+  --red200: #fcb8a0;
+  --red50: #fff1ed;
+
+  --orange700: #b54c01;
+  --orange500: #fc8302;
+  --orange200: #fedc99;
+  --orange50: #fff5ea;
+
+  --gray1: #21282f;
+  --gray2: #48515a;
+  --gray3: #77808a;
+  --gray4: #abb1b9;
+  --gray5: #dfe3e8;
+  --gray6: #eef0f3;
+  --gray7: #f5f7f9;
+}
+
+$navbar-height: 64px;
+$navbar-height-lg: 85px;
+$navbar-z-index: 99;
+
+$sidebar-width: 260px;
+$sidebar-slim-width: 72px;
+$sidebar-z-index: 99;
+$sidebar-bg: $gray7;
+
+$container-padding-x: 1.25rem;
+$container-padding-x-lg: 2rem;

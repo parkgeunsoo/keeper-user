@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_navbar.html', {"title": "대회 문의"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "게시판 관리", "dep2" : "대회 문의" })
+      <div id="container">
+        <div class="page-top">
+          <h1 class="page-title d-none d-lg-block">대회 문의</h1>
+        </div>
+        <div class="contents">
+          <div class="table-top">
+            <div class="hstack gap-2">
+              <select class="form-select w-auto">
+                <option selected>10개씩</option>
+                <option value="1">20개씩</option>
+                <option value="2">50개씩</option>
+              </select>
+            </div>
+            <div class="form-field search d-flex gap-2">
+              <div class="input-form">
+                <i class="icon-search"></i>
+                <input type="text" class="form-control search-form" placeholder="제목" />
+                <button type="button" class="clear-button"> <i class="icon-input-close"></i> </button>
+              </div>
+              <button type="button" class="btn btn-dark">검색</button>
+            </div>
+          </div>
+          <div class="scroll-layout">
+            <div class="scroll-content">
+              <table class="table table-hover">
+                <thead>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">제목</th>
+                  <th class="text-center">작성자</th>
+                  <th class="text-center">작성일</th>
+                  <th class="text-center">상태</th>
+                </thead>
+                <tbody>
+                  @@for(i=1; i < 11; i++){ <tr class="cursor-pointer" onclick="document.location.href='qna-contest-form.html'">
+                    <td class="text-center">
+                      `+i+`
+                    </td>
+                    <td class="text-start">[공지] 서비스 이용약관 개정 사전 안내 (시행일: 2024년 5월 20일)</td>
+                    <td class="text-center">연구개발팀</td>
+                    <td class="text-center">2023.12.01</td>
+                    <td class="text-center">
+                      <span class="badge text-primary">답변대기</span>
+                      <span class="badge text-secondary">답변완료</span>
+                    </td>
+                    </tr>
+                    }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
+          <!-- //container -->
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

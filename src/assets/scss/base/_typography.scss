@@ -1,0 +1,11 @@
+$font-size: 12px, 14px, 15px, 16px, 18px, 20px;
+@each $i in $font-size {
+  .fs-#{$i} {
+    @include typography($i);
+  }
+}
+
+.table-title {
+  padding-bottom: 12px;
+  @include typography(16px, 700);
+}
