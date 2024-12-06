@@ -114,7 +114,7 @@ function server(done) {
     root: "./dist/",
     livereload: true,
     //host: "192.168.0.124",
-    port: 9855,
+    port: 9955,
   });
 
   done();

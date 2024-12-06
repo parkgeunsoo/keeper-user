@@ -1,5 +1,5 @@
 #sidebar {
-  background: var(--gray7);
+  background: var(--brand700);
   width: $sidebar-width;
   flex: 0 0 auto;
   position: fixed;
@@ -10,6 +10,11 @@
   height: 100vh;
   top: 0;
   padding: 24px 32px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  &.active {
+    transform: translateX(0);
+  }
 }
 
 .sidebar-toggler,

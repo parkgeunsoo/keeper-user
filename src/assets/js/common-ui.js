@@ -10,6 +10,17 @@ let Sidebar = {
     btnMenu?.addEventListener("click", function () {
       html.classList.toggle("sidebar-collapsed");
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const mainContent = document.getElementById("main-content");
+
+      menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active"); // 사이드바 표시/숨김
+        mainContent.classList.toggle("shifted"); // 메인 콘텐츠 여백 조정
+      });
+    });
   },
 };
 
