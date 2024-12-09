@@ -1,47 +1,16 @@
 #navbar {
   flex-shrink: 0;
-  height: $navbar-height;
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: $navbar-z-index;
+  height: $navbar-height;
   background: #fff;
   padding: 0 20px;
   .img {
     width: 108px;
   }
-  @include media-breakpoint-up(lg) {
-    height: $navbar-height-lg;
-    padding-top: 12px;
-    width: calc(100% - $sidebar-width);
-    left: $sidebar-width;
-    background: var(--gray7);
-    padding-left: 0;
-    padding-right: 0;
-    html.sidebar-collapsed & {
-      width: calc(100% - 72px);
-      left: 72px;
-    }
-    > div {
-      padding-left: $container-padding-x-lg;
-      padding-right: $container-padding-x-lg;
-      background-color: #fff;
-      border-radius: 32px 0 0 0;
-    }
-    .img {
-      width: auto;
-    }
-  }
   .divider-vertical {
     width: 1px;
     height: 12px;
     background: var(--gray4);
-  }
-  @include media-breakpoint-down(lg) {
-    .navbar-user-info,
-    .divider-vertical {
-      display: none;
-    }
   }
 }
 

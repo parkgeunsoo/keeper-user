@@ -1,6 +1,6 @@
 #sidebar {
   background: var(--brand700);
-  width: $sidebar-width;
+  width: 60px;
   flex: 0 0 auto;
   position: fixed;
   left: 0;
@@ -9,11 +9,17 @@
   flex-direction: column;
   height: 100vh;
   top: 0;
-  padding: 24px 32px;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+  padding: 32px 18px;
+  transition: width 0.1s ease-in-out;
+  overflow: hidden;
   &.active {
-    transform: translateX(0);
+    width: 260px;
+    overflow: inherit;
+    & + #container {
+      padding-left: 260px;
+      transition: margin-left 0.1s ease-in-out;
+    }
   }
 }
 
@@ -60,12 +66,12 @@
         //1뎁스
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 18px;
         font-weight: 700;
         padding: 12px 0;
         text-decoration: none;
         position: relative;
-        color: var(--gray1);
+        color: var(--gray6);
         font-size: 13px;
         span {
           flex-grow: 1;
@@ -108,7 +114,7 @@
         gap: 8px;
         padding: 8px 16px 8px 16px;
         border-radius: 8px;
-        color: var(--gray2);
+        color: var(--gray6);
         transition: background 0.15s;
         text-decoration: none;
         font-weight: 500;

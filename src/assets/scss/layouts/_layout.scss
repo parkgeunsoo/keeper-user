@@ -7,27 +7,23 @@
 }
 
 #main {
-  display: flex;
-  flex: 1;
   padding-top: $navbar-height;
-  padding-left: $sidebar-width;
-  html.sidebar-collapsed & {
-    padding-left: $sidebar-slim-width;
-  }
 }
 
 #container {
   flex-grow: 1;
   position: relative;
-  width: 100%;
-  background-color: #fff;
-  padding: 0 32px;
+  // width: calc(100% - 60px);
+  background-color: $gray7;
+  padding-left: 60px;
 }
 
 .row > * {
   min-width: 0;
 }
-
+.main-content {
+  padding: 32px;
+}
 @include media-breakpoint-up(sm) {
   .hstack > * {
     flex: 0 0 auto;

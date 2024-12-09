@@ -11,7 +11,8 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "dashboard"})
       <div id="container">
-        <div class="vstack gap-5 pt-10">
+        @@include('@@webRoot/html/_layouts/_navbar.html', {"dep1": "dashboard"})
+        <div class="vstack gap-5">
           <div class="row g-4">
             <div class="col-12 col-lg-4">
               <div class="card product">

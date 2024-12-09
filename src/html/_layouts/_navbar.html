@@ -1,34 +1,14 @@
 <!--  pc Nav -->
-<nav id="navbar" class="d-none d-lg-block">
-  <div class="d-flex align-items-center h-100">
-    <div class="navbar-brand">
-      @@if (context.dep1 !== 'Dashboard'){
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">@@dep1</li>
-          @@if (context.dep2){
-          <li class="breadcrumb-item" aria-current="page">@@dep2</li>
-          }
-          @@if (context.dep3){
-          <li class="breadcrumb-item">@@dep3</li>
-          }
-        </ol>
-      </nav>
-      }
-    </div>
-    <div class="hstack gap-6 ms-auto">
-      <div class="profile-wrap">
-        <div class="profile-img" data-bs-toggle="modal" data-bs-target="#modal-mypage">
-          <img src="@@webRoot/assets/images/profile-img.svg" alt="프로필 이미지">
-        </div>
-        <div class="navbar-user-info">
-          <a id="login-id" href="#none">Admin</a>
-        </div>
-      </div>
-      <div class="logout-wrap">
-        <button id="logout-btn" type="button" class="btn-logout"></button>
-        <p>logout</p>
-      </div>
-    </div>
-  </div>
+<nav id="navbar">
+  <ul class="nav nav-tabs none-border" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button" role="tab" aria-controls="panel1" aria-selected="true">Tab 1</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab" aria-controls="panel2" aria-selected="false">Tab 2</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#panel3" type="button" role="tab" aria-controls="panel3" aria-selected="false">Tab 3</button>
+    </li>
+  </ul>
 </nav>
