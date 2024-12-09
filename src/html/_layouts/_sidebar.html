@@ -4,17 +4,21 @@
     <button id="menu-toggle" class="menu-toggle-btn">
       <i class="icon-menu"></i>
     </button>
+    <p class="title">발주 메뉴</p>
   </div>
 
   <!-- 사이드바 메뉴 -->
   <nav class="sidebar-nav" id="sidevarNav">
     <ul>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '제품 발주 입력') {active}" aria-expanded="@@if (context.dep1 === '제품 발주 입력') {true}">
+        <a href="#" data-bs-target="#gnb-product-ordering" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '제품 발주 입력') {active}"
+          aria-expanded="@@if (context.dep1 === '제품 발주 입력') {true}">
           <i class="icon-aside-01"></i>
           <span>제품 발주 입력</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '제품 발주 입력') {show}">
+        <div id="gnb-product-ordering" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '제품 발주 입력') {show}">
           <div class="depth2-heading">제품 발주 입력</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -31,11 +35,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '발주 / 입고 내역') {active}" aria-expanded="@@if (context.dep1 === '발주 / 입고 내역') {true}">
+        <a href="#" data-bs-target="#gnb-order-received" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '발주 / 입고 내역') {active}"
+          aria-expanded="@@if (context.dep1 === '발주 / 입고 내역') {true}">
           <i class="icon-aside-02"></i>
           <span>발주 / 입고 내역</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '발주 / 입고 내역') {show}">
+        <div id="gnb-order-received" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '발주 / 입고 내역') {show}">
           <div class="depth2-heading">발주 / 입고 내역</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -52,11 +59,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '판매입력 / 조회') {active}" aria-expanded="@@if (context.dep1 === '판매입력 / 조회') {true}">
+        <a href="#" data-bs-target="#gnb-sales-inquiry" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '판매입력 / 조회') {active}"
+          aria-expanded="@@if (context.dep1 === '판매입력 / 조회') {true}">
           <i class="icon-aside-03"></i>
           <span>판매입력 / 조회</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '판매입력 / 조회') {show}">
+        <div id="gnb-sales-inquiry" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '판매입력 / 조회') {show}">
           <div class="depth2-heading">판매입력 / 조회</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -73,11 +83,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '거래처 관리') {active}" aria-expanded="@@if (context.dep1 === '거래처 관리') {true}">
+        <a href="#" data-bs-target="#gnb-correspondent" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '거래처 관리') {active}"
+          aria-expanded="@@if (context.dep1 === '거래처 관리') {true}">
           <i class="icon-aside-04"></i>
           <span>거래처 관리</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '거래처 관리') {show}">
+        <div id="gnb-correspondent" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '거래처 관리') {show}">
           <div class="depth2-heading">거래처 관리</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -94,11 +107,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '시리얼 관리') {active}" aria-expanded="@@if (context.dep1 === '시리얼 관리') {true}">
+        <a href="#" data-bs-target="#gnb-serial" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '시리얼 관리') {active}"
+          aria-expanded="@@if (context.dep1 === '시리얼 관리') {true}">
           <i class="icon-aside-05"></i>
           <span>시리얼 관리</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '시리얼 관리') {show}">
+        <div id="gnb-serial" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '시리얼 관리') {show}">
           <div class="depth2-heading">시리얼 관리</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -115,11 +131,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '결제 관리') {active}" aria-expanded="@@if (context.dep1 === '결제 관리') {true}">
+        <a href="#" data-bs-target="#gnb-payment" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '결제 관리') {active}"
+          aria-expanded="@@if (context.dep1 === '결제 관리') {true}">
           <i class="icon-aside-06"></i>
           <span>결제 관리</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '결제 관리') {show}">
+        <div id="gnb-payment" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '결제 관리') {show}">
           <div class="depth2-heading">결제 관리</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -136,11 +155,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '제품 가격표') {active}" aria-expanded="@@if (context.dep1 === '제품 가격표') {true}">
+        <a href="#" data-bs-target="#gnb-price-list" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '제품 가격표') {active}"
+          aria-expanded="@@if (context.dep1 === '제품 가격표') {true}">
           <i class="icon-aside-07"></i>
           <span>제품 가격표</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '제품 가격표') {show}">
+        <div id="gnb-price-list" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '제품 가격표') {show}">
           <div class="depth2-heading">제품 가격표</div>
           <ul class="depth2">
             <li class="sidebar-item">
@@ -157,11 +179,14 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-product" data-bs-toggle="collapse" class="sidebar-link @@if (context.dep1 === '위탁 관리') {active}" aria-expanded="@@if (context.dep1 === '위탁 관리') {true}">
+        <a href="#" data-bs-target="#gnb-consignment" data-bs-toggle="collapse"
+          class="sidebar-link @@if (context.dep1 === '위탁 관리') {active}"
+          aria-expanded="@@if (context.dep1 === '위탁 관리') {true}">
           <i class="icon-aside-08"></i>
           <span>위탁 관리</span>
         </a>
-        <div id="gnb-product" data-bs-parent="#sidevarNav" class="accordion-collapse collapse @@if (context.dep1 === '위탁 관리') {show}">
+        <div id="gnb-consignment" data-bs-parent="#sidevarNav"
+          class="accordion-collapse collapse @@if (context.dep1 === '위탁 관리') {show}">
           <div class="depth2-heading">위탁 관리</div>
           <ul class="depth2">
             <li class="sidebar-item">

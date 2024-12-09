@@ -13,12 +13,44 @@ let Sidebar = {
 
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menu-toggle");
+      const sidebarLinks = document.querySelectorAll(".sidebar-link");
       const sidebar = document.getElementById("sidebar");
-      const mainContent = document.getElementById("main-content");
-
+      const accordionCollapses = document.querySelectorAll(".accordion-collapse"); // 모든 accordion-collapse 요소 선택
+    
+      // menu-toggle 클릭 시 active 제어
       menuToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("active"); // 사이드바 표시/숨김
-        mainContent.classList.toggle("shifted"); // 메인 콘텐츠 여백 조정
+        sidebar.classList.toggle("active");
+    
+        if (!sidebar.classList.contains("active")) {
+          // sidebar에서 active가 제거되면 모든 accordion-collapse에서 show 제거 및 aria-expanded=false 설정
+          accordionCollapses.forEach((collapse) => {
+            collapse.classList.remove("show");
+            const relatedLink = document.querySelector(
+              `[data-bs-target="#${collapse.id}"]`
+            );
+            if (relatedLink) {
+              relatedLink.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    
+      // sidebar-link 클릭 시 active 제어
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+    
+          // sidebar가 활성화 상태가 아닐 경우 활성화
+          if (!sidebar.classList.contains("active")) {
+            sidebar.classList.add("active");
+          }
+    
+          // 클릭된 링크만 active 추가
+          sidebarLinks.forEach((otherLink) => {
+            otherLink.classList.remove("active");
+          });
+          link.classList.add("active");
+        });
       });
     });
   },

@@ -7,23 +7,44 @@
   z-index: $sidebar-z-index;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  top: 0;
+  height: calc(100vh - 107px);
+  bottom: 0;
   transform: translateX(0);
   padding: 32px 18px;
   transition: width 0.1s ease-in-out;
   overflow: hidden;
   &.active {
-    width: 260px;
+    width: 240px;
     overflow: inherit;
+    display: flex;
     & + #container {
-      padding-left: 260px;
+      padding-left: 240px;
       transition: margin-left 0.1s ease-in-out;
     }
-    display: flex;
+    .menu-bar{
+      .title{
+        display: block;
+        opacity: 1;
+        transform: .5s;
+      }
+    }
   }
 }
-
+.menu-bar{
+  height: 27px; // 펼쳤을 때 title hide/show 때문에 꿀렁거림 방지 height 값 지정
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  .title{
+    display: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #fff;
+    opacity: 0;
+  }
+}
 .sidebar-toggler,
 .btn-allmenu-close {
   flex-shrink: 0;

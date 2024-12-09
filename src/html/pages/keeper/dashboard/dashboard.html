@@ -11,7 +11,42 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "dashboard"})
       <div id="container">
-        @@include('@@webRoot/html/_layouts/_navbar.html')
+        <nav id="navbar">
+          <ul class="nav nav-tabs none-border" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button"
+                role="tab" aria-controls="panel1" aria-selected="true">USB Security </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab"
+                aria-controls="panel2" aria-selected="false">USB Security</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#panel3" type="button" role="tab"
+                aria-controls="panel3" aria-selected="false">Network Security </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">Other Port Security</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">Anti-Theft for Computer</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">Memory</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">LOCK KE</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">LOCK KE</button>
+            </li>
+          </ul>
+        </nav>
         <div class="main-content">
           <!-- 정산 및 결재 리스트​  -->
           <div class="row">

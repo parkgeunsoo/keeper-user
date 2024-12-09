@@ -1,5 +1,41 @@
-<header id="header" class="d-none d-lg-block">
-  <div class="d-flex align-items-center h-100">
+<header id="header">
+  <div class="header-top">
+    <div class="left-content">
+      <p>계약기간: <span>2022년 5월 1일 ~ 2024년 4월 30일</span></p>
+      <p>next update <span>2024/04/29</span> <span class="d-day">D-256</span> </p>
+      <p class="badge">갱신</p>
+    </div>
+    <div class="right-content">
+      <select class="form-select language" aria-label="Default select example">
+        <option selected>KOR</option>
+        <option value="1">ENG</option>
+      </select>
+      <a href="" class="my-info-link">내 정보 <i class="icon-people"></i></a>
+    </div>
+  </div>
+  <div class="header-gnb">
+    <div class="d-flex align-items-center h-100">
+      <div class="logo">
+        <img src="@@webRoot/assets/images/logo.svg" alt="smartkeeper">
+      </div>
+      <ul class="gnb">
+        <li class="active">
+          <a href="">제품정보</a>
+        </li>
+        <li>
+          <a href="">제품소식</a>
+        </li>
+        <li>
+          <a href="">마케팅 소식</a>
+        </li>
+        <li>
+          <a href="">자료실</a>
+        </li>
+        <li>
+          <a href="">요청 게시판</a>
+        </li>
+      </ul>
+    </div>
     <div class="navbar-brand">
       @@if (context.dep1 !== 'Dashboard'){
       <nav>
@@ -8,26 +44,9 @@
           @@if (context.dep2){
           <li class="breadcrumb-item" aria-current="page">@@dep2</li>
           }
-          @@if (context.dep3){
-          <li class="breadcrumb-item">@@dep3</li>
-          }
         </ol>
       </nav>
       }
-    </div>
-    <div class="hstack gap-6 ms-auto">
-      <div class="profile-wrap">
-        <div class="profile-img" data-bs-toggle="modal" data-bs-target="#modal-mypage">
-          <img src="@@webRoot/assets/images/profile-img.svg" alt="프로필 이미지">
-        </div>
-        <div class="navbar-user-info">
-          <a id="login-id" href="#none">Admin</a>
-        </div>
-      </div>
-      <div class="logout-wrap">
-        <button id="logout-btn" type="button" class="btn-logout"></button>
-        <p>logout</p>
-      </div>
     </div>
   </div>
 </header>

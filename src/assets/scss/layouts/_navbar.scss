@@ -1,9 +1,9 @@
 #navbar {
   flex-shrink: 0;
   width: 100%;
-  height: $navbar-height;
   background: #fff;
-  padding: 0 20px;
+  padding: 0 32px;
+  border-bottom: 1px solid #DFE3E8;
   .img {
     width: 108px;
   }

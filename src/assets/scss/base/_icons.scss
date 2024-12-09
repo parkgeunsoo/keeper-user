@@ -21,7 +21,11 @@
 //     height: 24px;
 //   }
 // }
-
+.icon-people{
+  width: 10px;
+  height: 11px;
+  background-image: url("../images/icon-people.svg");
+}
 .icon-arrow {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.64645 3.64645C5.84171 3.45118 6.15829 3.45118 6.35355 3.64645L10.3536 7.64645C10.5488 7.84171 10.5488 8.15829 10.3536 8.35355L6.35355 12.3536C6.15829 12.5488 5.84171 12.5488 5.64645 12.3536C5.45118 12.1583 5.45118 11.8417 5.64645 11.6464L9.29289 8L5.64645 4.35355C5.45118 4.15829 5.45118 3.84171 5.64645 3.64645Z' fill='%23828282'/%3E%3C/svg%3E%0A");
   width: 16px;
@@ -37,7 +41,11 @@
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.13855 8C3.50975 8 3 8.44772 3 9C3 9.55228 3.50975 10 4.13855 10H19.8614C20.4903 10 21 9.55228 21 9C21 8.44772 20.4903 8 19.8614 8H4.13855Z' fill='%23F5F7F9'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.13855 14C3.50975 14 3 14.4477 3 15C3 15.5523 3.50975 16 4.13855 16H19.8614C20.4903 16 21 15.5523 21 15C21 14.4477 20.4903 14 19.8614 14H4.13855Z' fill='%23F5F7F9'/%3E%3C/svg%3E%0A");
 }
-
+.icon-home {
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/icon-home.svg');
+}
 /* 16px 아이콘 */
 $icons-16px: input-mail, input-key, check, inf, reply, more-arrow;
 @each $icon in $icons-16px {

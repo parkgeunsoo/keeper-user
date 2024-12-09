@@ -1,0 +1,92 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #fff;
+    border-bottom: 1px solid #dfe3e8;
+    .header-top{
+        padding: 8px 32px;
+        border-bottom: 1px solid #dfe3e8;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left-content{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            p{
+                font-size: 13px;
+                line-height: 22.1px;
+                color: #77808a;
+                .d-day{
+                    color: #E51414;
+                    font-weight: 700;
+                }
+            }
+            .badge{
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 20.4px;
+                color: #ABB1B9;
+                border: 1px solid $gray5;
+                border-radius: 18px;
+            }
+        }
+        .right-content{
+            display: flex; align-items: center; gap: 24px;
+            .language {
+                width: auto;
+                border: 0;
+                padding: 0 24px 0 0;
+                min-width: auto;
+                background-image: url('../images/language-arrow.svg');
+                background-size: 16px 16px;
+                background-position: right 0px center;
+                font-size: 13px;
+                color: #48515A;
+            }
+            .my-info-link{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 22.1px;
+                color: #48515A;
+            }
+        }
+    }
+    .header-gnb{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 32px;
+    }
+    .logo{
+        margin-right: 43px;
+    }
+    .gnb{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 0 32px;
+        li{
+            padding: 4px 16px;
+            a{
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 24px;    
+                color: #2d3239;
+            }
+            &.active{
+                background-color: var(--brand700);
+                border-radius: 40px;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
