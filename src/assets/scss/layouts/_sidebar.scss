@@ -8,11 +8,10 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  top: 0;
-  transform: translateX(0);
-  padding: 32px 18px;
-  transition: width 0.1s ease-in-out;
-  overflow: hidden;
+  top: 1px;
+  padding: 24px 32px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
   &.active {
     width: 260px;
     overflow: inherit;
