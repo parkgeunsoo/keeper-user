@@ -8,4 +8,7 @@ $font-size: 12px, 14px, 15px, 16px, 18px, 20px;
 .table-title {
   padding-bottom: 12px;
   @include typography(16px, 700);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -16,31 +16,31 @@
         </div>
         <div class="contents">
           <div class="scroll-layout">
-            <div class="scroll-content">
-              <table class="table table-hover">
+            <div class="scroll-content" style="max-height: 581px; overflow-y: auto">
+              <table class="table table-hover table-sticky">
                 <thead>
                   <th class="text-center">번호</th>
-                  <th class="text-center">이름</th>
-                  <th class="text-center">부서​</th>
-                  <th class="text-center">ID</th>
-                  <th class="text-center">이메일</th>
-                  <th class="text-center">레벨​</th>
-                  <th class="text-center">가입일​</th>
-                  <th class="text-center">삭제​</th>
+                  <th class="text-center">업체</th>
+                  <th class="text-center">정산월</th>
+                  <th class="text-center">정산 금액</th>
+                  <th class="text-center">정산여부</th>
+                  <th class="text-center">자동 정산(예정)​일</th>
+                  <th class="text-center">승인여부</th>
+                  <th class="text-center">최종 정산 번호</th>
                 </thead>
                 <tbody>
-                  @@for( i=1; i < 4; i++){ <tr>
+                  @@for( i=1; i < 12; i++){ <tr>
+                    <td class="text-center">`+ i +`</td>
+                    <td class="text-start">Smart Light Solution</td>
+                    <td class="text-center">2023년 11월</td>
+                    <td class="text-center">0</td>
+                    <td class="text-center">정산등록</td>
+                    <td class="text-center">2023-11-10</td>
                     <td class="text-center">
-                      <input class="form-check-input check-all" type="checkbox">
+                      <a href="javascript:void(0)">미 승인</a>
                     </td>
-                    <td class="text-center">홍길동</td>
-                    <td class="text-center">유통사업팀</td>
-                    <td class="text-center">s5deng</td>
-                    <td class="text-center">s5deng@comxi.com</td>
-                    <td class="text-center">Admin</td>
-                    <td class="text-center">2024-08-01​</td>
                     <td class="text-center">
-                      <button type="button" class="btn btn-sm btn-outline-danger">삭제</button>
+                      <a href="javascript:void(0)">SLS-C231110-00001</a>
                     </td>
                     </tr>
                     }
@@ -48,13 +48,14 @@
               </table>
             </div>
           </div>
+          @@include('@@webRoot/html/_components/_pagination.html')
           <div class="d-flex pt-6 align-items-center justify-content-end">
             <div class="hstack gap-2">
-              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modal-add-admin">관리자 추가</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#modal-add-admin">관리자 추가</button>
               <button type="button" class="btn btn-primary">선택 삭제​</button>
             </div>
           </div>
-          @@include('@@webRoot/html/_components/_pagination.html')
           <!-- //container -->
         </div>
       </div>

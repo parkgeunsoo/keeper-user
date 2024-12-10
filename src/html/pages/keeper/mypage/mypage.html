@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "내정보"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "내정보"})
+      <div id="container">
+        <div class="main-content">
+          <div class="contents">
+            <div class="page-top">
+              <h1 class="page-title d-none d-lg-block">회원관리​</h1>
+            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="info-input" data-bs-toggle="tab" data-bs-target="#tab-info-input"
+                  type="button" role="tab" aria-controls="tab-info-input" aria-selected="true">기업 및 계약 정보 입력</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="master-manager" data-bs-toggle="tab" data-bs-target="#tab-master-manager"
+                  type="button" role="tab" aria-controls="tab-master-manager" aria-selected="false">Master 담당자
+                  정보</button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="tab-info-input" role="tabpanel" aria-labelledby="info-input">
+                <h3 class="table-title mt-6">
+                  <p>계약정보</p>
+                  <button type="button" class="btn btn-sm btn-primary">계약 (갱신)</button>
+                </h3>
+                <table class="table table-bordered table-sticky" id="tableContestList">
+                  <colgroup>
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="text-center">국가</th>
+                      <td class="text-center" colspan="2">
+                        Germany
+                      </td>
+                      <th class="text-center">최초 계약일</th>
+                      <td class="text-center" colspan="2">
+                        2022.05.01
+                      </td>
+                      <th class="text-center">계약 갱신일</th>
+                      <td class="text-center" colspan="2">
+                        2022.05.01 <span>(D-256)</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">PRO LEVEL</th>
+                      <td class="text-center" colspan="2">
+                        L2
+                      </td>
+                      <th class="text-center">ESS LEVEL</th>
+                      <td class="text-center" colspan="2">
+                        V2
+                      </td>
+                      <th class="text-center">여신기간</th>
+                      <td class="text-center" colspan="2">
+                        <span>50</span> Day
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">영업 지역</th>
+                      <td class="" colspan="8">
+                        <span>DE</span>,<span>UK</span>,<span>FR</span>,<span>CH</span>,<span>NL</span>,<span>SP</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="table-title mt-6">
+                  <p>기업정보</p>
+                  <button type="button" class="btn btn-sm btn-outline-danger">수정</button>
+                </h3>
+                <table class="table table-bordered table-sticky" id="tableContestList">
+                  <colgroup>
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="text-center">업체명</th>
+                      <td class="text-center" colspan="2">
+                        SMS SMART LIGHT SOLUTIONS GMBH
+                      </td>
+                      <th class="text-center">설립일</th>
+                      <td class="text-center" colspan="2">
+                        2018.10.15
+                      </td>
+                      <th class="text-center">법인구분</th>
+                      <td class="text-center" colspan="2">
+                        법인사업자
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">TAX No.</th>
+                      <td class="text-start" colspan="2">
+                        DE313213541
+                      </td>
+                      <th class="text-center">TEL No.</th>
+                      <td class="text-start" colspan="5">
+                        0176/6548321854
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">대표자1</th>
+                      <td class="text-start" colspan="2">
+                        FLEISCHHAUER NILS
+                      </td>
+                      <th class="text-center">대표자2</th>
+                      <td class="text-start" colspan="2">
+                        WAN SIK UHM(엄완식)
+                      </td>
+                      <th class="text-center">Zip Code</th>
+                      <td class="text-start" colspan="2">
+                        105484
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">Home Page</th>
+                      <td class="" colspan="8">
+                        https://www.smartKeeper.de
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">회사 E-mail</th>
+                      <td class="text-start" colspan="2">
+                        asd@naver.com
+                      </td>
+                      <th class="text-center" style="width:10%">대표 E-mail</th>
+                      <td class="text-start" colspan="5">
+                        asd@naver.com
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">주소1</th>
+                      <td class="" colspan="8">
+                        LINSENKAMP, 8B, HAMBURG, 22175, GURMANY
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">주소2</th>
+                      <td class="" colspan="8">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">주요판매제품</th>
+                      <td class="" colspan="8">
+                        rice cooker & SnartKeeper
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane fade" id="tab-master-manager" role="tabpanel" aria-labelledby="master-manager">
+                <h3 class="table-title mt-6">
+                  <p>Master 담당자 정보</p>
+                  <div class="d-flex align-items-center gap-2">
+                    <button type="button" class="btn btn-sm btn-outline-danger">수정</button>
+                    <button type="button" class="btn btn-sm btn-dark">패스워드 수정</button>
+                  </div>
+
+                </h3>
+                <table class="table table-bordered table-sticky" id="tableContestList">
+                  <colgroup>
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="text-center">업체명</th>
+                      <td class="text-center" colspan="2">
+                        SLS SMART LIGHT SOLUTIONS GMBH
+                      </td>
+                      <th class="text-center">Master ID</th>
+                      <td class="text-center" colspan="2">
+                        N.Fleischhauer
+                      </td>
+                      <th class="text-center">가입일</th>
+                      <td class="text-center" colspan="2">
+                        2024-08-04
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">성명</th>
+                      <td class="text-center" colspan="2">
+                        Nils Fleischhauer
+                      </td>
+                      <th class="text-center">부서</th>
+                      <td class="text-center" colspan="2">
+                        Marketing
+                      </td>
+                      <th class="text-center">직위</th>
+                      <td class="text-center" colspan="2">
+                        CEO
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">Tel No.</th>
+                      <td class="text-center" colspan="2">
+                        Nils Fleischhauer
+                      </td>
+                      <th class="text-center">C.P</th>
+                      <td class="text-center" colspan="5">
+                        Marketing
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <th class="text-center">E-Mail</th>
+                      <td class="" colspan="8">
+                        N.Fleischhauer@smartlightsolutions.de
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="table-title justify-content-start mt-6 gap-4">
+                  <p>Sub ID</p>
+                  <button type="button" class="btn btn-sm btn-primary">+ 추가</button>
+                </div>
+
+                <h3 class="table-title mt-2">
+                  <p>Sub 담당자 1</p>
+                  <button type="button" class="btn btn-sm btn-outline-dark">- 삭제</button>
+                </h3>
+                <table class="table table-bordered table-sticky" id="tableContestList">
+                  <colgroup>
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="text-center">업체명</th>
+                      <td class="text-center" colspan="2">
+                        SMS SMART LIGHT SOLUTIONS GMBH
+                      </td>
+                      <th class="text-center">설립일</th>
+                      <td class="text-center" colspan="2">
+                        2018.10.15
+                      </td>
+                      <th class="text-center">법인구분</th>
+                      <td class="text-center" colspan="2">
+                        법인사업자
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">성명</th>
+                      <td class="text-center" colspan="2">
+                        Wan sik, UHM
+                      </td>
+                      <th class="text-center">부서</th>
+                      <td class="text-center" colspan="2">
+                        Marketing
+                      </td>
+                      <th class="text-center">직위</th>
+                      <td class="text-center" colspan="2">
+                        cofounder
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">Tel No.</th>
+                      <td class="text-center" colspan="2">
+                        49 173 888 7139
+                      </td>
+                      <th class="text-center">C.P</th>
+                      <td class="text-center" colspan="5">
+                        49 123 456 4868
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">E-Mail</th>
+                      <td class="" colspan="9">
+                        s.uhm@smartlightsolutions.de
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="table-title mt-6">
+                  <p>Sub 담당자 2</p>
+                  <button type="button" class="btn btn-sm btn-outline-dark">- 삭제</button>
+                </h3>
+                <table class="table table-bordered table-sticky" id="tableContestList">
+                  <colgroup>
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                    <col width="11%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th class="text-center">업체명</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                      <th class="text-center">설립일</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                      <th class="text-center">법인구분</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">성명</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                      <th class="text-center">부서</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                      <th class="text-center">직위</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">Tel No.</th>
+                      <td class="text-center" colspan="2">
+                      </td>
+                      <th class="text-center">C.P</th>
+                      <td class="text-center" colspan="5">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">E-Mail</th>
+                      <td class="" colspan="9">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

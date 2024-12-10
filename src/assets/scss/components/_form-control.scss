@@ -6,6 +6,9 @@
     text-align: right;
     padding-right: 12px !important;
   }
+  &:read-only{
+    background-color: #eee;
+  }
 }
 
 [data-picker="date"],
@@ -111,5 +114,38 @@ textarea.form-textarea{
   @include media-breakpoint-down(lg){
     font-size: 14px;
     min-height: 100px;
+  }
+}
+
+.form-wrap{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.more-wrap{
+  border: 1px solid #ddd;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 12px;
+ 
+}
+.more-id{
+  display: flex; align-items: center; gap: 24px;
+  border-bottom: 1px solid #ddd;
+ 
+  &:last-child{
+    border-bottom: 0;
+  }
+  p{
+    width: 100px;
+    height: 50px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.id{
+      padding: 8px;
+      background-color: #eee;
+    }
   }
 }

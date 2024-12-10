@@ -53,6 +53,36 @@ let Sidebar = {
         });
       });
     });
+
+    $(document).ready(function () {
+      let timeout;
+      $(".gnb > li").on("mouseenter", function () {
+        const $this = $(this);
+        clearTimeout(timeout);
+
+        $(".gnb-depth").not($this.find(".gnb-depth")).css({
+          display: "none",
+          opacity: 0,
+          pointerEvents: "none",
+        });
+        $this.find(".gnb-depth").css({
+          display: "block",
+          opacity: 1,
+          pointerEvents: "auto",
+        });
+      });
+    
+      $(".gnb > li").on("mouseleave", function () {
+        const $this = $(this);
+        timeout = setTimeout(function () {
+          $this.find(".gnb-depth").css({
+            display: "none",
+            opacity: 0,
+            pointerEvents: "none",
+          });
+        }, 200);
+      });
+    });
   },
 };
 
