@@ -2,9 +2,11 @@
   background-color: #fff;
   border-radius: 14px;
   padding: 24px 32px;
+  
   & + .contents {
     margin-top: 24px;
   }
+  &.detail-page{min-height: calc(100vh - 170px);}
 }
 
 .contents-header {

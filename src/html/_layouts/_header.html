@@ -19,18 +19,18 @@
         <img src="@@webRoot/assets/images/logo.svg" alt="smartkeeper">
       </div>
       <ul class="gnb">
-        <li class="active">
+        <li class="@@if (context.dep1 === '제품정보판') {active}">
           <a href="">제품정보</a>
           <ul class="gnb-depth">
             <li>
-              <a href="">PRO</a>
+              <a href="@@webRoot/html/pages/keeper/product-info/pro.html">PRO</a>
             </li>
             <li>
               <a href="">ESS</a>
             </li>
           </ul>
         </li>
-        <li>
+        <li class="@@if (context.dep1 === '제품소식') {active}">
           <a href="">제품소식</a>
           <ul class="gnb-depth">
             <li>
@@ -50,7 +50,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="@@if (context.dep1 === '마케팅 소식') {active}">
           <a href="">마케팅 소식</a>
           <ul class="gnb-depth">
             <li>
@@ -67,7 +67,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="@@if (context.dep1 === '자료실') {active}">
           <a href="">자료실</a>
           <ul class="gnb-depth">
             <li>
@@ -81,20 +81,23 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="@@if (context.dep1 === '요청 게시판') {active}">
           <a href="">요청 게시판</a>
           <ul class="gnb-depth">
-            <li>
-              <a href="">영업관련 요청</a>
+            <li class="">
+              <a href="@@webRoot/html/pages/keeper/request-board/entire.html">전체</a>
+            </li>
+            <li class="">
+              <a href="@@webRoot/html/pages/keeper/request-board/business.html">영업관련 요청</a>
             </li>
             <li>
-              <a href="">제품 개발 요청</a>
+              <a href="@@webRoot/html/pages/keeper/request-board/product-development.html">제품 개발 요청</a>
             </li>
             <li>
-              <a href="">패턴 및 제품 추가요청</a>
+              <a href="@@webRoot/html/pages/keeper/request-board/pattern.html">패턴 및 제품 추가요청</a>
             </li>
             <li>
-              <a href="">기타문의</a>
+              <a href="@@webRoot/html/pages/keeper/request-board/etc.html">기타문의</a>
             </li>
           </ul>
         </li>

@@ -8,8 +8,8 @@
     padding: 7px 23px;
     text-decoration: none;
     &.active {
-      border-color: #1e7d63;
-      background: #1e7d63;
+      border-color: $primary;
+      background:  $primary;
       color: #fff;
     }
   }
