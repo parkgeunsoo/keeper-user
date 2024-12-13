@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "마케팅 소식", "dep2":"프로모션"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', {"dep1": "마케팅 소식", "dep2":"프로모션"})
+      <div id="container">
+
+        <div class="main-content">
+          <div class="contents detail-page">
+            <div class="page-top">
+              <h1 class="page-title d-none d-lg-block">프로모션</h1>
+            </div>
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">메뉴</th>
+                  <td class="" colspan="4">
+                    마케팅 소식
+                  </td>
+                  <th class="text-center">게시판 소분류</th>
+                  <td class="" colspan="3">
+                    프로모션
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">제목</th>
+                  <td class="" colspan="4">
+                    프로모션 공기
+                  </td>
+                  <th class="text-center">등록일(수정일)</th>
+                  <td class="" colspan="3">
+                    2023/06/23
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">내용</th>
+                  <td class="text-start" colspan="8">
+                    <div class="detail-content">
+                      <p>2024년 신규 가격표를 공지</p>
+                      <p>- USB PORT LOCK PLUS 추가</p>
+                      <p>- 랜케이블락2 추가</p>
+                      <p></p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">첨부파일</th>
+                  <td class="text-start" colspan="8">
+                    <a href="" class="d-flex align-items-center gap-2">
+                      <i class="icon-file"></i><span>1. 프로모션</span>
+                    </a>
+                    <a href="" class="d-flex align-items-center gap-2">
+                      <i class="icon-file"></i><span>2. 프로모션</span>
+                    </a>
+                    <a href="" class="d-flex align-items-center gap-2">
+                      <i class="icon-file"></i><span>3. 프로모션</span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+              <a href="" class="btn btn-dark">목록보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

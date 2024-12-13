@@ -7,17 +7,16 @@
 
 <body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
   <div id="wrap">
-    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품정보", "dep2":"pro"})
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품소식", "dep2":"제품 단종"})
     <main id="main">
-      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "제품정보", "dep2":"PRO"})
+      @@include('@@webRoot/html/_layouts/_sidebar.html', {"dep1": "제품소식", "dep2":"제품 단종"})
       <div id="container">
-
         <div class="main-content">
           <div class="contents detail-page">
             <div class="page-top">
-              <h1 class="page-title d-none d-lg-block">PRO</h1>
+              <h1 class="page-title d-none d-lg-block">제품 단종</h1>
             </div>
-            <table class="table table-bordered table-sticky" id="tableContestList">
+            <table class="table table-bordered table-sticky">
               <colgroup>
                 <col width="11%">
                 <col width="11%">
@@ -37,7 +36,7 @@
                   </td>
                   <th class="text-center">게시판 소분류</th>
                   <td class="" colspan="3">
-                    신제품 출시
+                    제품 단종
                   </td>
                 </tr>
                 <tr>

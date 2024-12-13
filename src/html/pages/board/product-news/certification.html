@@ -7,50 +7,14 @@
 
 <body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
   <div id="wrap">
-    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품정보", "dep2":"pro"})
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품소식", "dep2":"제품 인증관련"})
     <main id="main">
-      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "제품정보", "dep2":"PRO"})
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "제품소식", "dep2":"제품 인증관련"})
       <div id="container">
-        <!-- <nav id="navbar">
-          <ul class="nav nav-tabs none-border" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button"
-                role="tab" aria-controls="panel1" aria-selected="true">USB Security </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab"
-                aria-controls="panel2" aria-selected="false">USB Security</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#panel3" type="button" role="tab"
-                aria-controls="panel3" aria-selected="false">Network Security </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">Other Port Security</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">Anti-Theft for Computer</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">Memory</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">LOCK KE</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">LOCK KE</button>
-            </li>
-          </ul>
-        </nav> -->
         <div class="main-content">
           <div class="contents">
             <div class="page-top">
-              <h1 class="page-title d-none d-lg-block">PRO</h1>
+              <h1 class="page-title d-none d-lg-block">제품 인증관련</h1>
             </div>
             <div class="scroll-layout">
               <div class="scroll-content">
@@ -90,9 +54,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @@for(i=1; i < 10; i++){ <tr class="cursor-pointer" onclick="document.location.href='pro-detail.html'">
+                    @@for(i=1; i < 10; i++){ <tr class="cursor-pointer"
+                      onclick="document.location.href='certification-detail.html'">
                       <td class="text-center">`+ i +`</td>
-                      <td class="text-center text-danger">PRO</td>
+                      <td class="text-center text-danger">제품 인증관련</td>
                       <td class="text-center">USB Security</td>
                       <td class="text-start">USB Port Lock</td>
                       <td class="text-center"><i class="icon-file"></i></td>

@@ -83,3 +83,15 @@
     }
   }
 }
+
+.detail-content{
+  min-height: 400px;
+}
+.detail-content-img{
+  margin-top: 16px;
+  img{
+    max-width: 400px;
+    margin: 8px 0;
+    display: block;
+  }
+}

@@ -7,52 +7,16 @@
 
 <body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
   <div id="wrap">
-    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품정보", "dep2":"pro"})
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품소식", "dep2":"기타"})
     <main id="main">
-      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "제품정보", "dep2":"PRO"})
+      @@include('@@webRoot/html/_layouts/_sidebar.html', {"dep1": "제품소식", "dep2":"기타"})
       <div id="container">
-        <!-- <nav id="navbar">
-          <ul class="nav nav-tabs none-border" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button"
-                role="tab" aria-controls="panel1" aria-selected="true">USB Security </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab"
-                aria-controls="panel2" aria-selected="false">USB Security</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#panel3" type="button" role="tab"
-                aria-controls="panel3" aria-selected="false">Network Security </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">Other Port Security</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">Anti-Theft for Computer</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">Memory</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">LOCK KE</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
-                aria-controls="panel4" aria-selected="false">LOCK KE</button>
-            </li>
-          </ul>
-        </nav> -->
         <div class="main-content">
           <div class="contents detail-page">
             <div class="page-top">
-              <h1 class="page-title d-none d-lg-block">PRO</h1>
+              <h1 class="page-title d-none d-lg-block">기타</h1>
             </div>
-            <table class="table table-bordered table-sticky" id="tableContestList">
+            <table class="table table-bordered table-sticky">
               <colgroup>
                 <col width="11%">
                 <col width="11%">
@@ -72,7 +36,7 @@
                   </td>
                   <th class="text-center">게시판 소분류</th>
                   <td class="" colspan="3">
-                    신제품 출시
+                    기타
                   </td>
                 </tr>
                 <tr>

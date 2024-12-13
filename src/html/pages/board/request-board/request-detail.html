@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "요청 게시판", "dep2":"영업관련 요청"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "요청 게시판", "dep2":"영업관련 요청"})
+      <div id="container">
+        <div class="main-content">
+          <!-- 단독 페이지 일때만 detail-page를 줘서 최소값 맞추기 -->
+          <div class="contents detail-page">
+            <div class="page-top">
+              <h1 class="page-title d-none d-lg-block">영업관련 요청</h1>
+            </div>
+            <!-- 질문 -->
+            <table class="table table-bordered table-sticky mb-4">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">제목</th>
+                  <td class="text-start bg-gray7" colspan="8">
+                    패턴 및 제품 추가 요청합니다
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">분류</th>
+                  <td class="text-start" colspan="2">
+                    영업관련 요청
+                  </td>
+                  <th class="text-center">작성자</th>
+                  <td class="text-start" colspan="2">
+                    오동근
+                  </td>
+                  <th class="text-center">등록일</th>
+                  <td class="text-start" colspan="2">
+                    24/07/12
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">첨부파일</th>
+                  <td class="text-start" colspan="8">
+                    <p>qwerasd.pptx</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">요청내용</th>
+                  <td class="text-start" colspan="8">
+                    <p>요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. </p>
+                    <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+                      <a href="request-modify.html" class="btn btn-primary btn-sm">수정</a>
+                      <button type="button" class="btn btn-outline-danger btn-sm">문의 삭제</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- // 질문 -->
+
+            <!-- 답변 -->
+            <table class="table table-bordered table-sticky mb-4">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">제목</th>
+                  <td class="text-start" colspan="8">
+                    패턴 및 제품 추가 요청 게시판 답변
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">답변지</th>
+                  <td class="text-start" colspan="2">
+                    오동근
+                  </td>
+                  <th class="text-center">회차</th>
+                  <td class="text-start" colspan="2">
+                    1차
+                  </td>
+                  <th class="text-center">답변일자</th>
+                  <td class="text-start" colspan="2">
+                    24/07/12
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">요청내용</th>
+                  <td class="text-start" colspan="8">
+                    <p>요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. </p>
+                    <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+                      <button type="button" class="btn btn-primary btn-sm">완료하기</button>
+                      <button type="button" class="btn btn-outline-danger btn-sm">추가문의</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- // 답변 -->
+
+            <!-- 추가 질문 -->
+            <table class="table table-bordered table-sticky mb-4">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">제목</th>
+                  <td class="text-start bg-gray7" colspan="8">
+                    패턴 및 제품 추가 요청합니다
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">분류</th>
+                  <td class="text-start" colspan="2">
+                    영업관련 요청
+                  </td>
+                  <th class="text-center">작성자</th>
+                  <td class="text-start" colspan="2">
+                    오동근
+                  </td>
+                  <th class="text-center">등록일</th>
+                  <td class="text-start" colspan="2">
+                    24/07/12
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">첨부파일</th>
+                  <td class="text-start" colspan="8">
+                    <p>qwerasd.pptx</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">요청내용</th>
+                  <td class="text-start" colspan="8">
+                    <p>요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. </p>
+                    <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+                      <a href="request-modify.html" class="btn btn-primary btn-sm">수정</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- // 추가 질문 -->
+
+            <!-- 추가 내용에 대한 답변 -->
+            <table class="table table-bordered table-sticky mb-4">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center" colspan="9">추가 내용에 대한 답변입니다.</th>
+                </tr>
+                <tr>
+                  <th class="text-center">답변지</th>
+                  <td class="text-start" colspan="2">
+                    오동근
+                  </td>
+                  <th class="text-center">회차</th>
+                  <td class="text-start" colspan="2">
+                    1차
+                  </td>
+                  <th class="text-center">답변일자</th>
+                  <td class="text-start" colspan="2">
+                    24/07/12
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">요청내용</th>
+                  <td class="text-start" colspan="8">
+                    <p>요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다. 요청대로 JL 패턴을 추가하도록 하겠습니다.
+                      요청대로 JL 패턴을 추가하도록 하겠습니다. </p>
+                    <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+                      <button type="button" class="btn btn-primary btn-sm">완료하기</button>
+                      <button type="button" class="btn btn-outline-danger btn-sm">추가문의</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- // 추가 내용에 대한 답변 -->
+
+            <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+              <a href="" class="btn btn-dark">목록보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropArea = document.getElementById("fileDropArea");
+      const fileInput = document.getElementById("fileInput");
+      const fileList = document.getElementById("fileList");
+
+      // 드래그 이벤트
+      dropArea.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropArea.classList.add("hover");
+      });
+
+      dropArea.addEventListener("dragleave", () => {
+        dropArea.classList.remove("hover");
+      });
+
+      dropArea.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropArea.classList.remove("hover");
+
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+      });
+
+      // 클릭을 통한 파일 선택
+      fileInput.addEventListener("change", (e) => {
+        const files = e.target.files;
+        handleFiles(files);
+      });
+
+      // 파일 처리
+      function handleFiles(files) {
+        Array.from(files).forEach((file) => {
+          const li = document.createElement("li");
+          li.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+          fileList.appendChild(li);
+        });
+      }
+    });
+  </script>
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

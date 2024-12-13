@@ -11,120 +11,351 @@
     <main id="main">
       @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "dashboard"})
       <div id="container">
-        <nav id="navbar">
-          <ul class="nav nav-tabs none-border" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button" role="tab" aria-controls="panel1" aria-selected="true">USB Security </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab" aria-controls="panel2" aria-selected="false">USB Security</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#panel3" type="button" role="tab" aria-controls="panel3" aria-selected="false">Network Security </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab" aria-controls="panel4" aria-selected="false">Other Port Security</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab" aria-controls="panel4" aria-selected="false">Anti-Theft for Computer</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab" aria-controls="panel4" aria-selected="false">Memory</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab" aria-controls="panel4" aria-selected="false">LOCK KE</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab" aria-controls="panel4" aria-selected="false">LOCK KE</button>
-            </li>
-          </ul>
-        </nav>
         <div class="main-content">
-          <!-- 정산 및 결재 리스트​  -->
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="hstack align-items-center justify-content-between gap-2">
-                    <div class="card-title" data-bs-toggle="modal" data-bs-target="#modal-member-1">정산 및 결재 리스트​</div>
-                    <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+          <div class="vstack gap-5">
+            <div class="row g-4">
+              <div class="col-12 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="hstack align-items-center justify-content-between gap-2">
+                      <div class="card-title">제품 소식</div>
+                      <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-body w-100">
+                    <ul class="board-list">
+                      <li>
+                        <a href="#">
+                          <span class="title">[단독]동덕여대, 본관 점거 학생에 '형사 책임'도 묻는다. [단독]동덕여대, 본관 점거 학생에 '형사 책임'도 묻는다.</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="title">살 빼도 80%는 2년내 다시 살쪄… ‘요요’ 막는 최고의 습관은?</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="title">살 빼도 80%는 2년내 다시 살쪄… ‘요요’ 막는 최고의 습관은?</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="card-body w-100">
-                  <div class="row align-items-center g-6">
-                    <div class="col-12">
-                      <div class="scroll-layout">
-                        <div class="scroll-content">
-                          <table class="table table-hover mt-2">
-                            <colgroup>
-                              <col>
-                              <col>
-                              <col>
-                              <col>
-                              <col>
-                              <col>
-                            </colgroup>
-                            <thead class="bg-body-tertiary">
-                              <th class="text-center">번호</th>
-                              <th class="text-center">업체명</th>
-                              <th class="text-center">발주<br>구분</th>
-                              <th class="text-center">발주번호</th>
-                              <th class="text-center">진행상태</th>
-                              <th class="text-center">발송일</th>
-                              <th class="text-center">배송<br>완료일</th>
-                              <th class="text-center">정산기준</th>
-                              <th class="text-center">결재주기</th>
-                              <th class="text-center">결재예정일</th>
-                              <th class="text-center">결재상태</th>
-                              <th class="text-center">미수일</th>
-                              <th class="text-center">증빙파일</th>
-                              <th class="text-center">관리자<br>확인</th>
-                              <th class="text-center">담당자</th>
-                            </thead>
-                            <tbody>
-                              @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
-                                <td class="text-center">
-                                  `+i+`
-                                </td>
-                                <td>
-                                  Smart Light Solution
-                                </td>
-                                <td class="text-center">일반</td>
-                                <td class="text-center">
-                                  <a href="">2023/05/06-2</a>
-                                </td>
-                                <td class="text-center">
-                                  입고완료
-                                </td>
-                                <td class="text-center">
-                                  2024/05/06
-                                </td>
-                                <td class="text-center">
-                                  2024/05/06
-                                </td>
-                                <td class="text-center">
-                                  <a href="">2023/05/06-2</a>
-                                </td>
-                                <td class="text-center">
-                                  45Day
-                                </td>
-                                <td class="text-center">2023/04/29</td>
-                                <td class="text-center">결재예정</td>
-                                <td class="text-center">
-                                  <span class="text-danger">-30 Day</span>
-                                </td>
-                                <td class="text-center">
-                                  <a href="">보기</a>
-                                </td>
-                                <td class="text-center">
-                                  Y
-                                </td>
-                                <td class="text-center">홍길동</td>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="hstack align-items-center justify-content-between gap-2">
+                      <div class="card-title">마케팅 소식</div>
+                      <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-body w-100">
+                    <ul class="board-list">
+                      <li>
+                        <a href="#">
+                          <span class="title">[단독]동덕여대, 본관 점거 학생에 '형사 책임'도 묻는다. [단독]동덕여대, 본관 점거 학생에 '형사 책임'도 묻는다.</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="title">살 빼도 80%는 2년내 다시 살쪄… ‘요요’ 막는 최고의 습관은?</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="title">살 빼도 80%는 2년내 다시 살쪄… ‘요요’ 막는 최고의 습관은?</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="hstack align-items-center justify-content-between gap-2">
+                      <div class="card-title">문의사항</div>
+                      <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-body w-100">
+                    <ul class="board-list">
+                      <li>
+                        <a href="#">
+                          <span class="title">[단독]동덕여대, 본관 점거 학생에 '형사 책임'도 묻는다. [단독]동덕여대, 본관 점거 학생에 '형사 책임'도 묻는다.</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="title">살 빼도 80%는 2년내 다시 살쪄… ‘요요’ 막는 최고의 습관은?</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="title">살 빼도 80%는 2년내 다시 살쪄… ‘요요’ 막는 최고의 습관은?</span>
+                          <span class="date">2024/12/12</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 발주 및 배송 내역  -->
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="hstack align-items-center justify-content-between gap-2">
+                      <div class="card-title">발주 및 배송 내역</div>
+                      <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-body w-100">
+                    <div class="row align-items-center g-6">
+                      <div class="col-12">
+                        <div class="scroll-layout">
+                          <div class="scroll-content">
+                            <table class="table table-hover mt-2">
+                              <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                              </colgroup>
+                              <thead class="bg-body-tertiary">
+                                <th class="text-center">번호</th>
+                                <th class="text-center">구분</th>
+                                <th class="text-center">발주번호</th>
+                                <th class="text-center">발주처리 단계</th>
+                                <th class="text-center">발주 수정<br>상태</th>
+                                <th class="text-center">발주 취소/ <br>배송 정보 수정</th>
+                                <th class="text-center">발주금액</th>
+                                <th class="text-center">배송<br>방법</th>
+                                <th class="text-center">발송일</th>
+                                <th class="text-center">선적<br> 서류</th>
+                                <th class="text-center">배송<br> 완료일</th>
+                                <th class="text-center">입고단계</th>
+                                <th class="text-center">자동입고<br>예정일</th>
+                              </thead>
+                              <tbody>
+                                @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                  <td class="text-center">
+                                    `+i+`
+                                  </td>
+                                  <td>
+                                    일반
+                                  </td>
+                                  <td class="text-center">
+                                    SLS-P240627-00000
+                                  </td>
+                                  <td class="text-center">
+                                    <i class="icon-new">N</i>
+                                    <a href="#"> 수정 상품 준비 완료</a>
+                                  </td>
+                                  <td class="text-center">
+                                    <p>수정요청(<span>2</span>)</p>
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#">배송정보 수정요청</a>
+                                  </td>
+                                  <td class="text-center">100,000,000</td>
+                                  <td class="text-center">
+                                    DHL
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#">2023/12/06</a>
+                                  </td>
+                                  <td class="text-center">
+                                    <i class="icon-file"></i>
+                                  </td>
+                                  <td class="text-center">
+                                    2023/12/06
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#">입고처리</a>
+                                  </td>
+                                  <td class="text-center">2022/04/29</td>
+                                  </tr>
+                                  }
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 결재 예정내역 및 내역  -->
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="hstack align-items-center justify-content-between gap-2">
+                      <div class="card-title">결재 예정내역 및 내역</div>
+                      <a href="" class="btn btn-outline-gray6 more-btn round">더보기 <i class="icon-more-arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="card-body w-100">
+                    <div class="row align-items-center g-6">
+                      <div class="col-12">
+                        <div class="scroll-layout">
+                          <div class="scroll-content">
+                            <table class="table table-hover mt-2">
+                              <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                              </colgroup>
+                              <thead class="bg-body-tertiary">
+                                <th class="text-center">번호</th>
+                                <th class="text-center">발주<br>구분</th>
+                                <th class="text-center">연결전표</th>
+                                <th class="text-center">진행상태</th>
+                                <th class="text-center">입고(정산)일시</th>
+                                <th class="text-center">금액</th>
+                                <th class="text-center">결재예정일</th>
+                                <th class="text-center">결재 등록</th>
+                                <th class="text-center">증빙파일</th>
+                                <th class="text-center">관리자<br>확인</th>
+                                <th class="text-center">미수일</th>
+                                <th class="text-center">관리자<br>메세지</th>
+                              </thead>
+                              <tbody>
+                                @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                  <td class="text-center">
+                                    `+i+`
+                                  </td>
+                                  <td>
+                                    위탁
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#">2023/12/06</a>
+                                  </td>
+                                  <td class="text-center">
+                                    정산완료
+                                  </td>
+                                  <td class="text-center">
+                                    <span>24-01-06</span> / <span>16:05:48</span>
+                                  </td>
+                                  <td class="text-center">
+                                    7,890,000
+                                  </td>
+                                  <td class="text-center">2023/12/30</td>
+                                  <td class="text-center">결재완료</td>
+                                  <td class="text-center"><a href="">보기</a></td>
+                                  <td class="text-center">Y</td>
+                                  <td class="text-center">
+                                    <span class="text-danger">-15</span>
+                                  </td>
+                                  <td class="text-center">-</td>
+                                  </tr>
+                                  }
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 위탁 정산 예정  -->
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="hstack align-items-center justify-content-between gap-2">
+                      <div class="card-title">위탁 정산 예정</div>
+                      <a href="" class="btn btn-primary btn-sm">정산입력</a>
+                    </div>
+                  </div>
+                  <div class="card-body w-100">
+                    <div class="row align-items-center g-6">
+                      <div class="col-12">
+                        <div class="scroll-layout">
+                          <div class="scroll-content">
+                            <table class="table table-hover mt-2">
+                              <colgroup>
+                                <col width="5%">
+                                <col width="12%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="20%">
+                                <col width="12%">
+                                <col width="15%">
+                                <col width="10%">
+                              </colgroup>
+                              <thead class="bg-body-tertiary">
+                                <th class="text-center">번호</th>
+                                <th class="text-center">정산월</th>
+                                <th class="text-center">정산여부</th>
+                                <th class="text-center">정산등록일</th>
+                                <th class="text-center">정산(등록)번호</th>
+                                <th class="text-center">구분</th>
+                                <th class="text-center">정산 금액</th>
+                                <th class="text-center">메세지</th>
+                              </thead>
+                              <tbody>
+                                @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                  <td class="text-center">
+                                    `+i+`
+                                  </td>
+                                  <td class="text-center">
+                                    2023년 10월
+                                  </td>
+                                  <td class="text-center">정산예정</td>
+                                  <td class="text-center">
+                                    2023/10/23
+                                  </td>
+                                  <td class="text-center">
+                                    SLS-C231023-00000
+                                  </td>
+                                  <td class="text-center">
+                                    PRO
+                                  </td>
+                                  <td class="text-center">
+                                    1,000,000
+                                  </td>
+                                  <td class="text-center">
 
+                                  </td>
+
+                                  </tr>
+                                  }
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td class="text-center" colspan="3">
+                                    2023년 10월
+                                  </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="text-center">10,377,000</td>
+                                  <td></td>
                                 </tr>
-                                }
-                            </tbody>
-                          </table>
+                              </tfoot>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>

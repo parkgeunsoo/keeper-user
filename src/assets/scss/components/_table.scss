@@ -28,6 +28,11 @@
   .form-check {
     flex-shrink: 0;
   }
+  tfoot{
+    td{
+      background-color: var(--green50);
+    }
+  }
 }
 
 .table-borderless {
