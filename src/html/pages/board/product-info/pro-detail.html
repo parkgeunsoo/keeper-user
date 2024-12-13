@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품정보", "dep2":"pro"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "제품정보", "dep2":"PRO"})
+      <div id="container">
+        <!-- <nav id="navbar">
+          <ul class="nav nav-tabs none-border" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#panel1" type="button"
+                role="tab" aria-controls="panel1" aria-selected="true">USB Security </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#panel2" type="button" role="tab"
+                aria-controls="panel2" aria-selected="false">USB Security</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#panel3" type="button" role="tab"
+                aria-controls="panel3" aria-selected="false">Network Security </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">Other Port Security</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">Anti-Theft for Computer</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">Memory</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">LOCK KE</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#panel4" type="button" role="tab"
+                aria-controls="panel4" aria-selected="false">LOCK KE</button>
+            </li>
+          </ul>
+        </nav> -->
+        <div class="main-content">
+          <div class="contents detail-page">
+            <div class="page-top">
+              <h1 class="page-title d-none d-lg-block">PRO</h1>
+            </div>
+            <table class="table table-bordered table-sticky" id="tableContestList">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">게시판 명칭</th>
+                  <td class="" colspan="4">
+                    제품정보 게시판
+                  </td>
+                  <th class="text-center">제품 분류</th>
+                  <td class="" colspan="3">
+                    PRO
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">제품 그룹</th>
+                  <td class="" colspan="4">
+                    USB Security
+                  </td>
+                  <th class="text-center">등록일(수정일)</th>
+                  <td class="" colspan="3">
+                    2023/06/23
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">제품명</th>
+                  <td class="" colspan="4">
+                    USB PORT LOCK
+                  </td>
+                  <th class="text-center">모델명</th>
+                  <td class="" colspan="3">
+                    CSK-UL10
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">Application port</th>
+                  <td class="" colspan="4">
+                    USB (USB Type-A)
+                  </td>
+                  <th class="text-center">사용키</th>
+                  <td class="" colspan="3">
+                    Universal lock key 3
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">용도</th>
+                  <td class="text-start" colspan="8">
+                    Block unused USB prot to prevent unauthorized device access
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">Dimensions</th>
+                  <td class="" colspan="4">
+                    W 12.3 x H 4.6 x L 10mm (0.48 x 0.18 x 0.39 in)
+                  </td>
+                  <th class="text-center">Weight</th>
+                  <td class="" colspan="3">
+                    1g (0.04oz)
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">HS CODE</th>
+                  <td class="text-start" colspan="8">
+                    3926.90.9790
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">URL</th>
+                  <td class="text-start" colspan="8">
+                    <a href="" class="text-primary">smartkeeperworld.com</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">첨부파일</th>
+                  <td class="text-start" colspan="8">
+                    <a href="" class="d-flex align-items-center gap-2">
+                      <i class="icon-file"></i><span>qwerasd.pptx</span>
+                    </a>
+                    <a href="" class="d-flex align-items-center gap-2">
+                      <i class="icon-file"></i><span>USB Port Lock 고해상도 이미지</span>
+                    </a>
+                    <a href="" class="d-flex align-items-center gap-2">
+                      <i class="icon-file"></i><span>메뉴얼</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">첨부파일</th>
+                  <td class="text-start" colspan="8">
+
+                    <div class="img-list">
+                      <div class="img">
+                        <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                      </div>
+                      <div class="img">
+                        <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+              <a href="" class="btn btn-dark">목록보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>
