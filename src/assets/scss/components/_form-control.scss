@@ -9,6 +9,10 @@
   &:read-only{
     background-color: #eee;
   }
+  &.form-sm{
+    height: 32px;
+    font-size: 14px;
+  }
 }
 
 [data-picker="date"],

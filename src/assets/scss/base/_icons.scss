@@ -46,6 +46,11 @@
   height: 16px;
   background-image: url('../images/icon-home.svg');
 }
+.icon-search {
+  width: 14px;
+  height: 14px;
+  background-image: url('../images/icon-search.svg');
+}
 /* 16px 아이콘 */
 $icons-16px: input-mail, input-key, check, inf, reply, more-arrow;
 @each $icon in $icons-16px {
@@ -57,7 +62,7 @@ $icons-16px: input-mail, input-key, check, inf, reply, more-arrow;
 }
 
 /* 20px 아이콘 */
-$icons-20px: input-close, error, reset, edit, minus, plus, search, image, trash, file, new-window, up, down;
+$icons-20px: input-close, error, reset, edit, minus, plus,  image, trash, file, new-window, up, down;
 @each $icon in $icons-20px {
   .icon-#{$icon} {
     background-image: url("../images/icon-#{$icon}.svg");

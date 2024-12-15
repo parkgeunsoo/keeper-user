@@ -24,6 +24,14 @@
 .max-width-none {
   max-width: none !important;
 }
+.bg-primary{
+  background-color: var(--brand200) !important;
+}
 .bg-gray7{
   background-color: var(--gray7) !important;
+}
+.conter-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

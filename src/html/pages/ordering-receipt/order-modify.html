@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "발주 / 입고 내역", "dep2":"발주 수정 내역"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "발주 / 입고 내역", "dep2":"발주 수정 내역"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">발주 수정 내역</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered table-sticky">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">기준일자​</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="radio" class="btn-check" id="type1"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-dark btn-sm" for="type1">1개월</label>
+                                                        <input type="radio" class="btn-check" id="type2"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-dark btn-sm" for="type2">6개월</label>
+                                                        <input type="radio" class="btn-check" id="type3"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-dark btn-sm" for="type3">1년</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control form-sm"
+                                                            placeholder="YYYY.MM.DD" data-picker="date" />
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control form-sm"
+                                                            placeholder="YYYY.MM.DD" data-picker="date" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-gray"
+                                                        id="btn-srch-con1">검색조건</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">제품 발송 구분</th>
+                                        <td>
+                                            <div class="py-2">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState1">
+                                                    <label class="form-check-label" for="idState1">전체</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState2">
+                                                    <label class="form-check-label" for="idState2">발송 전</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState3">
+                                                    <label class="form-check-label" for="idState3">발송 완료</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState4">
+                                                    <label class="form-check-label" for="idState4">발주 취소</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th class="text-center">수정 현황 구분</th>
+                                        <td>
+                                            <div class="py-2">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState5">
+                                                    <label class="form-check-label" for="idState5">전체</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState6">
+                                                    <label class="form-check-label" for="idState6">수정 요청</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState7">
+                                                    <label class="form-check-label" for="idState7">수정 승인</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="idState8">
+                                                    <label class="form-check-label" for="idState8">수정 거절</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-srch">
+                                        <th class="text-center">발주 구분​</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list p-1">
+                                                    <ul class="d-flex gap-1 flex-column">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>NL-Hart4Technology</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-srch">
+                                        <th class="text-center">최종고객사</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-final-customer">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list p-1">
+                                                    <ul class="d-flex gap-1 flex-column">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>BAE SYSTEMS</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-srch">
+                                        <th class="text-center">제품 선택​</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-select-product">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list p-1">
+                                                    <ul class="d-flex gap-1 flex-column">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex mt-2 align-items-center justify-content-end">
+                                <div class="hstack gap-2">
+                                    <button type="button" class="btn btn-gray">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-layout">
+                            <div class="scroll-content">
+                                <table class="table">
+                                    <thead>
+                                        <th class="text-center">번호</th>
+                                        <th class="text-center">발주<br>구분</th>
+                                        <th class="text-center">발주번호</th>
+                                        <th class="text-center">발주 처리 단계</th>
+                                        <th class="text-center">수정 현황</th>
+                                        <th class="text-center">수정<br>차수</th>
+                                        <th class="text-center">수정요청번호</th>
+                                        <th class="text-center">승인일시</th>
+                                        <th class="text-center">수정 번호</th>
+                                        <th class="text-center">승인관리자</th>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 발송완료 묶음 -->
+                                        <tr>
+                                            <td class="text-center" rowspan="3">1</td>
+                                            <td class="text-center" rowspan="3">일반</td>
+                                            <td class="text-center" rowspan="3">
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-order-modify-details">2023/10/06-1</a>
+                                            </td>
+                                            <td class="text-center" rowspan="3">발송완료</td>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <!-- 발송완료 묶음 //-->
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">위탁</td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2023/10/06-1</a>
+                                            </td>
+                                            <td class="text-center">제품 배송 중</td>
+                                            <td class="text-center">
+                                                수정 거절(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //container -->
+                        </div>
+                        @@include('@@webRoot/html/_components/_pagination.html')
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+        <script>
+            $(document).ready(function () {
+                $('.hide-srch').hide();
+                $('#btn-srch-con1').click(function () {
+                    $('.hide-srch').toggle(); // 요소 보이기/숨기기 전환
+                });
+            });
+        </script>
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

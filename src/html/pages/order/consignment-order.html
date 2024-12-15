@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "제품 발주 입력", "dep2":"위탁 발주"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "제품 발주 입력", "dep2":"위탁 발주"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">위탁 발주</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">일자</th>
+                                        <td>
+                                            <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD"
+                                                data-picker="date" style="width: 160px;" />
+                                        </td>
+                                        <th class="text-center">담당자</th>
+                                        <td>
+                                            <input type="text" class="form-control form-sm" value="엄완식" readonly />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">배송방법 요청</th>
+                                        <td>
+                                            <div class="hstack gap-2">
+                                                <select class="form-select w-100" aria-label="Default select example">
+                                                    <option selected="">특송(DHL, UPS등)</option>
+                                                    <option value="1">전체</option>
+                                                    <option value="2">전체</option>
+                                                    <option value="3">전체</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th class="text-center">운송정보/어카운트 No.</th>
+                                        <td>
+                                            <div class="hstack gap-2">
+                                                <input type="text" class="form-control form-sm w-100" value=""
+                                                    placeholder="ex) DHL">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">배송지 주소</th>
+                                        <td colspan="3">
+                                            <input type="text" class="form-control form-sm w-100" value=""
+                                                placeholder="40477, Dusseldorf Germany">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">인수인</th>
+                                        <td>
+                                            <input type="text" class="form-control form-sm w-100" value=""
+                                                placeholder="user">
+                                        </td>
+                                        <th class="text-center">연락처</th>
+                                        <td>
+                                            <input type="text" class="form-control form-sm w-100" value=""
+                                                placeholder="+49(0)173/8887139">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">담당자 E-mail</th>
+                                        <td colspan="3">
+                                            <input type="text" class="form-control form-sm" value="" placeholder="" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">요청사항</th>
+                                        <td colspan="3">
+                                            <textarea name="" id="" class="form-control form-sm"
+                                                style="height: 90px;"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="scroll-layout">
+                            <div class="scroll-content">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th class="text-center">
+
+                                            <div class="form-check conter-content">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault" />
+                                            </div>
+                                        </th>
+                                        <th class="text-center"></th>
+                                        <th class="text-center">발주 구분</th>
+                                        <th class="text-center">구분</th>
+                                        <th class="text-center">모델명</th>
+                                        <th class="text-center">제품명</th>
+                                        <th class="text-center">패턴 (컬러)​</th>
+                                        <th class="text-center">2차 패턴​</th>
+                                        <th class="text-center">수량</th>
+                                        <th class="text-center">단가</th>
+                                        <th class="text-center">공급가</th>
+                                        <th class="text-center">비고</th>
+                                    </thead>
+                                    <tbody>
+                                        @@for( i=1; i < 4; i++){ <tr>
+                                            <td class="text-center">
+                                                <div class="form-check conter-content">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" />
+                                                </div>
+                                            </td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">일반</td>
+                                            <td class="text-center">PRO</td>
+                                            <td class="text-center">
+                                                CSK-UL10
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="hstack gap-2">
+                                                    <span>UBS Port Lock</span>
+                                                    <button type="button" class="btn btn-outline-gray p-1"
+                                                        aria-label="검색" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-order-product">
+                                                        <i class="icon-search"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">AB</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">1,327</td>
+                                            <td class="text-center">132,700</td>
+                                            <td class="text-center">NL</td>
+                                            </tr>
+                                            }
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td class="text-center">합계</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">127</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">358,440</td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- //container -->
+                        </div>
+                        @@include('@@webRoot/html/_components/_pagination.html')
+                        <div class="btn-groups d-flex justify-content-end gap-2 mt-4">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#modal-temporary-save">임시 저장</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modal-alert-order">발주</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

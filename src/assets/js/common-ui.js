@@ -38,7 +38,6 @@ let Sidebar = {
       // sidebar-link 클릭 시 active 제어
       sidebarLinks.forEach((link) => {
         link.addEventListener("click", function (e) {
-          e.preventDefault();
     
           // sidebar가 활성화 상태가 아닐 경우 활성화
           if (!sidebar.classList.contains("active")) {
@@ -107,6 +106,7 @@ let Common = {
     this.datepicker();
     this.buttonDatepicker();
     this.inputDelete();
+    this.globalModal();
   },
   datepicker: function () {
     $("[data-picker='date']").datepicker({
@@ -152,6 +152,28 @@ let Common = {
       $(this).hide();
     });
   },
+  globalModal: function () {
+    document.addEventListener("DOMContentLoaded", function () {
+      const firstModal = document.getElementById("modal-final-customer");
+      const secondModal = document.getElementById("modal-sales-status");
+    
+      // 두 번째 모달 열기 전 첫 번째 모달 유지
+      secondModal.addEventListener("show.bs.modal", function () {
+        if (firstModal.classList.contains("show")) {
+          firstModal.classList.add("modal-static"); // 첫 번째 모달 고정
+          firstModal.style.pointerEvents = "none"; // 클릭 방지
+        }
+      });
+    
+      // 두 번째 모달 닫힐 때 첫 번째 모달 복구
+      secondModal.addEventListener("hidden.bs.modal", function () {
+        if (firstModal.classList.contains("modal-static")) {
+          firstModal.classList.remove("modal-static");
+          firstModal.style.pointerEvents = ""; // 클릭 가능하게 복구
+        }
+      });
+    });
+  }
 };
 
 Sidebar.init();

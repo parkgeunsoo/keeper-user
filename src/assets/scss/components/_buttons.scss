@@ -11,6 +11,11 @@
   .input-group > &{
     min-width: 0;
   }
+  &.btn-green{
+    background-color:var(--green500) !important;
+    border: var(--green500) !important;
+    color: #fff !important;
+  }
 }
 
 .btn-sm{

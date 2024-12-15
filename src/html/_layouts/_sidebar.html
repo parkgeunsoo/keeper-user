@@ -22,12 +22,14 @@
           <div class="depth2-heading">제품 발주 입력</div>
           <ul class="depth2">
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '일반 발주') {active}">
+              <a href="@@webRoot/html/pages/order/general-order.html"
+                class="sidebar-link @@if (context.dep2 === '일반 발주') {active}">
                 일반 발주
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '위탁 발주') {active}">
+              <a href="@@webRoot/html/pages/order/general-order.html"
+                class="sidebar-link @@if (context.dep2 === '위탁 발주') {active}">
                 위탁 발주
               </a>
             </li>
@@ -46,13 +48,23 @@
           <div class="depth2-heading">발주 / 입고 내역</div>
           <ul class="depth2">
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '일반 발주') {active}">
-                일반 발주
+              <a href="@@webRoot/html/pages/ordering-receipt/order-inquiry.html" class="sidebar-link">
+                발주 조회&수정
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '위탁 발주') {active}">
-                위탁 발주
+              <a href="@@webRoot/html/pages/ordering-receipt/receiving-processing.html" class="sidebar-link">
+                입고 처리
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="@@webRoot/html/pages/ordering-receipt/order-modify.html" class="sidebar-link">
+                발주 수정 내역
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="@@webRoot/html/pages/ordering-receipt/receipt-modify.html" class="sidebar-link">
+                입고 수정 내역
               </a>
             </li>
           </ul>

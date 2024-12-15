@@ -1,6 +1,10 @@
 <!-- data-overlap="true"  << 모달 최상위에 입력하면 2중으로 최상단에 배치 -->
 <!-- data-bs-backdrop="static"  << 여백 클릭시 안사라지는 팝업 처리 -->
 
+<!-- ************************************************ -->
+<!-- 최종 고객사 -> 판매 현황 조회 모달 중첩 -->
+<!-- ************************************************ -->
+
 <!-- Alert: sample -->
 <div class="modal alert" tabindex="-1" id="alert-sample1">
   <div class="modal-dialog modal-dialog-centered">
@@ -31,7 +35,7 @@
       </div>
       <div class="modal-footer gap-2">
         <div class="d-flex">
-          <button type="button" class="btn btn-gray" data-bs-dismiss="mo dal">취소</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
           <button type="button" class="btn btn-primary">확인</button>
         </div>
       </div>
@@ -39,7 +43,52 @@
   </div>
 </div>
 <!-- //Alert: sample -->
-
+<!-- modal: 임시저장 -->
+<div class="modal alert" tabindex="-1" id="modal-temporary-save" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">임시저장</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert-text">
+          <p>임시저장은 발주 전 단계로 발주를 실행하려면 발주버튼 클릭으로 최종 발주를 진행하세요
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <div class="d-flex">
+          <button type="button" class="btn btn-primary">임시저장</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal: 발주 -->
+<div class="modal alert" tabindex="-1" id="modal-alert-order" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">발주</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert-text">
+          <p>발주 후 발주 접수가 되면 자체 수정이 불가 하니, 추가될 발주가 있으면, 우선 임시저장 후 최종 발주 시 발주버튼을 클릭하세요
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <div class="d-flex">
+          <button type="button" class="btn btn-primary">발주</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- modal: 관리자 추가​ -->
 <div class="modal" tabindex="-1" id="modal-add-admin" data-bs-backdrop="static">
@@ -90,10 +139,12 @@
       <div class="modal-body">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="company" data-bs-toggle="tab" data-bs-target="#tab-company" type="button" role="tab" aria-controls="tab-company" aria-selected="true">기업정보 입력</button>
+            <button class="nav-link active" id="company" data-bs-toggle="tab" data-bs-target="#tab-company"
+              type="button" role="tab" aria-controls="tab-company" aria-selected="true">기업정보 입력</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="master" data-bs-toggle="tab" data-bs-target="#tab-master" type="button" role="tab" aria-controls="tab-master" aria-selected="false">Master 담당자 정보</button>
+            <button class="nav-link" id="master" data-bs-toggle="tab" data-bs-target="#tab-master" type="button"
+              role="tab" aria-controls="tab-master" aria-selected="false">Master 담당자 정보</button>
           </li>
         </ul>
 
@@ -127,7 +178,8 @@
                         <label class="form-check-label" for="flexRadioDefault1">법인사업자</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked />
                         <label class="form-check-label" for="flexRadioDefault2">개인사업자</label>
                       </div>
                     </div>
@@ -305,7 +357,8 @@
                         <label class="form-check-label" for="flexRadioDefault3">ENG</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4"
+                          checked />
                         <label class="form-check-label" for="flexRadioDefault4">KOR</label>
                       </div>
                     </div>
@@ -400,7 +453,8 @@
                   <td class="" colspan="3">
                     <div class="add-btn">
                       <div>
-                        <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modal-subid">+ 추가</button>
+                        <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                          data-bs-target="#modal-subid">+ 추가</button>
                       </div>
                       <div class="more-wrap">
                         <div class="more-id">
@@ -469,10 +523,12 @@
       <div class="modal-body">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="sub-id-1" data-bs-toggle="tab" data-bs-target="#tab-sub-id-1" type="button" role="tab" aria-controls="tab-sub-id-1" aria-selected="true">SUB ID 1</button>
+            <button class="nav-link active" id="sub-id-1" data-bs-toggle="tab" data-bs-target="#tab-sub-id-1"
+              type="button" role="tab" aria-controls="tab-sub-id-1" aria-selected="true">SUB ID 1</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="sub-id-2" data-bs-toggle="tab" data-bs-target="#tab-sub-id-2" type="button" role="tab" aria-controls="tab-sub-id-2" aria-selected="false">SUB ID 2</button>
+            <button class="nav-link" id="sub-id-2" data-bs-toggle="tab" data-bs-target="#tab-sub-id-2" type="button"
+              role="tab" aria-controls="tab-sub-id-2" aria-selected="false">SUB ID 2</button>
           </li>
         </ul>
 
@@ -506,7 +562,8 @@
                         <label class="form-check-label" for="flexRadioDefault3">ENG</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4"
+                          checked />
                         <label class="form-check-label" for="flexRadioDefault4">KOR</label>
                       </div>
                     </div>
@@ -630,7 +687,8 @@
                         <label class="form-check-label" for="flexRadioDefault3">ENG</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4"
+                          checked />
                         <label class="form-check-label" for="flexRadioDefault4">KOR</label>
                       </div>
                     </div>
@@ -732,32 +790,6 @@
 </div>
 
 
-<!-- modal: Messege -->
-<div class="modal alert" tabindex="-1" id="modal-approval" data-bs-backdrop="static">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Messege</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="alert-text">
-          <p>관리자 승인 전 입니다.</p>
-          <p>관리자 ( <a href="asd@test.com" class="text-primary">asd@test.com</a> ) 에게 <br>확인 요청해주세요</p>
-        </div>
-        <div class="text-center mt-4">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
-        </div>
-      </div>
-      <ul class="example-text">
-        <li>회원신청 후 관리자의 승인 후 사용이 가능합니다.</li>
-        <li>회원신청은 당사 해외 영업 담당자와 협의 후 신청하시기 바랍니다. </li>
-        <li>회원신청 관련 문의는 <a href="xxxxx@comxi.com" class="text-primary">xxxxx@comxi.com</a> 로 주시기 바랍니다. </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <!-- modal: 아이디/패스워드 찾기 -->
 <div class="modal" tabindex="-1" id="modal-fide-pw" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
@@ -796,15 +828,19 @@
       <div class="modal-body">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="company-modify" data-bs-toggle="tab" data-bs-target="#tab-company-modify" type="button" role="tab" aria-controls="tab-company-modify" aria-selected="true">기업정보 수정</button>
+            <button class="nav-link active" id="company-modify" data-bs-toggle="tab"
+              data-bs-target="#tab-company-modify" type="button" role="tab" aria-controls="tab-company-modify"
+              aria-selected="true">기업정보 수정</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="master-modify" data-bs-toggle="tab" data-bs-target="#tab-master-modify" type="button" role="tab" aria-controls="tab-master-modify" aria-selected="false">Master 담당자 수정</button>
+            <button class="nav-link" id="master-modify" data-bs-toggle="tab" data-bs-target="#tab-master-modify"
+              type="button" role="tab" aria-controls="tab-master-modify" aria-selected="false">Master 담당자 수정</button>
           </li>
         </ul>
 
         <div class="tab-content">
-          <div class="tab-pane fade show active" id="tab-company-modify" role="tabpanel" aria-labelledby="company-modify">
+          <div class="tab-pane fade show active" id="tab-company-modify" role="tabpanel"
+            aria-labelledby="company-modify">
             <table class="table table-bordered table-sticky mt-6">
               <colgroup>
                 <col width="15%">
@@ -886,7 +922,8 @@
                   </th>
                   <td class="text-center" colspan="3">
                     <div class="form-wrap">
-                      <input type="text" class="form-control" style="width: 40%;" value="LINSENKAMP, 8B, HAMBURG, 22175, GERMANY">
+                      <input type="text" class="form-control" style="width: 40%;"
+                        value="LINSENKAMP, 8B, HAMBURG, 22175, GERMANY">
                     </div>
                   </td>
                 </tr>
@@ -1002,11 +1039,13 @@
                   <td class="text-center">
                     <div class="hstack gap-4">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault5" checked />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault5"
+                          checked />
                         <label class="form-check-label" for="flexRadioDefault5">ENG</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6" checked />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6"
+                          checked />
                         <label class="form-check-label" for="flexRadioDefault66">KOR</label>
                       </div>
                     </div>
@@ -1101,7 +1140,8 @@
                   <td class="" colspan="3">
                     <div class="add-btn">
                       <div>
-                        <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modal-subid">+ 추가</button>
+                        <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal"
+                          data-bs-target="#modal-subid">+ 추가</button>
                       </div>
                       <div class="more-wrap">
                         <div class="more-id">
@@ -1277,16 +1317,20 @@
         <!-- 1depth -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="product-pro" data-bs-toggle="tab" data-bs-target="#tab-product-pro" type="button" role="tab" aria-controls="tab-product-pro" aria-selected="true">PRO</button>
+            <button class="nav-link active" id="product-pro" data-bs-toggle="tab" data-bs-target="#tab-product-pro"
+              type="button" role="tab" aria-controls="tab-product-pro" aria-selected="true">PRO</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="product-ess" data-bs-toggle="tab" data-bs-target="#tab-product-ess" type="button" role="tab" aria-controls="tab-product-ess" aria-selected="false">ESS</button>
+            <button class="nav-link" id="product-ess" data-bs-toggle="tab" data-bs-target="#tab-product-ess"
+              type="button" role="tab" aria-controls="tab-product-ess" aria-selected="false">ESS</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="product-sample" data-bs-toggle="tab" data-bs-target="#tab-product-sample" type="button" role="tab" aria-controls="tab-product-sample" aria-selected="false">SAMPLE</button>
+            <button class="nav-link" id="product-sample" data-bs-toggle="tab" data-bs-target="#tab-product-sample"
+              type="button" role="tab" aria-controls="tab-product-sample" aria-selected="false">SAMPLE</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="product-etc" data-bs-toggle="tab" data-bs-target="#tab-product-etc" type="button" role="tab" aria-controls="tab-product-etc" aria-selected="false">ETC</button>
+            <button class="nav-link" id="product-etc" data-bs-toggle="tab" data-bs-target="#tab-product-etc"
+              type="button" role="tab" aria-controls="tab-product-etc" aria-selected="false">ETC</button>
           </li>
         </ul>
 
@@ -1298,27 +1342,34 @@
             <!-- 2depth -->
             <ul class="nav nav-pills mt-6" id="myTab2" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="usb-port" data-bs-toggle="tab" data-bs-target="#tab-usb-port" type="button" role="tab" aria-controls="tab-usb-port" aria-selected="true">USB Port</button>
+                <button class="nav-link active" id="usb-port" data-bs-toggle="tab" data-bs-target="#tab-usb-port"
+                  type="button" role="tab" aria-controls="tab-usb-port" aria-selected="true">USB Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="network-port" data-bs-toggle="tab" data-bs-target="#tab-network-port" type="button" role="tab" aria-controls="tab-network-port" aria-selected="false">Network Port</button>
+                <button class="nav-link" id="network-port" data-bs-toggle="tab" data-bs-target="#tab-network-port"
+                  type="button" role="tab" aria-controls="tab-network-port" aria-selected="false">Network Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="fiber-optic" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic" type="button" role="tab" aria-controls="tab-fiber-optic" aria-selected="false">Fiber Optic
+                <button class="nav-link" id="fiber-optic" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic"
+                  type="button" role="tab" aria-controls="tab-fiber-optic" aria-selected="false">Fiber Optic
                   Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="other-port" data-bs-toggle="tab" data-bs-target="#tab-other-port" type="button" role="tab" aria-controls="tab-other-port" aria-selected="false">Other Port</button>
+                <button class="nav-link" id="other-port" data-bs-toggle="tab" data-bs-target="#tab-other-port"
+                  type="button" role="tab" aria-controls="tab-other-port" aria-selected="false">Other Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="anti-theft" data-bs-toggle="tab" data-bs-target="#tab-anti-theft" type="button" role="tab" aria-controls="tab-anti-theft" aria-selected="false">Anti-Theft for
+                <button class="nav-link" id="anti-theft" data-bs-toggle="tab" data-bs-target="#tab-anti-theft"
+                  type="button" role="tab" aria-controls="tab-anti-theft" aria-selected="false">Anti-Theft for
                   Computer</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="memory" data-bs-toggle="tab" data-bs-target="#tab-memory" type="button" role="tab" aria-controls="tab-memory" aria-selected="false">Memory</button>
+                <button class="nav-link" id="memory" data-bs-toggle="tab" data-bs-target="#tab-memory" type="button"
+                  role="tab" aria-controls="tab-memory" aria-selected="false">Memory</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="lock-key" data-bs-toggle="tab" data-bs-target="#tab-lock-key" type="button" role="tab" aria-controls="tab-lock-key" aria-selected="false">Lock KEY</button>
+                <button class="nav-link" id="lock-key" data-bs-toggle="tab" data-bs-target="#tab-lock-key" type="button"
+                  role="tab" aria-controls="tab-lock-key" aria-selected="false">Lock KEY</button>
               </li>
             </ul>
             <!-- 2depth 컨텐츠 -->
@@ -1593,27 +1644,34 @@
             <!-- 2depth -->
             <ul class="nav nav-pills mt-6" id="myTab3" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="usb-port2" data-bs-toggle="tab" data-bs-target="#tab-usb-port2" type="button" role="tab" aria-controls="tab-usb-port2" aria-selected="true">USB Port</button>
+                <button class="nav-link active" id="usb-port3" data-bs-toggle="tab" data-bs-target="#tab-usb-port3"
+                  type="button" role="tab" aria-controls="tab-usb-port3" aria-selected="true">USB Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="network-port2" data-bs-toggle="tab" data-bs-target="#tab-network-port2" type="button" role="tab" aria-controls="tab-network-port2" aria-selected="false">Network Port</button>
+                <button class="nav-link" id="network-port3" data-bs-toggle="tab" data-bs-target="#tab-network-port3"
+                  type="button" role="tab" aria-controls="tab-network-port3" aria-selected="false">Network Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="fiber-optic2" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic2" type="button" role="tab" aria-controls="tab-fiber-optic2" aria-selected="false">Fiber Optic
+                <button class="nav-link" id="fiber-optic3" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic3"
+                  type="button" role="tab" aria-controls="tab-fiber-optic3" aria-selected="false">Fiber Optic
                   Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="other-port2" data-bs-toggle="tab" data-bs-target="#tab-other-port2" type="button" role="tab" aria-controls="tab-other-port2" aria-selected="false">Other Port</button>
+                <button class="nav-link" id="other-port3" data-bs-toggle="tab" data-bs-target="#tab-other-port3"
+                  type="button" role="tab" aria-controls="tab-other-port3" aria-selected="false">Other Port</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="anti-theft2" data-bs-toggle="tab" data-bs-target="#tab-anti-theft2" type="button" role="tab" aria-controls="tab-anti-theft2" aria-selected="false">Anti-Theft for
+                <button class="nav-link" id="anti-theft3" data-bs-toggle="tab" data-bs-target="#tab-anti-theft3"
+                  type="button" role="tab" aria-controls="tab-anti-theft3" aria-selected="false">Anti-Theft for
                   Computer</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="memory2" data-bs-toggle="tab" data-bs-target="#tab-memory2" type="button" role="tab" aria-controls="tab-memory2" aria-selected="false">Memory</button>
+                <button class="nav-link" id="memory3" data-bs-toggle="tab" data-bs-target="#tab-memory3" type="button"
+                  role="tab" aria-controls="tab-memory3" aria-selected="false">Memory</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="lock-key2" data-bs-toggle="tab" data-bs-target="#tab-lock-key2" type="button" role="tab" aria-controls="tab-lock-key2" aria-selected="false">Lock KEY</button>
+                <button class="nav-link" id="lock-key3" data-bs-toggle="tab" data-bs-target="#tab-lock-key3"
+                  type="button" role="tab" aria-controls="tab-lock-key3" aria-selected="false">Lock KEY</button>
               </li>
             </ul>
             <!-- 2depth 컨텐츠 -->
@@ -1905,4 +1963,2363 @@
       });
     });
   </script>
+</div>
+
+<!-- modal: 발주 제품 선택 -->
+<div class="modal" tabindex="-1" id="modal-order-product" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">발주 제품 선택</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- 1depth -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="product-pro10" data-bs-toggle="tab" data-bs-target="#tab-product-pro10"
+              type="button" role="tab" aria-controls="tab-product-pro10" aria-selected="true">PRO</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-ess10" data-bs-toggle="tab" data-bs-target="#tab-product-ess10"
+              type="button" role="tab" aria-controls="tab-product-ess10" aria-selected="false">ESS</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-sample10" data-bs-toggle="tab" data-bs-target="#tab-product-sample10"
+              type="button" role="tab" aria-controls="tab-product-sample10" aria-selected="false">SAMPLE</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-etc10" data-bs-toggle="tab" data-bs-target="#tab-product-etc10"
+              type="button" role="tab" aria-controls="tab-product-etc10" aria-selected="false">ETC</button>
+          </li>
+        </ul>
+
+        <!-- 1depth 컨텐츠 -->
+        <div class="tab-content">
+          <!-- PRO -->
+          <div class="tab-pane fade show active" id="tab-product-pro10" role="tabpanel" aria-labelledby="product-pro10">
+
+            <!-- 2depth -->
+            <ul class="nav nav-pills mt-6" id="myTab2" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="usb-port10" data-bs-toggle="tab" data-bs-target="#tab-usb-port10"
+                  type="button" role="tab" aria-controls="tab-usb-port10" aria-selected="true">USB Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="network-port10" data-bs-toggle="tab" data-bs-target="#tab-network-port10"
+                  type="button" role="tab" aria-controls="tab-network-port10" aria-selected="false">Network
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fiber-optic10" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic10"
+                  type="button" role="tab" aria-controls="tab-fiber-optic10" aria-selected="false">Fiber Optic
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-port10" data-bs-toggle="tab" data-bs-target="#tab-other-port10"
+                  type="button" role="tab" aria-controls="tab-other-port10" aria-selected="false">Other Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="anti-theft10" data-bs-toggle="tab" data-bs-target="#tab-anti-theft10"
+                  type="button" role="tab" aria-controls="tab-anti-theft10" aria-selected="false">Anti-Theft for
+                  Computer</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory10" data-bs-toggle="tab" data-bs-target="#tab-memory10" type="button"
+                  role="tab" aria-controls="tab-memory10" aria-selected="false">Memory</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lock-key10" data-bs-toggle="tab" data-bs-target="#tab-lock-key10"
+                  type="button" role="tab" aria-controls="tab-lock-key10" aria-selected="false">Lock KEY</button>
+              </li>
+            </ul>
+            <!-- 2depth 컨텐츠 -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-usb-port10" role="tabpanel" aria-labelledby="usb-port10">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-network-port10" role="tabpanel" aria-labelledby="network-port10">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-fiber-optic10" role="tabpanel" aria-labelledby="fiber-optic10">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-other-port10" role="tabpanel" aria-labelledby="other-port10"></div>
+              <div class="tab-pane fade" id="tab-anti-theft10" role="tabpanel" aria-labelledby="anti-theft10"></div>
+              <div class="tab-pane fade" id="tab-memory10" role="tabpanel" aria-labelledby="memory10"></div>
+              <div class="tab-pane fade" id="tab-lock-key10" role="tabpanel" aria-labelledby="lock-key10"></div>
+            </div>
+            <div class="scroll-layout mt-6">
+              <div class="scroll-content">
+                <table class="table table-hover">
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col width="120px">
+                  </colgroup>
+                  <thead>
+                    <th class="text-center">선택</th>
+                    <th class="text-center"></th>
+                    <th class="text-center">구분</th>
+                    <th class="text-center">모델명</th>
+                    <th class="text-center">제품명</th>
+                    <th class="text-center">패턴 (패키지명)​</th>
+                    <th class="text-center">2차 패턴​(컬러)</th>
+                    <th class="text-center">수량</th>
+                    <th class="text-center">단가</th>
+                    <th class="text-center">공급가</th>
+                    <th class="text-center">국가</th>
+                    <th class="text-center">신규여부</th>
+                    <th class="text-center">유통사</th>
+                    <th class="text-center">최종고객사</th>
+                    <th class="text-center">지사/부서</th>
+                    <th class="text-center">시리얼</th>
+                    <th class="text-center">비고</th>
+                  </thead>
+                  <tbody>
+                    @@for( i=1; i < 4; i++){ <tr>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center"></td>
+                      <td class="text-center">PRO</td>
+                      <td class="text-center">
+                        CSK-UL10
+                      </td>
+                      <td class="text-center">
+                        <div class="hstack gap-2">
+                          <span>UBS Port Lock</span>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <select class="form-select form-sm">
+                          <option selected>AB</option>
+                          <option value="1">AC</option>
+                          <option value="2">AD</option>
+                          <option value="3">AE</option>
+                        </select>
+                      </td>
+                      <td class="text-center">-</td>
+                      <td class="text-center">100</td>
+                      <td class="text-center">1,327</td>
+                      <td class="text-center">132,700</td>
+                      <td class="text-center">
+                        <div class="hstack gap-2">
+                          <span>NL</span>
+                          <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                            <i class="icon-search"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <select class="form-select form-sm">
+                          <option selected>NEW</option>
+                          <option value="1">Existing</option>
+                        </select>
+                      </td>
+                      <td class="text-center">
+                        <div class="hstack gap-2">
+                          <span>HART4TECH</span>
+                          <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                            <i class="icon-search"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="hstack gap-2">
+                          <span>NN Group</span>
+                          <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                            <i class="icon-search"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="text-center"></td>
+                      <td class="text-center">
+                        <div class="hstack gap-2">
+                          <span></span>
+                          <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                            <i class="icon-search"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="text-center"></td>
+                      </tr>
+                      }
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="text-center">합계</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center">127</td>
+                      <td class="text-center"></td>
+                      <td class="text-center">358,440</td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                      <td class="text-center"></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- //container -->
+            </div>
+          </div>
+
+          <!-- ESS -->
+          <div class="tab-pane fade" id="tab-product-ess10" role="tabpanel" aria-labelledby="product-ess10">
+            <!-- 2depth -->
+            <ul class="nav nav-pills mt-6" id="myTab3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="usb-port11" data-bs-toggle="tab" data-bs-target="#tab-usb-port11"
+                  type="button" role="tab" aria-controls="tab-usb-port11" aria-selected="true">USB Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="network-port11" data-bs-toggle="tab" data-bs-target="#tab-network-port11"
+                  type="button" role="tab" aria-controls="tab-network-port11" aria-selected="false">Network
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fiber-optic11" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic11"
+                  type="button" role="tab" aria-controls="tab-fiber-optic11" aria-selected="false">Fiber Optic
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-port11" data-bs-toggle="tab" data-bs-target="#tab-other-port11"
+                  type="button" role="tab" aria-controls="tab-other-port11" aria-selected="false">Other Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="anti-theft11" data-bs-toggle="tab" data-bs-target="#tab-anti-theft11"
+                  type="button" role="tab" aria-controls="tab-anti-theft11" aria-selected="false">Anti-Theft for
+                  Computer</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory11" data-bs-toggle="tab" data-bs-target="#tab-memory11" type="button"
+                  role="tab" aria-controls="tab-memory11" aria-selected="false">Memory</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lock-key11" data-bs-toggle="tab" data-bs-target="#tab-lock-key11"
+                  type="button" role="tab" aria-controls="tab-lock-key11" aria-selected="false">Lock KEY</button>
+              </li>
+            </ul>
+            <!-- 2depth 컨텐츠 -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-usb-port11" role="tabpanel" aria-labelledby="usb-port11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-network-port11" role="tabpanel" aria-labelledby="network-port11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-fiber-optic11" role="tabpanel" aria-labelledby="fiber-optic11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-other-port11" role="tabpanel" aria-labelledby="other-port11"></div>
+              <div class="tab-pane fade" id="tab-anti-theft11" role="tabpanel" aria-labelledby="anti-theft11"></div>
+              <div class="tab-pane fade" id="tab-memory11" role="tabpanel" aria-labelledby="memory11"></div>
+              <div class="tab-pane fade" id="tab-lock-key11" role="tabpanel" aria-labelledby="lock-key11"></div>
+            </div>
+          </div>
+
+          <!-- SAMPLE -->
+          <div class="tab-pane fade" id="tab-product-sample10" role="tabpanel" aria-labelledby="product-sample10">
+          </div>
+          <!-- ETC -->
+          <div class="tab-pane fade" id="tab-product-etc10" role="tabpanel" aria-labelledby="product-etc10">
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-end mt-6 gap-2">
+          <button type="button" class="btn btn-primary">적용</button>
+          <button type="button" class="btn btn-danger">삭제</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $(".product-content").click(function () {
+        $(this)
+          .toggleClass("active")
+      });
+    });
+  </script>
+</div>
+
+
+
+<!-- modal: 최종 고객사 검색-->
+<div class="modal" tabindex="-1" id="modal-final-customer">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">최종 고객사 검색</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 160px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">고객사 검색</th>
+                <td>
+                  <input type="text" class="form-control" value="">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-2 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-gray">검색</button>
+              <button type="button" class="btn btn-outline-gray px-2" aria-label="초기화">
+                <i class="icon-reset"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style="max-height:362px;overflow-y:auto;">
+          <table class="table table-hover table-bordered table-sticky">
+            <thead>
+              <tr>
+                <th class="text-center">
+                  <input class="form-check-input check-all" type="checkbox">
+                </th>
+                <th class="text-center">고객사 명칭</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                <td class="text-start"><a href="javascript:void(0)">가나다라마바사아자차 가나다라마바사아자차 가나다라마바사아자차 가나다라마바 </a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">적용</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-sales-status">판매현황
+          조회</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal: 판매 현황 조회-->
+<div class="modal" tabindex="-1" id="modal-sales-status" data-bs-backdrop="static" data-overlap="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">판매 현황 조회</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 216px">
+              <col>
+              <col style="width: 216px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">기준일자​</th>
+                <td colspan="3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="row g-2 align-items-center">
+                      <div class="col-auto">
+                        <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                        <label class="btn btn-dark btn-sm" for="type1">1개월</label>
+                        <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                        <label class="btn btn-dark btn-sm" for="type2">6개월</label>
+                        <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                        <label class="btn btn-dark btn-sm" for="type3">1년</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                      <div class="col-auto">~</div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-gray" id="btn-srch-con">검색조건</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center">제품 발송 구분</th>
+                <td colspan="3">
+                  <div class="py-2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState1">
+                      <label class="form-check-label" for="idState1">전체</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState2">
+                      <label class="form-check-label" for="idState2">발송 전</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState3">
+                      <label class="form-check-label" for="idState3">발송 완료</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState4">
+                      <label class="form-check-label" for="idState4">발주 취소</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hide-srch">
+                <th class="text-center">발주 구분​</th>
+                <td colspan="3">
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list p-1">
+                      <ul class="d-flex gap-1 flex-column">
+                        <li class="d-flex align-items-center">
+                          <p>NL-Hart4Technology</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hide-srch">
+                <th class="text-center">최종고객사</th>
+                <td colspan="3">
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list p-1">
+                      <ul class="d-flex gap-1 flex-column">
+                        <li class="d-flex align-items-center">
+                          <p>BAE SYSTEMS</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hide-srch">
+                <th class="text-center">제품 선택​</th>
+                <td colspan="3">
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-select-product">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list p-1">
+                      <ul class="d-flex gap-1 flex-column">
+                        <li class="d-flex align-items-center">
+                          <p>USB PROT LOCK AB</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-2 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-gray">검색</button>
+            </div>
+          </div>
+        </div>
+        <div style="max-height:560px;overflow-y:auto;">
+          <table class="table table-hover">
+            <thead>
+              <th class="text-center">선택</th>
+              <th class="text-center">판매번호</th>
+              <th class="text-center">구분</th>
+              <th class="text-center">입고번호 OR<br>
+                정산번호
+              </th>
+              <th class="text-center">구분</th>
+              <th class="text-center">품목명</th>
+              <th class="text-center">패턴</th>
+              <th class="text-center">수량</th>
+              <th class="text-center">국가</th>
+              <th class="text-center">유통사</th>
+              <th class="text-center">최종고객사</th>
+              <th class="text-center">지사/부서</th>
+              <th class="text-center">시리얼</th>
+              <th class="text-center">비고</th>
+            </thead>
+            <tbody>
+              @@for( i=1; i < 5; i++){ <tr>
+                <td class="text-center">
+                  <div class="form-check conter-content">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </td>
+                <td class="text-center"> <a href="">2023/10/06</a></td>
+                <td class="text-center">발주입력</td>
+                <td class="text-center">
+                  <a href="">2023/10/06-1</a>
+                </td>
+                <td class="text-center">PRO</td>
+                <td class="text-center">USB포트락</td>
+                <td class="text-center">AB</td>
+                <td class="text-center">40</td>
+                <td class="text-center">UK</td>
+                <td class="text-center">NL-Hart4Technology</td>
+                <td class="text-center">SLS(UK)-BAE SYSTEMS</td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                </tr>
+                }
+                <tr class="green50-bg">
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center" colspan="4">2022/10 계</td>
+                  <td class="text-center">118</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"> <a href="">2023/10/06</a></td>
+                  <td class="text-center">발주입력</td>
+                  <td class="text-center">
+                    <a href="">2023/10/06-1</a>
+                  </td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">USB포트락</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">40</td>
+                  <td class="text-center">UK</td>
+                  <td class="text-center">NL-Hart4Technology</td>
+                  <td class="text-center">SLS(UK)-BAE SYSTEMS</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+                <tr class="green200-bg">
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center" colspan="4">합계</td>
+                  <td class="text-center">164</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">선택 적용</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.hide-srch').hide();
+      $('#btn-srch-con').click(function () {
+        $('.hide-srch').toggle(); // 요소 보이기/숨기기 전환
+      });
+    });
+  </script>
+</div>
+
+
+<!-- modal: 제품 발송 정보 -->
+<div class="modal" tabindex="-1" id="modal-product-order-info" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">제품 발송 정보</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky">
+          <colgroup>
+            <col width="150px">
+            <col width="">
+            <col width="150px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                발송일자
+              </th>
+              <td class="text-center" colspan="3">
+                2023년 07월 19일
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                배송사
+              </th>
+              <td class="text-center">
+                DHL
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>
+                racking No
+              </th>
+              <td class="text-center">
+                123456798
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발송 수정</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 수정 거절 -->
+<div class="modal" tabindex="-1" id="modal-order-reject" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">발주 수정 거절</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert-text text-start">
+          <p>
+            해당 발주건의 수정요청이 아래와 같은 사유로 수정이 거절 되었습니다.
+          </p>
+        </div>
+        <div class="alert-box">
+          <p>제품이 이미 발송되었습니다.</p>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 에러 메세지 -->
+<div class="modal alert" tabindex="-1" id="modal-error-msg" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">에러 메세지</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert-text">
+          <p>
+            임시 저장은 직접 발주 삭제가 가능 합니다.
+          </p>
+          <p> “발주 삭제버튼을 이용해서 직접 삭제해 주세요＂</p>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 취소 -->
+<div class="modal alert" tabindex="-1" id="modal-order-cancel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">발주 취소</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert-text">
+          <p>
+            선택된 건에 대한 전체 발주 취소를 요청 하시겠습니까? 발주 취소가 승인 되면 발주가 진행되지 않습니다. 취소된 발주 건은 발주 삭제가 가능 합니다.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발주 취소</button>
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 배송 정보 -->
+<div class="modal" tabindex="-1" id="modal-delivery-info" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">배송 정보</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="d-flex justify-content-end mb-2">수정요청 일시 : 2022-09-17</p>
+        <table class="table table-bordered table-sticky" id="tableContestList">
+          <colgroup>
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>일자</th>
+              <td class="text-center" colspan="3"> <input type="text" class="form-control w-100"
+                  placeholder="YYYY.MM.DD" data-picker="date" /></td>
+              <th class="text-center"><span class="text-danger">*</span>발주자</th>
+              <td class="text-center" colspan="3"><input type="text" class="form-control" value="엄완식" readonly> </td>
+            </tr>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>배송방법 요청</th>
+              <td class="text-center" colspan="3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>특송(DHL, UPS등)</option>
+                  <option value="1">특송(DHL, UPS등)</option>
+                  <option value="2">특송(DHL, UPS등)</option>
+                  <option value="3">특송(DHL, UPS등)</option>
+                </select>
+              </td>
+              <th class="text-center"><span class="text-danger">*</span>운송정보/어카운트 No.</th>
+              <td class="text-center" colspan="3"><input type="text" class="form-control" placeholder="EX)DHL/1234567">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>배송지 주소
+              </th>
+              <td class="text-center" colspan="7"><input type="text" class="form-control"
+                  placeholder="Marschall str 42, 40477, Dusseldorf Germany">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>인수인
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="Nils Fleischhauer">
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>연락처
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="+49(0)173/8887139">
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>담당자 E-mail
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>요청사항
+              </th>
+              <td class="text-center" colspan="7">
+                <textarea name="" id="" class="form-control" placeholder="고객사로 직접 배송을 위해서 배송정보를 수정하겠습니다."></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">수정 승인</button>
+        <button type="button" class="btn btn-outline-danger">수정 거절</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 세부 내역 -->
+<div class="modal" tabindex="-1" id="modal-order-details" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 세부 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex gap-4">
+          <table class="table table-bordered table-sticky table-bordered2">
+            <thead>
+              <th class="text-center">발주구분</th>
+              <th class="text-center">발주일</th>
+              <th class="text-center">발주번호</th>
+              <th class="text-center">발주 처리 단계</th>
+              <th class="text-center">직접 수정 가능</th>
+              <th class="text-center">수정 요청 가능</th>
+              <th class="text-center">발주 수정 상태</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">일반발주</td>
+                <td class="text-center">2024-06-27</td>
+                <td class="text-center">SLS-C231110-00001</td>
+                <td class="text-center">임시저장</td>
+                <td class="text-center">N</td>
+                <td class="text-center bg-primary">Y</td>
+                <td class="text-center">N/A</td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-dark">발주</button>
+        </div>
+        <table class="table table-bordered table-sticky mt-6" id="tableContestList">
+          <colgroup>
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+            <col width="120px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>일자</th>
+              <td class="text-center" colspan="3"> <input type="text" class="form-control w-100"
+                  placeholder="YYYY.MM.DD" data-picker="date" /></td>
+              <th class="text-center"><span class="text-danger">*</span>발주자</th>
+              <td class="text-center" colspan="3"><input type="text" class="form-control" value="엄완식" readonly> </td>
+            </tr>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>배송방법 요청</th>
+              <td class="text-center" colspan="3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>특송(DHL, UPS등)</option>
+                  <option value="1">특송(DHL, UPS등)</option>
+                  <option value="2">특송(DHL, UPS등)</option>
+                  <option value="3">특송(DHL, UPS등)</option>
+                </select>
+              </td>
+              <th class="text-center"><span class="text-danger">*</span>운송정보/어카운트 No.</th>
+              <td class="text-center" colspan="3"><input type="text" class="form-control" placeholder="EX)DHL/1234567">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>배송지 주소
+              </th>
+              <td class="text-center" colspan="7"><input type="text" class="form-control"
+                  placeholder="Marschall str 42, 40477, Dusseldorf Germany">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>인수인
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="Nils Fleischhauer">
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>연락처
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="+49(0)173/8887139">
+              </td>
+              <th class="text-center">
+                <span class="text-danger">*</span>담당자 E-mail
+              </th>
+              <td class="text-center" colspan="2">
+                <input type="email" class="form-control" placeholder="">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                <span class="text-danger">*</span>요청사항
+              </th>
+              <td class="text-center" colspan="7">
+                <textarea name="" id="" class="form-control" placeholder="고객사로 직접 배송을 위해서 배송정보를 수정하겠습니다."></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="scroll-layout mt-6" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">
+                  <div class="form-check conter-content">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </th>
+                <th class="text-center"></th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">
+                    CSK-UL10
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>UBS Port Lock</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NL</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>NEW</option>
+                      <option value="1">Existing</option>
+                    </select>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>HART4TECH</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NN Group</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">임시 저장</button>
+        <button type="button" class="btn btn-outline-danger">선택 삭제</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 발주 수정 내역 -->
+<div class="modal" tabindex="-1" id="modal-order-modify-details" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">발주 수정 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex gap-4">
+          <table class="table table-bordered table-sticky table-bordered2">
+            <thead>
+              <th class="text-center">발주구분</th>
+              <th class="text-center">발주일</th>
+              <th class="text-center">발주번호</th>
+              <th class="text-center">발주 처리 단계</th>
+              <th class="text-center">직접 수정 가능</th>
+              <th class="text-center">수정 요청 가능</th>
+              <th class="text-center">발주 수정 상태</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">일반발주</td>
+                <td class="text-center">2024-06-27</td>
+                <td class="text-center">SLS-C231110-00001</td>
+                <td class="text-center">발주 접수</td>
+                <td class="text-center">N</td>
+                <td class="text-center bg-primary">Y</td>
+                <td class="text-center">N/A</td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-primary">수정 승인 요청</button>
+        </div>
+        <div class="d-flex align-items-center gap-4 mt-6">
+          <table class="table table-sticky table-bordered">
+            <tbody>
+              <tr>
+                <th class="text-center">배송주소</th>
+                <td class="text-center">Marschall str 42, 40477, Dusseldorf Germany</td>
+                <th class="text-center">인수인</th>
+                <td class="text-center">Nils Fleischhauer</td>
+                <th class="text-center">연락처</th>
+                <td class="text-center">+49(0)173/8887139</td>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-dark">배송 정보 수정</button>
+        </div>
+        <table class="table table-sticky table-bordered mt-6">
+          <colgroup>
+            <col width="110px">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">수정요청<br> 내용</th>
+              <td class="text-center">
+                <textarea name="" id="" class="form-control"></textarea>
+              </td>
+          </tbody>
+        </table>
+        <div class="scroll-layout mt-6" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">
+                  <div class="form-check conter-content">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </th>
+                <th class="text-center">수정<br>차수</th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">수정사유</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">
+                    CSK-UL10
+                  </td>
+                  <td class="text-center">
+                    UBS Port Lock
+                  </td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NL</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>NEW</option>
+                      <option value="1">Existing</option>
+                    </select>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>HART4TECH</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NN Group</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">임시 저장</button>
+        <button type="button" class="btn btn-danger">선택 삭제</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 선택 수정 -->
+<div class="modal" tabindex="-1" id="modal-select-modify" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">선택 수정</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="scroll-layout" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">
+                  <div class="form-check conter-content">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </th>
+                <th class="text-center"></th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">수정사유</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>제품변경</option>
+                      <option value="">패턴변경</option>
+                      <option value="">수량변경</option>
+                      <option value="">제품변경</option>
+                      <option value="">발주삭제</option>
+                    </select>
+                  </td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">CSK-UL10</td>
+                  <td class="text-center">UBS Port Lock</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NL</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>NEW</option>
+                      <option value="1">Existing</option>
+                    </select>
+                  </td>
+                  <td class="text-center">HART4TECH</td>
+                  <td class="text-center"> NN Group</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">적용</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 첨부 서류 -->
+<div class="modal" tabindex="-1" id="modal-attached-documents" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">첨부 서류</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky table-bordered2">
+          <colgroup>
+            <col width="30%">
+            <col width="45%">
+            <col width="10%">
+            <col width="15%">
+          </colgroup>
+          <thead>
+            <th class="text-center">항목</th>
+            <th class="text-center">파일명</th>
+            <th class="text-center">크기</th>
+            <th class="text-center">다운로드</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">INVOICE ( Include Packing Slip )</td>
+              <td class="text-center">CXI-CIPL-240207-002_SLS - 일반(11) – 수입통관.XlsX</td>
+              <td class="text-center">2.0BM</td>
+              <td class="text-center"><a download="">다운로드</a></td>
+            </tr>
+            <tr>
+              <td class="text-center">BL</td>
+              <td class="text-center">240208_FCE002193</td>
+              <td class="text-center">2.0BM</td>
+              <td class="text-center"><a download="">다운로드</a></td>
+            </tr>
+            <tr>
+              <td class="text-center">박스별 Packing List</td>
+              <td class="text-center">240208_Packing List</td>
+              <td class="text-center">2.0BM</td>
+              <td class="text-center"><a download="">다운로드</a></td>
+            </tr>
+            <tr>
+              <td class="text-center">IN거래명세서</td>
+              <td class="text-center">240208_거래명세서_SLS_일반 발주분</td>
+              <td class="text-center">2.0BM</td>
+              <td class="text-center"><a download="">다운로드</a></td>
+            </tr>
+            <tr>
+              <td class="text-center">기타</td>
+              <td class="text-center"></td>
+              <td class="text-center">/td>
+              <td class="text-center"><a download="">다운로드</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 수정 요청 내역 -->
+<div class="modal" tabindex="-1" id="modal-modify-request" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">수정 요청 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-sticky table-bordered mt-6">
+          <colgroup>
+            <col width="110px">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">수정요청<br> 내용</th>
+              <td class="text-center">
+                <textarea name="" id="" class="form-control">3품목 발주 삭제</textarea>
+              </td>
+          </tbody>
+        </table>
+        <div class="scroll-layout mt-6" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">선택</th>
+                <th class="text-center">수정<br>차수</th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">수정사유</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">` + i + `</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">CSK-UL10</td>
+                  <td class="text-center">UBS Port Lock</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">NL</td>
+                  <td class="text-center">NEW</td>
+                  <td class="text-center">HART4TECH</td>
+                  <td class="text-center">NN Group</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 입고 처리 -->
+<div class="modal" tabindex="-1" id="modal-receiving-processing" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">입고 처리</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex gap-4">
+          <table class="table table-bordered table-sticky table-bordered2">
+            <thead>
+              <th class="text-center">발주구분</th>
+              <th class="text-center">발주번호</th>
+              <th class="text-center">발주 처리 단계</th>
+              <th class="text-center">입고단계</th>
+              <th class="text-center">입고 수정 상태</th>
+              <th class="text-center">입고번호</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">일반발주</td>
+                <td class="text-center">SLS-C231110-00001</td>
+                <td class="text-center">배송 완료</td>
+                <td class="text-center">입고전</td>
+                <td class="text-center">수정 승인(<span>1</span>)</td>
+                <td class="text-center"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex flex-direction-column gap-2">
+            <button type="button" class="btn btn-gray">일괄 입고</button>
+            <button type="button" class="btn btn-primary">수정 승인 요청</button>
+          </div>
+        </div>
+        <table class="table table-sticky table-bordered mt-6">
+          <colgroup>
+            <col width="110px">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">수정요청<br> 내용</th>
+              <td class="text-center">
+                <textarea name="" id="" class="form-control">
+                  UL03PK YL 5EA 발주하였는데 배송된 제품은 UL03PK DB 임
+                  NL03P1 BK 6EA 발주하였으나, 배송된 제품은 5EA 임
+                  발주하지 않은 Universal Lock Key 3 5 EA  포함되어 있음
+                </textarea>
+              </td>
+          </tbody>
+        </table>
+        <div class="scroll-layout mt-6" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">
+                  <div class="form-check conter-content">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </th>
+                <th class="text-center">수정<br>차수</th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">수정사유</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">
+                    CSK-UL10
+                  </td>
+                  <td class="text-center">
+                    UBS Port Lock
+                  </td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NL</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>NEW</option>
+                      <option value="1">Existing</option>
+                    </select>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>HART4TECH</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NN Group</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer justify-content-between gap-2">
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-primary">선택 수정</button>
+          <button type="button" class="btn btn-gray">미 발주 입고</button>
+          <button type="button" class="btn btn-green">반품요청</button>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-primary">전표복사</button>
+          <button type="button" class="btn btn-green">Excel</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 입고 선택 수정 -->
+<div class="modal" tabindex="-1" id="modal-receiving-select-modify" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">입고 선택 수정</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="scroll-layout" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">
+                  <div class="form-check conter-content">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </th>
+                <th class="text-center"></th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">수정사유</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>제품변경</option>
+                      <option value="">패턴변경</option>
+                      <option value="">수량변경</option>
+                      <option value="">제품변경</option>
+                      <option value="">발주삭제</option>
+                    </select>
+                  </td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">CSK-UL10</td>
+                  <td class="text-center">UBS Port Lock</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span>NL</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <select class="form-select form-sm">
+                      <option selected>NEW</option>
+                      <option value="1">Existing</option>
+                    </select>
+                  </td>
+                  <td class="text-center">HART4TECH</td>
+                  <td class="text-center"> NN Group</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">
+                    <div class="hstack gap-2">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">적용</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
 </div>

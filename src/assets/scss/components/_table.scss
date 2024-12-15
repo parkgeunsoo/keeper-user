@@ -1,6 +1,6 @@
 .table {
   margin-bottom: 0;
-  border-top: 2px solid $dark;
+  border-top: 1px solid $dark;
   @include media-breakpoint-down(md) {
     @include typography(13px);
   }
@@ -31,6 +31,7 @@
   tfoot{
     td{
       background-color: var(--green50);
+      font-weight: 700;
     }
   }
 }
@@ -125,7 +126,7 @@
 .scroll-layout {
   overflow: auto;
   .table {
-    min-width: 1400px;
+    min-width: 1600px;
   }
 }
 
@@ -150,5 +151,23 @@
   margin-bottom: 16px;
   .table {
     border-top: $border-color;
+  }
+}
+
+.green50-bg{
+  td{
+    background-color: var(--green50);
+  }
+}
+.green200-bg{
+  td{
+    background-color: var(--green200);
+  }
+}
+.table-bordered2 {
+  thead {
+    th {
+      background: var(--gray7);
+    }
   }
 }
