@@ -118,7 +118,7 @@
                                                     data-bs-toggle="modal" data-bs-target="#modal-">
                                                     <i class="icon-search"></i>
                                                 </button>
-                                                <div class="list p-1">
+                                                <div class="list">
                                                     <ul class="d-flex gap-1 flex-column">
                                                         <li class="d-flex align-items-center">
                                                             <p>NL-Hart4Technology</p>
@@ -139,7 +139,7 @@
                                                     data-bs-toggle="modal" data-bs-target="#modal-final-customer">
                                                     <i class="icon-search"></i>
                                                 </button>
-                                                <div class="list p-1">
+                                                <div class="list">
                                                     <ul class="d-flex gap-1 flex-column">
                                                         <li class="d-flex align-items-center">
                                                             <p>BAE SYSTEMS</p>
@@ -160,7 +160,7 @@
                                                     data-bs-toggle="modal" data-bs-target="#modal-select-product">
                                                     <i class="icon-search"></i>
                                                 </button>
-                                                <div class="list p-1">
+                                                <div class="list">
                                                     <ul class="d-flex gap-1 flex-column">
                                                         <li class="d-flex align-items-center">
                                                             <p>USB PROT LOCK AB</p>
@@ -183,68 +183,160 @@
                         </div>
                         <div class="scroll-layout">
                             <div class="scroll-content">
-                                <table class="table table-hover">
+                                <table class="table">
                                     <thead>
-                                        <th class="text-center">선택</th>
-                                        <th class="text-center">발주 구분</th>
-                                        <th class="text-center">묶음배송</th>
+                                        <th class="text-center">번호</th>
+                                        <th class="text-center">발주<br>구분</th>
                                         <th class="text-center">발주번호</th>
-                                        <th class="text-center">발주처리 단계</th>
-                                        <th class="text-center">발주 수정<br>상태</th>
+                                        <th class="text-center">발주 처리 단계</th>
+                                        <th class="text-center">수정 현황</th>
                                         <th class="text-center">수정<br>차수</th>
-                                        <th class="text-center">발주 취소/<br>배송 정보 수정</th>
-                                        <th class="text-center">발주<br>수량</th>
-                                        <th class="text-center">발주금액</th>
-                                        <th class="text-center">배송방법</th>
-                                        <th class="text-center">발송일<br>(발송정보)</th>
-                                        <th class="text-center">서류<br>선적</th>
-                                        <th class="text-center">배송완료</th>
-                                        <th class="text-center">입고단계</th>
+                                        <th class="text-center">수정요청번호</th>
+                                        <th class="text-center">승인일시</th>
+                                        <th class="text-center">수정 번호</th>
+                                        <th class="text-center">승인관리자</th>
                                     </thead>
                                     <tbody>
-                                        @@for( i=1; i < 4; i++){ <tr>
-                                            <td class="text-center">
-                                                <div class="form-check conter-content">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="flexCheckDefault" />
-                                                </div>
+                                        <!-- 3줄 -->
+                                        <tr>
+                                            <td class="text-center" rowspan="3">1</td>
+                                            <td class="text-center" rowspan="3">일반</td>
+                                            <td class="text-center" rowspan="3">
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-order-modify-details">2023/10/06-1</a>
                                             </td>
+                                            <td class="text-center" rowspan="3">발송완료</td>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center" rowspan="3">
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <!-- //3줄 -->
+
+                                        <!-- 2줄 -->
+                                        <tr>
+                                            <td class="text-center" rowspan="2">1</td>
+                                            <td class="text-center" rowspan="2">일반</td>
+                                            <td class="text-center" rowspan="2">
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-order-modify-details">2023/10/06-1</a>
+                                            </td>
+                                            <td class="text-center" rowspan="2">발송완료</td>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center" rowspan="2">
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                수정 승인(<span>2</span>)
+                                            </td>
+                                            <td class="text-center">
+                                                1
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)">2022/09/20</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
+                                            </td>
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <!-- //2줄 -->
+
+                                        <!-- 1줄 -->
+                                        <tr>
+                                            <td class="text-center">1</td>
                                             <td class="text-center">일반</td>
-                                            <td class="text-center">묶음배송</td>
                                             <td class="text-center">
                                                 <a href="javascript:void(0)" data-bs-toggle="modal"
                                                     data-bs-target="#modal-order-modify-details">2023/10/06-1</a>
                                             </td>
+                                            <td class="text-center">발송완료</td>
                                             <td class="text-center">
-                                                <span>발주 완료</span>
+                                                수정 승인(<span>2</span>)
                                             </td>
                                             <td class="text-center">
-                                                수정요청(<span>2</span>)
+                                                1
                                             </td>
                                             <td class="text-center">
-                                                <a href="javascript:void(0)">2</a>
+                                                <a href="javascript:void(0)">2022/09/20</a>
                                             </td>
                                             <td class="text-center">
-                                                <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                    data-bs-target="#modal-product-order-info">배송정보 수정요청</a>
-                                            </td>
-                                            <td class="text-center">653</td>
-                                            <td class="text-center">6,545,000</td>
-                                            <td class="text-center">DHL</td>
-                                            <td class="text-center">
-                                                <a href="javascript:void(0)">22/09/20</a>
+                                                <span>23-10-06</span>
+                                                /
+                                                <span>14:21:00</span>
                                             </td>
                                             <td class="text-center">
-                                                <a href="javascript:void(0)">보기</a>
+                                                <a href="javascript:void(0)">2023/10/06-1-R02</a>
                                             </td>
-                                            <td class="text-center">
-                                                22/09/20
-                                            </td>
-                                            <td class="text-center">
-                                                <a href="" class="text-danger">입고 처리 바로가기</a>
-                                            </td>
-                                            </tr>
-                                            }
+                                            <td class="text-center">오진욱</td>
+                                        </tr>
+                                        <!-- //1줄 -->
                                     </tbody>
                                 </table>
                             </div>

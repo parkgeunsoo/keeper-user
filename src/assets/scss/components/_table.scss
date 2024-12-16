@@ -9,9 +9,10 @@
     vertical-align: middle;
   }
   th {
-    @include typography(14px, 600);
+    @include typography(14px, 700);
     line-height: 1.4;
     white-space: nowrap;
+    color: #21282F;
   }
   td {
     color: $text-secondary;

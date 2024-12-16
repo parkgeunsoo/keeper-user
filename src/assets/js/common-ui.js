@@ -107,6 +107,7 @@ let Common = {
     this.buttonDatepicker();
     this.inputDelete();
     this.globalModal();
+    this.search();
   },
   datepicker: function () {
     $("[data-picker='date']").datepicker({
@@ -171,6 +172,42 @@ let Common = {
           firstModal.classList.remove("modal-static");
           firstModal.style.pointerEvents = ""; // 클릭 가능하게 복구
         }
+      });
+    });
+  },
+  search: function (){
+    $(document).ready(function () {
+      const $searchInput = $('.search-form');
+      const $searchResultBox = $('.search-result-box');
+      const $clearButton = $('.clear-button');
+    
+      // 입력 이벤트
+      $searchInput.on('input', function () {
+        const inputValue = $(this).val().trim();
+    
+        if (inputValue) {
+          $searchResultBox.show(); // 검색 결과 표시
+        } else {
+          $searchResultBox.hide(); // 검색 결과 숨기기
+        }
+      });
+    
+      // 클리어 버튼 클릭 이벤트
+      $clearButton.on('click', function () {
+        $searchInput.val(''); // 입력 필드 초기화
+        $searchResultBox.hide(); // 검색 결과 숨기기
+      });
+    
+      // 입력 필드 외부 클릭 시 검색 결과 숨기기
+      $(document).on('click', function (event) {
+        if (!$(event.target).closest('.form-field').length) {
+          $searchResultBox.hide(); // 검색 결과 숨기기
+        }
+      });
+    
+      // 검색 결과 클릭 방지 (외부 클릭으로 처리되지 않도록)
+      $searchResultBox.on('click', function (event) {
+        event.stopPropagation();
       });
     });
   }

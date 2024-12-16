@@ -83,7 +83,7 @@
     }
     .form-control{
       padding-left: 36px;
-      padding-right: 34px;
+      padding-right: 16px;
       @include media-breakpoint-up(lg) {
         min-width: 240px;
       }
@@ -94,7 +94,7 @@
       ul{
         .result{
           padding: 8px 12px;
-          font-size: 15px;
+          font-size: 13px;
           .search-word{
             font-weight: 600;
             color: $brand;

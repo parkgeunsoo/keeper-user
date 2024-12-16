@@ -789,7 +789,6 @@
   </div>
 </div>
 
-
 <!-- modal: 아이디/패스워드 찾기 -->
 <div class="modal" tabindex="-1" id="modal-fide-pw" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
@@ -815,7 +814,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- modal: 회원 정보 수정 -->
 <div class="modal" tabindex="-1" id="modal-signup" data-bs-backdrop="static">
@@ -2752,8 +2750,6 @@
   </script>
 </div>
 
-
-
 <!-- modal: 최종 고객사 검색-->
 <div class="modal" tabindex="-1" id="modal-final-customer">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
@@ -2816,6 +2812,7 @@
     </div>
   </div>
 </div>
+
 <!-- modal: 판매 현황 조회-->
 <div class="modal" tabindex="-1" id="modal-sales-status" data-bs-backdrop="static" data-overlap="true">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
@@ -2892,7 +2889,7 @@
                       data-bs-target="#modal-">
                       <i class="icon-search"></i>
                     </button>
-                    <div class="list p-1">
+                    <div class="list">
                       <ul class="d-flex gap-1 flex-column">
                         <li class="d-flex align-items-center">
                           <p>NL-Hart4Technology</p>
@@ -2913,7 +2910,7 @@
                       data-bs-target="#modal-">
                       <i class="icon-search"></i>
                     </button>
-                    <div class="list p-1">
+                    <div class="list">
                       <ul class="d-flex gap-1 flex-column">
                         <li class="d-flex align-items-center">
                           <p>BAE SYSTEMS</p>
@@ -2934,7 +2931,7 @@
                       data-bs-target="#modal-select-product">
                       <i class="icon-search"></i>
                     </button>
-                    <div class="list p-1">
+                    <div class="list">
                       <ul class="d-flex gap-1 flex-column">
                         <li class="d-flex align-items-center">
                           <p>USB PROT LOCK AB</p>
@@ -3067,7 +3064,6 @@
     });
   </script>
 </div>
-
 
 <!-- modal: 제품 발송 정보 -->
 <div class="modal" tabindex="-1" id="modal-product-order-info" data-bs-backdrop="static">
@@ -3890,7 +3886,7 @@
             <tr>
               <td class="text-center">기타</td>
               <td class="text-center"></td>
-              <td class="text-center">/td>
+              <td class="text-center"></td>
               <td class="text-center"><a download="">다운로드</a></td>
             </tr>
           </tbody>
@@ -4181,16 +4177,12 @@
         <!-- //container -->
       </div>
       <div class="modal-footer justify-content-between gap-2">
-        <div class="d-flex gap-2">
-          <button type="button" class="btn btn-primary">선택 수정</button>
-          <button type="button" class="btn btn-gray">미 발주 입고</button>
-          <button type="button" class="btn btn-green">반품요청</button>
-        </div>
-        <div class="d-flex gap-2">
-          <button type="button" class="btn btn-primary">전표복사</button>
-          <button type="button" class="btn btn-green">Excel</button>
-          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
-        </div>
+        <button type="button" class="btn btn-primary">선택 수정</button>
+        <button type="button" class="btn btn-gray">미 발주 입고</button>
+        <button type="button" class="btn btn-green">반품요청</button>
+        <button type="button" class="btn btn-primary">전표복사</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>
@@ -4319,6 +4311,2014 @@
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">적용</button>
         <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 입고 수정 요청 내역 -->
+<div class="modal" tabindex="-1" id="modal-receipt-modify-request" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">입고 수정 요청 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-sticky table-bordered mt-6">
+          <colgroup>
+            <col width="110px">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">수정요청<br> 내용</th>
+              <td class="text-center">
+                <textarea name="" id=""
+                  class="form-control">UL03PK YL SEA 발주하였는데 배송된 제품은 UL03PK DB 임 NL03P1 BK 6EA 발주하였으나, 배송된 제품은 SEA임</textarea>
+              </td>
+          </tbody>
+        </table>
+        <div class="scroll-layout mt-6" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">선택</th>
+                <th class="text-center"></th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">수정사유</th>
+                <th class="text-center">구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">단가</th>
+                <th class="text-center">공급가</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">` + i + `</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">CSK-UL10</td>
+                  <td class="text-center">UBS Port Lock</td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center">-</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">1,327</td>
+                  <td class="text-center">132,700</td>
+                  <td class="text-center">NL</td>
+                  <td class="text-center">NEW</td>
+                  <td class="text-center">HART4TECH</td>
+                  <td class="text-center">NN Group</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">358,440</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 제품 선택 (패턴 선택)-->
+<div class="modal" tabindex="-1" id="modal-pattern-order-product" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">제품 선택</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- 1depth -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="product-pro4" data-bs-toggle="tab" data-bs-target="#tab-product-pro4"
+              type="button" role="tab" aria-controls="tab-product-pro4" aria-selected="true">PRO</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-ess4" data-bs-toggle="tab" data-bs-target="#tab-product-ess4"
+              type="button" role="tab" aria-controls="tab-product-ess4" aria-selected="false">ESS</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-sample4" data-bs-toggle="tab" data-bs-target="#tab-product-sample4"
+              type="button" role="tab" aria-controls="tab-product-sample4" aria-selected="false">SAMPLE</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-etc4" data-bs-toggle="tab" data-bs-target="#tab-product-etc4"
+              type="button" role="tab" aria-controls="tab-product-etc4" aria-selected="false">ETC</button>
+          </li>
+        </ul>
+
+        <!-- 1depth 컨텐츠 -->
+        <div class="tab-content">
+          <!-- PRO -->
+          <div class="tab-pane fade show active" id="tab-product-pro4" role="tabpanel" aria-labelledby="product-pro4">
+            <!-- 2depth -->
+            <ul class="nav nav-pills mt-6" id="myTab2" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="usb-port4" data-bs-toggle="tab" data-bs-target="#tab-usb-port4"
+                  type="button" role="tab" aria-controls="tab-usb-port4" aria-selected="true">USB Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="network-port4" data-bs-toggle="tab" data-bs-target="#tab-network-port4"
+                  type="button" role="tab" aria-controls="tab-network-port4" aria-selected="false">Network
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fiber-optic4" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic4"
+                  type="button" role="tab" aria-controls="tab-fiber-optic4" aria-selected="false">Fiber Optic
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-port4" data-bs-toggle="tab" data-bs-target="#tab-other-port4"
+                  type="button" role="tab" aria-controls="tab-other-port4" aria-selected="false">Other Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="anti-theft4" data-bs-toggle="tab" data-bs-target="#tab-anti-theft4"
+                  type="button" role="tab" aria-controls="tab-anti-theft4" aria-selected="false">Anti-Theft for
+                  Computer</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory4" data-bs-toggle="tab" data-bs-target="#tab-memory4" type="button"
+                  role="tab" aria-controls="tab-memory4" aria-selected="false">Memory</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lock-key4" data-bs-toggle="tab" data-bs-target="#tab-lock-key4"
+                  type="button" role="tab" aria-controls="tab-lock-key4" aria-selected="false">Lock KEY</button>
+              </li>
+            </ul>
+            <!-- 2depth 컨텐츠 -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-usb-port4" role="tabpanel" aria-labelledby="usb-port4">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-network-port4" role="tabpanel" aria-labelledby="network-port4">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-fiber-optic4" role="tabpanel" aria-labelledby="fiber-optic4">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-other-port4" role="tabpanel" aria-labelledby="other-port4"></div>
+              <div class="tab-pane fade" id="tab-anti-theft4" role="tabpanel" aria-labelledby="anti-theft4"></div>
+              <div class="tab-pane fade" id="tab-memory4" role="tabpanel" aria-labelledby="memory4"></div>
+              <div class="tab-pane fade" id="tab-lock-key4" role="tabpanel" aria-labelledby="lock-key4"></div>
+            </div>
+            <div class="scroll-layout mt-6">
+              <div class="scroll-content">
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <th class="text-center">패턴</th>
+                      <th class="text-center">ALL</th>
+                      <th class="text-center">AB</th>
+                      <th class="text-center">AD</th>
+                      <th class="text-center">AC</th>
+                      <th class="text-center">AE​</th>
+                      <th class="text-center">AF</th>
+                      <th class="text-center">AG</th>
+                      <th class="text-center">AH</th>
+                      <th class="text-center">AI</th>
+                      <th class="text-center">AJ</th>
+                      <th class="text-center">AL</th>
+                      <th class="text-center">AM</th>
+                      <th class="text-center">AN</th>
+                      <th class="text-center">AR</th>
+                      <th class="text-center">AS</th>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        선택
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">패턴</th>
+                      <th class="text-center">BE</th>
+                      <th class="text-center">BF</th>
+                      <th class="text-center">BG</th>
+                      <th class="text-center">BH</th>
+                      <th class="text-center">BI</th>
+                      <th class="text-center">BQ</th>
+                      <th class="text-center">BR</th>
+                      <th class="text-center">CE</th>
+                      <th class="text-center">CF</th>
+                      <th class="text-center">CH</th>
+                      <th class="text-center">CI</th>
+                      <th class="text-center">CQ</th>
+                      <th class="text-center">CR</th>
+                      <th class="text-center">JR</th>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        선택
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //container -->
+            </div>
+          </div>
+
+          <!-- ESS -->
+          <div class="tab-pane fade" id="tab-product-ess4" role="tabpanel" aria-labelledby="product-ess4">
+            <!-- 2depth -->
+            <ul class="nav nav-pills mt-6" id="myTab3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="usb-port11" data-bs-toggle="tab" data-bs-target="#tab-usb-port11"
+                  type="button" role="tab" aria-controls="tab-usb-port11" aria-selected="true">USB Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="network-port11" data-bs-toggle="tab" data-bs-target="#tab-network-port11"
+                  type="button" role="tab" aria-controls="tab-network-port11" aria-selected="false">Network
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fiber-optic11" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic11"
+                  type="button" role="tab" aria-controls="tab-fiber-optic11" aria-selected="false">Fiber Optic
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-port11" data-bs-toggle="tab" data-bs-target="#tab-other-port11"
+                  type="button" role="tab" aria-controls="tab-other-port11" aria-selected="false">Other Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="anti-theft11" data-bs-toggle="tab" data-bs-target="#tab-anti-theft11"
+                  type="button" role="tab" aria-controls="tab-anti-theft11" aria-selected="false">Anti-Theft for
+                  Computer</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory11" data-bs-toggle="tab" data-bs-target="#tab-memory11" type="button"
+                  role="tab" aria-controls="tab-memory11" aria-selected="false">Memory</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lock-key11" data-bs-toggle="tab" data-bs-target="#tab-lock-key11"
+                  type="button" role="tab" aria-controls="tab-lock-key11" aria-selected="false">Lock KEY</button>
+              </li>
+            </ul>
+            <!-- 2depth 컨텐츠 -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-usb-port11" role="tabpanel" aria-labelledby="usb-port11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-network-port11" role="tabpanel" aria-labelledby="network-port11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-fiber-optic11" role="tabpanel" aria-labelledby="fiber-optic11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-other-port11" role="tabpanel" aria-labelledby="other-port11"></div>
+              <div class="tab-pane fade" id="tab-anti-theft11" role="tabpanel" aria-labelledby="anti-theft11"></div>
+              <div class="tab-pane fade" id="tab-memory11" role="tabpanel" aria-labelledby="memory11"></div>
+              <div class="tab-pane fade" id="tab-lock-key11" role="tabpanel" aria-labelledby="lock-key11"></div>
+            </div>
+          </div>
+
+          <!-- SAMPLE -->
+          <div class="tab-pane fade" id="tab-product-sample4" role="tabpanel" aria-labelledby="product-sample4">
+          </div>
+          <!-- ETC -->
+          <div class="tab-pane fade" id="tab-product-etc4" role="tabpanel" aria-labelledby="product-etc4">
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-end mt-6 gap-2">
+          <button type="button" class="btn btn-primary">적용</button>
+          <button type="button" class="btn btn-danger">삭제</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $(".product-content").click(function () {
+        $(this)
+          .toggleClass("active")
+      });
+    });
+  </script>
+</div>
+
+
+<!-- modal: 제품 선택 (2패턴 선택)-->
+<div class="modal" tabindex="-1" id="modal-pattern2-order-product" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">제품 선택</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- 1depth -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="product-pro5" data-bs-toggle="tab" data-bs-target="#tab-product-pro5"
+              type="button" role="tab" aria-controls="tab-product-pro5" aria-selected="true">PRO</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-ess5" data-bs-toggle="tab" data-bs-target="#tab-product-ess5"
+              type="button" role="tab" aria-controls="tab-product-ess5" aria-selected="false">ESS</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-sample5" data-bs-toggle="tab" data-bs-target="#tab-product-sample5"
+              type="button" role="tab" aria-controls="tab-product-sample5" aria-selected="false">SAMPLE</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-etc5" data-bs-toggle="tab" data-bs-target="#tab-product-etc5"
+              type="button" role="tab" aria-controls="tab-product-etc5" aria-selected="false">ETC</button>
+          </li>
+        </ul>
+
+        <!-- 1depth 컨텐츠 -->
+        <div class="tab-content">
+          <!-- PRO -->
+          <div class="tab-pane fade show active" id="tab-product-pro5" role="tabpanel" aria-labelledby="product-pro5">
+            <!-- 2depth -->
+            <ul class="nav nav-pills mt-6" id="myTab2" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="usb-port5" data-bs-toggle="tab" data-bs-target="#tab-usb-port5"
+                  type="button" role="tab" aria-controls="tab-usb-port5" aria-selected="true">USB Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="network-port5" data-bs-toggle="tab" data-bs-target="#tab-network-port5"
+                  type="button" role="tab" aria-controls="tab-network-port5" aria-selected="false">Network
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fiber-optic5" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic5"
+                  type="button" role="tab" aria-controls="tab-fiber-optic5" aria-selected="false">Fiber Optic
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-port5" data-bs-toggle="tab" data-bs-target="#tab-other-port5"
+                  type="button" role="tab" aria-controls="tab-other-port5" aria-selected="false">Other Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="anti-theft5" data-bs-toggle="tab" data-bs-target="#tab-anti-theft5"
+                  type="button" role="tab" aria-controls="tab-anti-theft5" aria-selected="false">Anti-Theft for
+                  Computer</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory5" data-bs-toggle="tab" data-bs-target="#tab-memory5" type="button"
+                  role="tab" aria-controls="tab-memory5" aria-selected="false">Memory</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lock-key5" data-bs-toggle="tab" data-bs-target="#tab-lock-key5"
+                  type="button" role="tab" aria-controls="tab-lock-key5" aria-selected="false">Lock KEY</button>
+              </li>
+            </ul>
+            <!-- 2depth 컨텐츠 -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-usb-port5" role="tabpanel" aria-labelledby="usb-port5">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-network-port5" role="tabpanel" aria-labelledby="network-port5">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-fiber-optic5" role="tabpanel" aria-labelledby="fiber-optic5">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-other-port5" role="tabpanel" aria-labelledby="other-port5"></div>
+              <div class="tab-pane fade" id="tab-anti-theft5" role="tabpanel" aria-labelledby="anti-theft5"></div>
+              <div class="tab-pane fade" id="tab-memory5" role="tabpanel" aria-labelledby="memory5"></div>
+              <div class="tab-pane fade" id="tab-lock-key5" role="tabpanel" aria-labelledby="lock-key5"></div>
+            </div>
+            <div class="scroll-layout mt-6">
+              <div class="scroll-content">
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <th class="text-center">1차 패턴</th>
+                      <th class="text-center">ALL</th>
+                      <th class="text-center">AB</th>
+                      <th class="text-center">AD</th>
+                      <th class="text-center">AC</th>
+                      <th class="text-center">AE​</th>
+                      <th class="text-center">AF</th>
+                      <th class="text-center">AG</th>
+                      <th class="text-center">AH</th>
+                      <th class="text-center">AI</th>
+                      <th class="text-center">AJ</th>
+                      <th class="text-center">AL</th>
+                      <th class="text-center">AM</th>
+                      <th class="text-center">AN</th>
+                      <th class="text-center">AR</th>
+                      <th class="text-center">AS</th>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        선택
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault8" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault9" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault10" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault11" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault12" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault13" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault14" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault14" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">패턴</th>
+                      <th class="text-center">BE</th>
+                      <th class="text-center">BF</th>
+                      <th class="text-center">BG</th>
+                      <th class="text-center">BH</th>
+                      <th class="text-center">BI</th>
+                      <th class="text-center">BQ</th>
+                      <th class="text-center">BR</th>
+                      <th class="text-center">CE</th>
+                      <th class="text-center">CF</th>
+                      <th class="text-center">CH</th>
+                      <th class="text-center">CI</th>
+                      <th class="text-center">CQ</th>
+                      <th class="text-center">CR</th>
+                      <th class="text-center">JR</th>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        선택
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault15" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault16" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault17" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault18" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault19" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault20" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault21" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault22" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault23" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault24" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault25" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault26" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault27" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault28" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="text-center">2차 패턴</th>
+                      <th class="text-center">ALL</th>
+                      <th class="text-center">QL(02)</th>
+                      <th class="text-center">QB(03)</th>
+                      <th class="text-center">QC(04)</th>
+                      <th class="text-center">QD(05)</th>
+                      <th class="text-center">TA(01)</th>
+                      <th class="text-center">TL(02)</th>
+                      <th class="text-center">TB(03)</th>
+                      <th class="text-center">TC(04)</th>
+                      <th class="text-center">TC(04)</th>
+                      <th class="text-center">TD(05)</th>
+                      <th class="text-center">TE(06)</th>
+                      <th class="text-center">TF(07)</th>
+                      <th class="text-center">TG(08)</th>
+                      <th class="text-center">TH(09)</th>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        선택
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check conter-content">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //container -->
+            </div>
+          </div>
+
+          <!-- ESS -->
+          <div class="tab-pane fade" id="tab-product-ess5" role="tabpanel" aria-labelledby="product-ess5">
+            <!-- 2depth -->
+            <ul class="nav nav-pills mt-6" id="myTab3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="usb-port11" data-bs-toggle="tab" data-bs-target="#tab-usb-port11"
+                  type="button" role="tab" aria-controls="tab-usb-port11" aria-selected="true">USB Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="network-port11" data-bs-toggle="tab" data-bs-target="#tab-network-port11"
+                  type="button" role="tab" aria-controls="tab-network-port11" aria-selected="false">Network
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="fiber-optic11" data-bs-toggle="tab" data-bs-target="#tab-fiber-optic11"
+                  type="button" role="tab" aria-controls="tab-fiber-optic11" aria-selected="false">Fiber Optic
+                  Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="other-port11" data-bs-toggle="tab" data-bs-target="#tab-other-port11"
+                  type="button" role="tab" aria-controls="tab-other-port11" aria-selected="false">Other Port</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="anti-theft11" data-bs-toggle="tab" data-bs-target="#tab-anti-theft11"
+                  type="button" role="tab" aria-controls="tab-anti-theft11" aria-selected="false">Anti-Theft for
+                  Computer</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="memory11" data-bs-toggle="tab" data-bs-target="#tab-memory11" type="button"
+                  role="tab" aria-controls="tab-memory11" aria-selected="false">Memory</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lock-key11" data-bs-toggle="tab" data-bs-target="#tab-lock-key11"
+                  type="button" role="tab" aria-controls="tab-lock-key11" aria-selected="false">Lock KEY</button>
+              </li>
+            </ul>
+            <!-- 2depth 컨텐츠 -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-usb-port11" role="tabpanel" aria-labelledby="usb-port11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-network-port11" role="tabpanel" aria-labelledby="network-port11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-fiber-optic11" role="tabpanel" aria-labelledby="fiber-optic11">
+                <div class="scroll-layout">
+                  <div class="scroll-content">
+                    <table class="table table-bordered table-sticky mt-6">
+                      <tbody>
+                        <tr>
+                          <td class="text-center pt-2 pb-2">
+                            <div class="product-list">
+                              <div class="product-content">
+                                <p class="product-tab-title">USB포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">링크락허브</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">보안젠더</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB폐쇄락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Mini USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">Micro USB-B 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="product-content">
+                                <p class="product-tab-title">USB-C 포트락 플러스</p>
+                                <p class="product-name">CSK-UL10</p>
+                                <div class="product-img">
+                                  <img src="@@webRoot/assets/images/@landscape.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-other-port11" role="tabpanel" aria-labelledby="other-port11"></div>
+              <div class="tab-pane fade" id="tab-anti-theft11" role="tabpanel" aria-labelledby="anti-theft11"></div>
+              <div class="tab-pane fade" id="tab-memory11" role="tabpanel" aria-labelledby="memory11"></div>
+              <div class="tab-pane fade" id="tab-lock-key11" role="tabpanel" aria-labelledby="lock-key11"></div>
+            </div>
+          </div>
+
+          <!-- SAMPLE -->
+          <div class="tab-pane fade" id="tab-product-sample5" role="tabpanel" aria-labelledby="product-sample5">
+          </div>
+          <!-- ETC -->
+          <div class="tab-pane fade" id="tab-product-etc5" role="tabpanel" aria-labelledby="product-etc5">
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-end mt-6 gap-2">
+          <button type="button" class="btn btn-primary">적용</button>
+          <button type="button" class="btn btn-danger">삭제</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $(".product-content").click(function () {
+        $(this)
+          .toggleClass("active")
+      });
+    });
+  </script>
+</div>
+
+<!-- modal: 고객사 등록 -->
+<div class="modal" tabindex="-1" id="modal-client-registration" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">고객사 등록</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky">
+          <colgroup>
+            <col width="150px">
+            <col width="">
+            <col width="150px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                관리항목코드
+              </th>
+              <td class="text-center" colspan="3">
+                <input type="text" class="form-control" value="SLS-E-023479">
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">
+                고객사명
+              </th>
+              <td class="" colspan="3">
+                <div class="d-flex align-items-center gap-1">
+                  <input type="text" class="form-control" value="SLS" style="width: 80px;">
+                  <div class="form-field search">
+                    <div class="input-form">
+                      <i class="icon-search"></i>
+                      <input type="text" class="form-control search-form" placeholder="placeholder"
+                        style="min-width: 120px;">
+                      <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
+                    </div>
+                    <div class="search-result-box">
+                      <ul>
+                        <li class="result">CH</li>
+                        <li class="result">CH</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" value="" placeholder="xxxxxx">
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">발송 수정</button>
       </div>
     </div>
   </div>
