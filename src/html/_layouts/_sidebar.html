@@ -82,13 +82,13 @@
           <div class="depth2-heading">판매입력 / 조회</div>
           <ul class="depth2">
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '일반 발주') {active}">
-                일반 발주
+              <a href="" class="sidebar-link @@if (context.dep2 === '판매 입력') {active}">
+                판매 입력
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '위탁 발주') {active}">
-                위탁 발주
+              <a href="" class="sidebar-link @@if (context.dep2 === '판매 데이터') {active}">
+                판매 데이터
               </a>
             </li>
           </ul>
@@ -120,28 +120,11 @@
         </div>
       </li>
       <li class="sidebar-item">
-        <a href="#" data-bs-target="#gnb-serial" data-bs-toggle="collapse"
+        <a href="@@webRoot/html/serial/serial-management.html"
           class="sidebar-link @@if (context.dep1 === '시리얼 관리') {active}"
           aria-expanded="@@if (context.dep1 === '시리얼 관리') {true}">
-          <i class="icon-aside-05"></i>
-          <span>시리얼 관리</span>
+          <i class="icon-aside-05"></i><span>시리얼 관리</span>
         </a>
-        <div id="gnb-serial" data-bs-parent="#sidevarNav"
-          class="accordion-collapse collapse @@if (context.dep1 === '시리얼 관리') {show}">
-          <div class="depth2-heading">시리얼 관리</div>
-          <ul class="depth2">
-            <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '일반 발주') {active}">
-                일반 발주
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '위탁 발주') {active}">
-                위탁 발주
-              </a>
-            </li>
-          </ul>
-        </div>
       </li>
       <li class="sidebar-item">
         <a href="#" data-bs-target="#gnb-payment" data-bs-toggle="collapse"

@@ -41,6 +41,7 @@
   border: 1px solid #eee;
   &.active {
     outline: 2px solid var(--orange500);
+    .product-name{background-color: $gray7;}
   }
   .product-tab-title {
     font-size: 16px;
@@ -93,5 +94,37 @@
     max-width: 400px;
     margin: 8px 0;
     display: block;
+  }
+}
+.serial-wrap{
+  display: flex;
+  align-items: start;
+  gap: 36px;
+  p{flex-shrink: 0;}
+}
+.serial-code{
+  width: 80%;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  .code-wrap{
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 4px;
+  }
+}
+.cnt{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  .cnt-box{
+    width: 120px;
+    background-color: $gray7;
+    padding: 4px 12px;
+    border-radius: 4px;
   }
 }

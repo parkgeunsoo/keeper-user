@@ -177,6 +177,12 @@ let Common = {
   },
   search: function (){
     $(document).ready(function () {
+      $(".product-content").click(function () {
+        $(this)
+          .toggleClass("active")
+      });
+    });
+    $(document).ready(function () {
       const $searchInput = $('.search-form');
       const $searchResultBox = $('.search-result-box');
       const $clearButton = $('.clear-button');

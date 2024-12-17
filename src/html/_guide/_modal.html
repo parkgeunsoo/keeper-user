@@ -1953,14 +1953,7 @@
       </div>
     </div>
   </div>
-  <script>
-    $(document).ready(function () {
-      $(".product-content").click(function () {
-        $(this)
-          .toggleClass("active")
-      });
-    });
-  </script>
+
 </div>
 
 <!-- modal: 발주 제품 선택 -->
@@ -2740,14 +2733,6 @@
       </div>
     </div>
   </div>
-  <script>
-    $(document).ready(function () {
-      $(".product-content").click(function () {
-        $(this)
-          .toggleClass("active")
-      });
-    });
-  </script>
 </div>
 
 <!-- modal: 최종 고객사 검색-->
@@ -5273,14 +5258,6 @@
       </div>
     </div>
   </div>
-  <script>
-    $(document).ready(function () {
-      $(".product-content").click(function () {
-        $(this)
-          .toggleClass("active")
-      });
-    });
-  </script>
 </div>
 
 
@@ -6253,14 +6230,7 @@
       </div>
     </div>
   </div>
-  <script>
-    $(document).ready(function () {
-      $(".product-content").click(function () {
-        $(this)
-          .toggleClass("active")
-      });
-    });
-  </script>
+
 </div>
 
 <!-- modal: 고객사 등록 -->
@@ -6298,8 +6268,7 @@
                   <div class="form-field search">
                     <div class="input-form">
                       <i class="icon-search"></i>
-                      <input type="text" class="form-control search-form" placeholder="placeholder"
-                        style="min-width: 120px;">
+                      <input type="text" class="form-control search-form" placeholder="" style="min-width: 120px;">
                       <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
                     </div>
                     <div class="search-result-box">
@@ -6319,6 +6288,481 @@
       </div>
       <div class="modal-footer gap-2">
         <button type="button" class="btn btn-primary">발송 수정</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 유통사 수정 -->
+<div class="modal" tabindex="-1" id="modal-distributor-modify" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">유통사 수정</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky">
+          <colgroup>
+            <col width="150px">
+            <col width="">
+            <col width="150px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center">
+                고객사명
+              </th>
+              <td class="" colspan="3">
+                <div class="d-flex align-items-center gap-1">
+                  <input type="text" class="form-control" value="SLS" style="width: 80px;">
+                  <div class="form-field search">
+                    <div class="input-form">
+                      <i class="icon-search"></i>
+                      <input type="text" class="form-control search-form" placeholder="" style="min-width: 120px;">
+                      <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
+                    </div>
+                    <div class="search-result-box">
+                      <ul>
+                        <li class="result">CH</li>
+                        <li class="result">CH</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" value="" placeholder="xxxxxx">
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 신규 유통사 등록 -->
+<div class="modal" tabindex="-1" id="modal-new-distributor-registration" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">신규 유통사 등록</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-sticky">
+          <colgroup>
+            <col width="150px">
+            <col width="">
+            <col width="150px">
+            <col width="">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="" colspan="3">
+                <div class="d-flex align-items-center gap-1">
+                  <input type="text" class="form-control" value="SLS" style="width: 80px;">
+                  <div class="form-field search">
+                    <div class="input-form">
+                      <i class="icon-search"></i>
+                      <input type="text" class="form-control search-form" placeholder="국가코드" style="min-width: 120px;">
+                      <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
+                    </div>
+                    <div class="search-result-box">
+                      <ul>
+                        <li class="result">CH</li>
+                        <li class="result">CH</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" value="" placeholder="Distributor  Name">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 시리얼 등록 -->
+<div class="modal" tabindex="-1" id="modal-serial-registration">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">시리얼 등록</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 160px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">제품 선택</th>
+                <td>
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-select-product">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list">
+                      <ul class="d-flex gap-1 flex-column">
+                        <li class="d-flex align-items-center">
+                          <p class="">06AS4B00</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="serial-wrap">
+          <div class="serial-code">
+            <p>시리얼코드</p>
+            <div class="code-wrap" style="max-height:262px;overflow-y:auto;">
+              <div>
+                <a href="javascript:void(0)">CSK20AM4M024</a>
+              </div>
+              <div>
+                <a href="javascript:void(0)">CSK20AM4M025</a>
+              </div>
+              <div>
+                <a href="javascript:void(0)">CSK20AM4M026</a>
+              </div>
+              <div>
+                <a href="javascript:void(0)">CSK20AM4M027</a>
+              </div>
+              <div>
+                <a href="javascript:void(0)">CSK20AM4M028</a>
+              </div>
+              <div>
+                <a href="javascript:void(0)">CSK20AM4M029</a>
+              </div>
+            </div>
+          </div>
+          <div class="cnt">
+            <p>생성수량</p>
+            <div class="cnt-box">
+              6
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 시리얼 수정 -->
+<div class="modal" tabindex="-1" id="modal-serial-modify">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">시리얼 수정</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 160px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">품목</th>
+                <td>
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-select-product">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list">
+                      <ul class="d-flex gap-1 flex-column">
+                        <li class="d-flex align-items-center">
+                          <p class="">USB PROT LOCK 4 AB
+                          </p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="max-height:362px;overflow-y:auto;">
+          <table class="table table-hover table-bordered table-sticky">
+            <thead>
+              <tr>
+                <th class="text-center">변경전 시리얼 번호</th>
+                <th class="text-center">변경후 시리어 번호</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <a href="javascript:void(0)">CSK20AM4M024</a>
+                </td>
+                <td class="text-center">
+                  <input type="text" class="form-control">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">저장</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 시리얼 조회-->
+<div class="modal" tabindex="-1" id="modal-serial-check">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">시리얼 조회</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 160px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="text" class="form-control" value="">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-2 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-gray">검색</button>
+              <button type="button" class="btn btn-outline-gray px-2" aria-label="초기화">
+                <i class="icon-reset"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style="max-height:362px;overflow-y:auto;">
+          <table class="table table-hover table-bordered table-sticky">
+            <thead>
+              <tr>
+                <th class="text-center">
+                  선택
+                </th>
+                <th class="text-center">시리얼 번호</th>
+                <th class="text-center">품목</th>
+                <th class="text-center">패턴</th>
+                <th class="text-center">판매조회</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <input class="form-check-input" type="checkbox">
+                </td>
+                <td class="text-center">CSK25AS5B021</td>
+                <td class="text-center">Universal LOCK KEY 5</td>
+                <td class="text-center">AB</td>
+                <td class="text-center">
+                  <a href="javascript:void(0)">2024/01/15</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center" colspan="5">등록된 데이터가 없습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-primary">선택적용</button>
+        <button type="button" class="btn btn-secondary">신규</button>
+        <button type="button" class="btn btn-outline-danger">삭제</button>
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal: 일반 발주 입고 리스트 -->
+<div class="modal" tabindex="-1" id="modal-order-received" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">일반 발주 입고 리스트</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 216px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">기준일자​</th>
+                <td>
+                  <div class="d-flex justify-content-between">
+                    <div class="row g-2 align-items-center">
+                      <div class="col-auto">
+                        <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                        <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                        <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                        <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                        <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                        <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                      <div class="col-auto">~</div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-gray btn-show-select">검색조건</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center">발주구분</th>
+                <td>
+                  <div class="py-2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="idStateType" id="idState1">
+                      <label class="form-check-label" for="idState1">PRO</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="idStateType" id="idState2">
+                      <label class="form-check-label" for="idState2">ESS</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="idStateType" id="idState3">
+                      <label class="form-check-label" for="idState3">Sample</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="idStateType" id="idState4">
+                      <label class="form-check-label" for="idState4">ETC</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="show-select-box">
+                <th class="text-center">제품 선택</th>
+                <td>
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-select-product">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list">
+                      <ul class="d-flex gap-1 flex-column">
+                        <li class="d-flex align-items-center">
+                          <p>USB PROT LOCK AB</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                        <li class="d-flex align-items-center">
+                          <p>USB PROT LOCK AB</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-2 align-items-center justify-content-end">
+            <button type="button" class="btn btn-gray">검색</button>
+          </div>
+        </div>
+        <div class="scroll-layout">
+          <div class="scroll-content">
+            <table class="table mt-6">
+              <thead>
+                <th class="text-center">선택</th>
+                <th class="text-center">발주<br>구분</th>
+                <th class="text-center">발주번호</th>
+                <th class="text-center">발주처리 단계</th>
+                <th class="text-center">발주<br>수량</th>
+                <th class="text-center">발주금액</th>
+                <th class="text-center">배송<br>방법</th>
+                <th class="text-center">발송일</th>
+                <th class="text-center">배송<br>완료일</th>
+                <th class="text-center">서류<br>선적</th>
+                <th class="text-center">입고단계</th>
+                <th class="text-center">입고번호</th>
+              </thead>
+              <tbody>
+                @@for(i=1; i < 4; i++){ <tr>
+                  <td class="text-center">`+ i +`</td>
+                  <td class="text-center">일반</td>
+                  <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+                  <td class="text-center">배송완료</td>
+                  <td class="text-center">422</td>
+                  <td class="text-center">4,860,000</td>
+                  <td class="text-center">SLS</td>
+                  <td class="text-center">23/05/21</td>
+                  <td class="text-center">23/05/21</td>
+                  <td class="text-center"><a href="javascript:void(0)">보기</a></td>
+                  <td class="text-center">입고 완료</td>
+                  <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+                  </tr>
+                  }
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mt-6 ">
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
       </div>
     </div>
   </div>

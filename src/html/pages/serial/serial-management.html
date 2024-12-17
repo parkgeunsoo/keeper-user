@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "시리얼 관리", "dep2":"시리얼 관리"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "시리얼 관리", "dep2":"시리얼 관리"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">시리얼 관리</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered table-sticky">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">기준일자​</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="radio" class="btn-check" id="type1"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-dark btn-sm" for="type1">1개월</label>
+                                                        <input type="radio" class="btn-check" id="type2"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-dark btn-sm" for="type2">6개월</label>
+                                                        <input type="radio" class="btn-check" id="type3"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-dark btn-sm" for="type3">1년</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control form-sm"
+                                                            placeholder="YYYY.MM.DD" data-picker="date" />
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control form-sm"
+                                                            placeholder="YYYY.MM.DD" data-picker="date" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-gray"
+                                                        id="btn-srch-con1">검색조건</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-srch">
+                                        <th class="text-center">유통사</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#modal-new-distributor-registration">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list">
+                                                    <ul class="d-flex gap-1 flex-column">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>ACP</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-srch">
+                                        <th class="text-center">최종고객사</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-final-customer">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list">
+                                                    <ul class="d-flex gap-1 flex-column">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>BAE SYSTEMS</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide-srch">
+                                        <th class="text-center">시리얼</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-select-product">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list">
+                                                    <ul class="d-flex gap-1 flex-column">
+                                                        <li class="d-flex align-items-center">
+                                                            <p class="text-danger">06AS4B00</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex mt-2 align-items-center justify-content-end">
+                                <div class="hstack gap-2">
+                                    <button type="button" class="btn btn-gray">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-layout">
+                            <div class="scroll-content">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th class="text-center">번호</th>
+                                        <th class="text-center">시리얼 번호</th>
+                                        <th class="text-center">품목</th>
+                                        <th class="text-center">패턴</th>
+                                        <th class="text-center">판매번호</th>
+                                    </thead>
+                                    <tbody>
+                                        @@for( i=1; i < 4; i++){ <tr>
+                                            <td class="text-center">
+                                                <div class="form-check conter-content">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" />
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-serial-modify">CSK20AM4M024</a>
+                                            </td>
+                                            <td class="text-center">Universal LOCK KEY 4</td>
+                                            <td class="text-center">
+                                                AM
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-product-order-info">23/10/15</a>
+                                            </td>
+                                            </tr>
+                                            }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //container -->
+                        </div>
+                        <div class="btn-groups d-flex justify-content-end gap-2 mt-4">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modal-serial-registration">신규</button>
+                            <button type="button" class="btn btn-outline-danger">선택삭제</button>
+                            <button type="button" class="btn btn-green">Excel</button>
+                        </div>
+                        @@include('@@webRoot/html/_components/_pagination.html')
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+        <script>
+            $(document).ready(function () {
+                $('.hide-srch').hide();
+                $('#btn-srch-con1').click(function () {
+                    $('.hide-srch').toggle(); // 요소 보이기/숨기기 전환
+                });
+            });
+        </script>
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>
