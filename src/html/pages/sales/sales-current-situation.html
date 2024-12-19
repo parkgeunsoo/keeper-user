@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "판매입력 / 조회", "dep2":"판매 현황 조회"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "판매입력 / 조회", "dep2":"판매 현황 조회"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">판매 현황 조회</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered table-sticky">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">기준일자​</th>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="radio" class="btn-check" id="type1"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type1">1개월</label>
+                                                        <input type="radio" class="btn-check" id="type2"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type2">6개월</label>
+                                                        <input type="radio" class="btn-check" id="type3"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type3">1년</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control" placeholder="YYYY.MM.DD"
+                                                            data-picker="date" />
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control" placeholder="YYYY.MM.DD"
+                                                            data-picker="date" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button"
+                                                        class="btn btn-gray btn-show-select">검색조건</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="show-select-box">
+                                        <th class="text-center">유통사</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#modal-new-distributor-registration">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list">
+                                                    <ul class="d-flex gap-1">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>ACP</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="show-select-box">
+                                        <th class="text-center">최종고객사</th>
+                                        <td colspan="3">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-final-customer">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list">
+                                                    <ul class="d-flex gap-1">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>BAE SYSTEMS</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="show-select-box">
+                                        <th class="text-center">제품 선택</th>
+                                        <td>
+                                            <div class="d-flex align-items-start justify-content-between gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-select-product">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list position-relative">
+                                                    <ul class="d-flex gap-1">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="dot-btn">
+                                                        <button type="button" class="px-1 btn-short" aria-label="줄임">
+                                                            <i class="icon-short"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex mt-2 align-items-center justify-content-end">
+                                <div class="hstack gap-2">
+                                    <button type="button" class="btn btn-gray">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-layout" style="max-height:400px;">
+                            <div class="scroll-content">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th class="text-center">판매번호</th>
+                                        <th class="text-center">구분</th>
+                                        <th class="text-center">연결전표</th>
+                                        <th class="text-center">구분</th>
+                                        <th class="text-center">품목명</th>
+                                        <th class="text-center">패턴</th>
+                                        <th class="text-center">수량</th>
+                                        <th class="text-center">국가</th>
+                                        <th class="text-center">유통사</th>
+                                        <th class="text-center">최종고객사</th>
+                                        <th class="text-center">지사/부서</th>
+                                        <th class="text-center">시리얼</th>
+                                        <th class="text-center">비고</th>
+                                    </thead>
+                                    <tbody>
+                                        @@for( i=1; i < 5; i++){ <tr>
+                                            <td class="text-center"> <a href="">2023/10/06</a></td>
+                                            <td class="text-center">발주입력</td>
+                                            <td class="text-center">
+                                                <a href="">2023/10/06-1</a>
+                                            </td>
+                                            <td class="text-center">PRO</td>
+                                            <td class="text-center">USB포트락</td>
+                                            <td class="text-center">AB</td>
+                                            <td class="text-center">40</td>
+                                            <td class="text-center">UK</td>
+                                            <td class="text-center">NL-Hart4Technology</td>
+                                            <td class="text-center">SLS(UK)-BAE SYSTEMS</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">추가입력</td>
+                                            </tr>
+                                            }
+                                            <tr class="green50-bg">
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center" colspan="4">2022/10 계</td>
+                                                <td class="text-center">118</td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"> <a href="">2023/10/06</a></td>
+                                                <td class="text-center">발주입력</td>
+                                                <td class="text-center">
+                                                    <a href="">2023/10/06-1</a>
+                                                </td>
+                                                <td class="text-center">PRO</td>
+                                                <td class="text-center">USB포트락</td>
+                                                <td class="text-center">AB</td>
+                                                <td class="text-center">40</td>
+                                                <td class="text-center">UK</td>
+                                                <td class="text-center">NL-Hart4Technology</td>
+                                                <td class="text-center">SLS(UK)-BAE SYSTEMS</td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                            </tr>
+                                            <tr class="green200-bg">
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center" colspan="4">합계</td>
+                                                <td class="text-center">164</td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                                <td class="text-center"></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+        <script>
+            $(document).ready(function () {
+                $(".show-select-box").hide();
+                $(".btn-show-select").click(function () {
+                    $(".show-select-box").show();
+                });
+                $(".btn-hide-select").click(function () {
+                    $(".show-select-box").hide();
+                });
+                $(".btn-short").click(function () {
+                    $(".show-select-box .list ul").toggleClass("short");
+                });
+            });
+        </script>
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

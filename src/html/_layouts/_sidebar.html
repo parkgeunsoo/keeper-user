@@ -82,13 +82,21 @@
           <div class="depth2-heading">판매입력 / 조회</div>
           <ul class="depth2">
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '판매 입력') {active}">
+              <a href="@@webRoot/html/pages/sales/sales-input.html"
+                class="sidebar-link @@if (context.dep2 === '판매 입력') {active}">
                 판매 입력
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="" class="sidebar-link @@if (context.dep2 === '판매 데이터') {active}">
+              <a href="@@webRoot/html/pages/sales/sales-data.html"
+                class="sidebar-link @@if (context.dep2 === '판매 데이터') {active}">
                 판매 데이터
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="@@webRoot/html/pages/sales/sales-current-situation.html"
+                class="sidebar-link @@if (context.dep2 === '판매 현황 조회') {active}">
+                판매 현황 조회
               </a>
             </li>
           </ul>

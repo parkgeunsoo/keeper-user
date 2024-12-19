@@ -2875,7 +2875,7 @@
                       <i class="icon-search"></i>
                     </button>
                     <div class="list">
-                      <ul class="d-flex gap-1 flex-column">
+                      <ul class="d-flex gap-1">
                         <li class="d-flex align-items-center">
                           <p>NL-Hart4Technology</p>
                           <button type="button" class="px-1" aria-label="삭제">
@@ -2896,7 +2896,7 @@
                       <i class="icon-search"></i>
                     </button>
                     <div class="list">
-                      <ul class="d-flex gap-1 flex-column">
+                      <ul class="d-flex gap-1">
                         <li class="d-flex align-items-center">
                           <p>BAE SYSTEMS</p>
                           <button type="button" class="px-1" aria-label="삭제">
@@ -2917,7 +2917,7 @@
                       <i class="icon-search"></i>
                     </button>
                     <div class="list">
-                      <ul class="d-flex gap-1 flex-column">
+                      <ul class="d-flex gap-1">
                         <li class="d-flex align-items-center">
                           <p>USB PROT LOCK AB</p>
                           <button type="button" class="px-1" aria-label="삭제">
@@ -4162,12 +4162,16 @@
         <!-- //container -->
       </div>
       <div class="modal-footer justify-content-between gap-2">
-        <button type="button" class="btn btn-primary">선택 수정</button>
-        <button type="button" class="btn btn-gray">미 발주 입고</button>
-        <button type="button" class="btn btn-green">반품요청</button>
-        <button type="button" class="btn btn-primary">전표복사</button>
-        <button type="button" class="btn btn-green">Excel</button>
-        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        <div class="hstack gap-2">
+          <button type="button" class="btn btn-primary">선택 수정</button>
+          <button type="button" class="btn btn-gray">미 발주 입고</button>
+          <button type="button" class="btn btn-green">반품요청</button>
+        </div>
+        <div class="hstack gap-2">
+          <button type="button" class="btn btn-primary">전표복사</button>
+          <button type="button" class="btn btn-green">Excel</button>
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
       </div>
     </div>
   </div>
@@ -4321,6 +4325,7 @@
                 <textarea name="" id=""
                   class="form-control">UL03PK YL SEA 발주하였는데 배송된 제품은 UL03PK DB 임 NL03P1 BK 6EA 발주하였으나, 배송된 제품은 SEA임</textarea>
               </td>
+            </tr>
           </tbody>
         </table>
         <div class="scroll-layout mt-6" style="max-height:400px;">
@@ -6420,7 +6425,7 @@
                       <i class="icon-search"></i>
                     </button>
                     <div class="list">
-                      <ul class="d-flex gap-1 flex-column">
+                      <ul class="d-flex gap-1">
                         <li class="d-flex align-items-center">
                           <p class="">06AS4B00</p>
                           <button type="button" class="px-1" aria-label="삭제">
@@ -6501,7 +6506,7 @@
                       <i class="icon-search"></i>
                     </button>
                     <div class="list">
-                      <ul class="d-flex gap-1 flex-column">
+                      <ul class="d-flex gap-1">
                         <li class="d-flex align-items-center">
                           <p class="">USB PROT LOCK 4 AB
                           </p>
@@ -6631,80 +6636,75 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
         <div class="filter-wrap">
           <table class="table table-bordered table-sticky">
             <colgroup>
+              <col style="width: 216px">
+              <col>
               <col style="width: 216px">
               <col>
             </colgroup>
             <tbody>
               <tr>
                 <th class="text-center">기준일자​</th>
-                <td>
-                  <div class="d-flex justify-content-between">
+                <td colspan="3">
+                  <div class="d-flex align-items-center justify-content-between">
                     <div class="row g-2 align-items-center">
                       <div class="col-auto">
                         <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
-                        <label class="btn btn-outline-secondary btn-sm" for="type1">1개월</label>
+                        <label class="btn btn-dark btn-sm" for="type1">1개월</label>
                         <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
-                        <label class="btn btn-outline-secondary btn-sm" for="type2">6개월</label>
+                        <label class="btn btn-dark btn-sm" for="type2">6개월</label>
                         <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
-                        <label class="btn btn-outline-secondary btn-sm" for="type3">1년</label>
+                        <label class="btn btn-dark btn-sm" for="type3">1년</label>
                       </div>
                       <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD" data-picker="date" />
                       </div>
                       <div class="col-auto">~</div>
                       <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                        <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD" data-picker="date" />
                       </div>
                     </div>
                     <div class="col-auto">
-                      <button type="button" class="btn btn-gray btn-show-select">검색조건</button>
+                      <button type="button" class="btn btn-gray" id="btn-srch-con2">검색조건</button>
                     </div>
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr class="hide-srch">
                 <th class="text-center">발주구분</th>
-                <td>
+                <td colspan="3">
                   <div class="py-2">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="idStateType" id="idState1">
+                      <input class="form-check-input" type="checkbox" value="" id="idState1">
                       <label class="form-check-label" for="idState1">PRO</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="idStateType" id="idState2">
+                      <input class="form-check-input" type="checkbox" value="" id="idState2">
                       <label class="form-check-label" for="idState2">ESS</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="idStateType" id="idState3">
+                      <input class="form-check-input" type="checkbox" value="" id="idState3">
                       <label class="form-check-label" for="idState3">Sample</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="idStateType" id="idState4">
+                      <input class="form-check-input" type="checkbox" value="" id="idState4">
                       <label class="form-check-label" for="idState4">ETC</label>
                     </div>
                   </div>
                 </td>
               </tr>
-              <tr class="show-select-box">
-                <th class="text-center">제품 선택</th>
-                <td>
+              <tr class="hide-srch">
+                <th class="text-center">제품 선택​</th>
+                <td colspan="3">
                   <div class="d-flex align-items-start gap-2">
                     <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
                       data-bs-target="#modal-select-product">
                       <i class="icon-search"></i>
                     </button>
                     <div class="list">
-                      <ul class="d-flex gap-1 flex-column">
-                        <li class="d-flex align-items-center">
-                          <p>USB PROT LOCK AB</p>
-                          <button type="button" class="px-1" aria-label="삭제">
-                            <i class="icon-input-close"></i>
-                          </button>
-                        </li>
+                      <ul class="d-flex gap-1">
                         <li class="d-flex align-items-center">
                           <p>USB PROT LOCK AB</p>
                           <button type="button" class="px-1" aria-label="삭제">
@@ -6713,14 +6713,15 @@
                         </li>
                       </ul>
                     </div>
-
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
           <div class="d-flex mt-2 align-items-center justify-content-end">
-            <button type="button" class="btn btn-gray">검색</button>
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-gray">검색</button>
+            </div>
           </div>
         </div>
         <div class="scroll-layout">
@@ -6763,6 +6764,284 @@
         <div class="d-flex justify-content-end mt-6 ">
           <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
         </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.hide-srch').hide();
+      $('#btn-srch-con2').click(function () {
+        $('.hide-srch').toggle(); // 요소 보이기/숨기기 전환
+      });
+    });
+  </script>
+</div>
+
+<!-- modal: 위탁 정산 리스트 -->
+<div class="modal" tabindex="-1" id="modal-consignment-adjustment" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">위탁 정산 리스트</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="filter-wrap">
+          <table class="table table-bordered table-sticky">
+            <colgroup>
+              <col style="width: 216px">
+              <col>
+              <col style="width: 216px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="text-center">기준일자​</th>
+                <td colspan="3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="row g-2 align-items-center">
+                      <div class="col-auto">
+                        <input type="radio" class="btn-check" id="type1" autocomplete="off" name="dayType">
+                        <label class="btn btn-dark btn-sm" for="type1">1개월</label>
+                        <input type="radio" class="btn-check" id="type2" autocomplete="off" name="dayType">
+                        <label class="btn btn-dark btn-sm" for="type2">6개월</label>
+                        <input type="radio" class="btn-check" id="type3" autocomplete="off" name="dayType">
+                        <label class="btn btn-dark btn-sm" for="type3">1년</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                      <div class="col-auto">~</div>
+                      <div class="col-auto">
+                        <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD" data-picker="date" />
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-gray" id="btn-srch-con2">검색조건</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hide-srch">
+                <th class="text-center">발주구분</th>
+                <td colspan="3">
+                  <div class="py-2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState1">
+                      <label class="form-check-label" for="idState11">PRO</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState2">
+                      <label class="form-check-label" for="idState12">ESS</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState3">
+                      <label class="form-check-label" for="idState13">Sample</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="idState4">
+                      <label class="form-check-label" for="idState14">ETC</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="hide-srch">
+                <th class="text-center">제품 선택​</th>
+                <td colspan="3">
+                  <div class="d-flex align-items-start gap-2">
+                    <button type="button" class="btn btn-outline-gray p-1" aria-label="검색" data-bs-toggle="modal"
+                      data-bs-target="#modal-select-product">
+                      <i class="icon-search"></i>
+                    </button>
+                    <div class="list">
+                      <ul class="d-flex gap-1">
+                        <li class="d-flex align-items-center">
+                          <p>USB PROT LOCK AB</p>
+                          <button type="button" class="px-1" aria-label="삭제">
+                            <i class="icon-input-close"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-2 align-items-center justify-content-end">
+            <div class="hstack gap-2">
+              <button type="button" class="btn btn-gray">검색</button>
+            </div>
+          </div>
+        </div>
+        <table class="table mt-6">
+          <thead>
+            <th class="text-center">번호</th>
+            <th class="text-center">정산월</th>
+            <th class="text-center">정산여부</th>
+            <th class="text-center">정산번호</th>
+            <th class="text-center">구분</th>
+          </thead>
+          <tbody>
+            @@for(i=1; i < 4; i++){ <tr>
+              <td class="text-center">`+ i +`</td>
+              <td class="text-center">2023년 10월</td>
+              <td class="text-center">정산완료</td>
+              <td class="text-center"><a href="javascript:void(0)">2024/10/24-1</a></td>
+              <td class="text-center">PRO</td>
+              </tr>
+              }
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-end mt-6 ">
+          <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.hide-srch').hide();
+      $('#btn-srch-con2').click(function () {
+        $('.hide-srch').toggle(); // 요소 보이기/숨기기 전환
+      });
+    });
+  </script>
+</div>
+
+<!-- modal: 판매 세부 내역 -->
+<div class="modal" tabindex="-1" id="modal-sales-detail" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">판매 세부 내역</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-sticky table-bordered mt-6">
+          <colgroup>
+            <col width="110px">
+            <col>
+            <col width="110px">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th class="text-center"><span class="text-danger">*</span>판매일자</th>
+              <td class="text-center"> <input type="text" class="form-control w-100" placeholder="YYYY.MM.DD"
+                  data-picker="date" /></td>
+              <th class="text-center"><span class="text-danger">*</span>판매번호</th>
+              <td class="text-center"><input type="text" class="form-control" value="SLS-S240627-0000" readonly> </td>
+            </tr>
+            <tr>
+              <th class="text-center">메모</th>
+              <td class="text-center" colspan="3">
+                <textarea name="" id="" class="form-control"></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="scroll-layout mt-6" style="max-height:400px;">
+          <div class="scroll-content">
+            <table class="table table-hover">
+              <thead>
+                <th class="text-center">선택</th>
+                <th class="text-center"></th>
+                <th class="text-center">입력구분</th>
+                <th class="text-center">상품<br>구분</th>
+                <th class="text-center">모델명</th>
+                <th class="text-center">제품명</th>
+                <th class="text-center">패턴<br>​(컬러)​</th>
+                <th class="text-center">2차<br>패턴</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">국가</th>
+                <th class="text-center">신규여부</th>
+                <th class="text-center">유통사</th>
+                <th class="text-center">최종고객사</th>
+                <th class="text-center">지사/부서</th>
+                <th class="text-center">시리얼</th>
+                <th class="text-center">비고</th>
+              </thead>
+              <tbody>
+                @@for( i=1; i < 4; i++){ <tr>
+                  <td class="text-center">
+                    <div class="form-check conter-content">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-center">발주입력</td>
+                  <td class="text-center">PRO</td>
+                  <td class="text-center">
+                    CSK-UL10
+                  </td>
+                  <td class="text-center">
+                    UBS Port Lock
+                  </td>
+                  <td class="text-center">AB</td>
+                  <td class="text-center"></td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">UK</td>
+                  <td class="text-center">NEW</td>
+                  <td class="text-center">
+                    <div class="hstack gap-2 justify-content-center">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    NN Group
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2 justify-content-center">
+                      <span></span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <div class="hstack gap-2 justify-content-center">
+                      <span>CSK20AM4M</span>
+                      <button type="button" class="btn btn-outline-gray p-1" aria-label="검색">
+                        <i class="icon-search"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text-center"></td>
+                  </tr>
+                  }
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-center">합계</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center">127</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <div class="modal-footer gap-2">
+        <button type="button" class="btn btn-green">Excel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">닫기</button>
       </div>
     </div>
   </div>

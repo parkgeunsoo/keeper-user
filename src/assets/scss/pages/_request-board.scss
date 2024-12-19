@@ -128,3 +128,12 @@
     border-radius: 4px;
   }
 }
+.list{
+  width: 100%;
+  >.d-flex{
+    width: 100%; flex-flow: wrap;
+    li.d-flex{
+      width: calc(20% - 10px);
+    }
+  }
+}

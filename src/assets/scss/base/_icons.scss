@@ -51,6 +51,11 @@
   height: 14px;
   background-image: url('../images/icon-search.svg');
 }
+.icon-short {
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/icon-short.svg');
+}
 /* 16px 아이콘 */
 $icons-16px: input-mail, input-key, check, inf, reply, more-arrow;
 @each $icon in $icons-16px {
