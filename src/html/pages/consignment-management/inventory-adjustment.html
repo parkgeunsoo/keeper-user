@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "위탁 관리", "dep2":"위탁 재고 조정"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "위탁 관리", "dep2":"위탁 재고 조정"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">위탁 재고 조정</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered table-sticky">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">기준일자​</th>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="radio" class="btn-check" id="type1"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type1">1개월</label>
+                                                        <input type="radio" class="btn-check" id="type2"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type2">6개월</label>
+                                                        <input type="radio" class="btn-check" id="type3"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type3">1년</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control" placeholder="YYYY.MM.DD"
+                                                            data-picker="date" />
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control" placeholder="YYYY.MM.DD"
+                                                            data-picker="date" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button"
+                                                        class="btn btn-gray btn-show-select">검색조건</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">구분</th>
+                                        <td>
+                                            <div class="py-2">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState1">
+                                                    <label class="form-check-label" for="idState1">ALL</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState2">
+                                                    <label class="form-check-label" for="idState2">PRO</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState3">
+                                                    <label class="form-check-label" for="idState3">ESS</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState4">
+                                                    <label class="form-check-label" for="idState4">Sample</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState5">
+                                                    <label class="form-check-label" for="idState5">ETC</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="show-select-box">
+                                        <th class="text-center">제품 선택</th>
+                                        <td>
+                                            <div class="d-flex align-items-start justify-content-between gap-2">
+                                                <button type="button" class="btn btn-outline-gray p-1" aria-label="검색"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-select-product">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                                <div class="list position-relative">
+                                                    <ul class="d-flex gap-1">
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <p>USB PROT LOCK AB</p>
+                                                            <button type="button" class="px-1" aria-label="삭제">
+                                                                <i class="icon-input-close"></i>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="dot-btn">
+                                                        <button type="button" class="px-1 btn-short" aria-label="줄임">
+                                                            <i class="icon-short"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex mt-2 align-items-center justify-content-end">
+                                <div class="hstack gap-2">
+                                    <button type="button" class="btn btn-gray">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-layout" style="max-height:500px;">
+                            <div class="scroll-content">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th class="text-center">조정요청일</th>
+                                        <th class="text-center">구분</th>
+                                        <th class="text-center">모델명</th>
+                                        <th class="text-center">제품명</th>
+                                        <th class="text-center">1차 패턴<br>(컬러)</th>
+                                        <th class="text-center">2차<br>패턴</th>
+                                        <th class="text-center">전산재고</th>
+                                        <th class="text-center">수정수량</th>
+                                        <th class="text-center">조정 후<br>수량</th>
+                                        <th class="text-center">정산적용</th>
+                                        <th class="text-center">승인/거절<br>일자</th>
+                                        <th class="text-center">승인내역</th>
+                                        <th class="text-center">승인<br>관리자</th>
+                                        <th class="text-center">비고</th>
+                                    </thead>
+                                    <tbody>
+                                        @@for( i=1; i < 4; i++){ <tr>
+                                            <td class="text-center">2023-12-10</td>
+                                            <td class="text-center">PRO</td>
+                                            <td class="text-center">CSK-UL10</td>
+                                            <td class="text-center">USB PORT LOCK</td>
+                                            <td class="text-center">AB</td>
+                                            <td class="text-center">T02</td>
+                                            <td class="text-center">200</td>
+                                            <td class="text-center">-50</td>
+                                            <td class="text-center">950</td>
+                                            <td class="text-center">적용</td>
+                                            <td class="text-center">2023-11--06</td>
+                                            <td class="text-center">조정 승인</td>
+                                            <td class="text-center">장승근</td>
+                                            <td class="text-center">재고조정</td>
+                                            </tr>
+                                            }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //container -->
+                        </div>
+                        @@include('@@webRoot/html/_components/_pagination.html')
+                        <div class="btn-groups d-flex justify-content-end gap-2 mt-4">
+                            <button type="button" class="btn btn-primary">신규 재고조정</button>
+                            <button type="button" class="btn btn-green">EXCEL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+        <script>
+            $(document).ready(function () {
+                $(".show-select-box").hide();
+                $(".btn-show-select").click(function () {
+                    $(".show-select-box").show();
+                });
+                $(".btn-hide-select").click(function () {
+                    $(".show-select-box").hide();
+                });
+                $(".btn-short").click(function () {
+                    $(".show-select-box .list ul").toggleClass("short");
+                });
+            });
+        </script>
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

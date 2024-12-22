@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "결재 관리"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "결재 관리"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">결재 관리</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered table-sticky">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">기준일자​</th>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="row g-2 align-items-center">
+                                                    <div class="col-auto">
+                                                        <input type="radio" class="btn-check" id="type1"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type1">1개월</label>
+                                                        <input type="radio" class="btn-check" id="type2"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type2">6개월</label>
+                                                        <input type="radio" class="btn-check" id="type3"
+                                                            autocomplete="off" name="dayType">
+                                                        <label class="btn btn-outline-secondary btn-sm"
+                                                            for="type3">1년</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control" placeholder="YYYY.MM.DD"
+                                                            data-picker="date" />
+                                                    </div>
+                                                    <div class="col-auto">~</div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control" placeholder="YYYY.MM.DD"
+                                                            data-picker="date" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button"
+                                                        class="btn btn-gray btn-show-select">검색조건</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">발주 구분</th>
+                                        <td>
+                                            <div class="py-2">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState1">
+                                                    <label class="form-check-label" for="idState1">ALL</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState2">
+                                                    <label class="form-check-label" for="idState2">일반</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="idStateType"
+                                                        id="idState3">
+                                                    <label class="form-check-label" for="idState3">위탁</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex mt-2 align-items-center justify-content-end">
+                                <div class="hstack gap-2">
+                                    <button type="button" class="btn btn-gray">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-layout" style="max-height:500px;">
+                            <div class="scroll-content">
+                                <table class="table table-hover mt-2">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead class="bg-body-tertiary">
+                                        <th class="text-center">번호</th>
+                                        <th class="text-center">발주<br>구분</th>
+                                        <th class="text-center">연결전표</th>
+                                        <th class="text-center">진행상태</th>
+                                        <th class="text-center">입고(정산)일시</th>
+                                        <th class="text-center">금액</th>
+                                        <th class="text-center">결재예정일</th>
+                                        <th class="text-center">결재 등록</th>
+                                        <th class="text-center">증빙파일</th>
+                                        <th class="text-center">관리자<br>확인</th>
+                                        <th class="text-center">미수일</th>
+                                        <th class="text-center">관리자<br>메세지</th>
+                                    </thead>
+                                    <tbody>
+                                        @@for(i=1; i < 7; i++){ <tr class="cursor-pointer">
+                                            <td class="text-center">
+                                                `+i+`
+                                            </td>
+                                            <td>
+                                                위탁
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#">2023/12/06</a>
+                                            </td>
+                                            <td class="text-center">
+                                                정산완료
+                                            </td>
+                                            <td class="text-center">
+                                                <span>24-01-06</span> / <span>16:05:48</span>
+                                            </td>
+                                            <td class="text-center">
+                                                7,890,000
+                                            </td>
+                                            <td class="text-center">2023/12/30</td>
+                                            <td class="text-center">결재완료</td>
+                                            <td class="text-center"><a href="">보기</a></td>
+                                            <td class="text-center">Y</td>
+                                            <td class="text-center">
+                                                <span class="text-danger">-15</span>
+                                            </td>
+                                            <td class="text-center">-</td>
+                                            </tr>
+                                            }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //container -->
+                        </div>
+                        @@include('@@webRoot/html/_components/_pagination.html')
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>

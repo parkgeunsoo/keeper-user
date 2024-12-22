@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
+    <div id="wrap">
+        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "판매입력 / 조회", "dep2":"위탁 정산 등록"})
+        <main id="main">
+            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "판매입력 / 조회", "dep2":"위탁 정산 등록"})
+            <div id="container">
+                <div class="main-content">
+                    <div class="contents">
+                        <div class="page-top">
+                            <h1 class="page-title d-none d-lg-block">위탁 정산 등록</h1>
+                        </div>
+                        <div class="filter-wrap">
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col style="width: 216px">
+                                    <col>
+                                    <col style="width: 216px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">정산 대상 기간</th>
+                                        <td>
+                                            <input type="text" class="form-control form-sm" placeholder="YYYY.MM.DD"
+                                                data-picker="date" style="width: 160px;" />
+                                        </td>
+                                        <th class="text-center">담당자</th>
+                                        <td>
+                                            <input type="text" class="form-control form-sm" value="엄완식" readonly />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">요청사항</th>
+                                        <td colspan="3">
+                                            <textarea name="" id="" class="form-control form-sm"
+                                                style="height: 90px;"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btn-groups d-flex justify-content-end gap-2 mb-4">
+                            <button type="button" class="btn btn-outline-danger btn-sm">선택 삭제</button>
+                            <button type="button" class="btn btn-dark btn-sm">정산자료 Upload</button>
+
+                        </div>
+                        <div class="scroll-layout">
+                            <div class="scroll-content">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th class="text-center">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault" />
+                                        </th>
+                                        <th class="text-center"></th>
+                                        <th class="text-center">구분</th>
+                                        <th class="text-center">모델명</th>
+                                        <th class="text-center">제품명</th>
+                                        <th class="text-center">패턴 (컬러)​</th>
+                                        <th class="text-center">2차 패턴​</th>
+                                        <th class="text-center">재고 수량</th>
+                                        <th class="text-center">정산 수량</th>
+                                        <th class="text-center">정산 금액</th>
+                                        <th class="text-center">국가</th>
+                                        <th class="text-center">신규여부</th>
+                                        <th class="text-center">유통사</th>
+                                        <th class="text-center">최종고객사</th>
+                                        <th class="text-center">지사/부서</th>
+                                        <th class="text-center">시리얼</th>
+                                        <th class="text-center">비고</th>
+                                    </thead>
+                                    <tbody>
+                                        @@for( i=1; i < 4; i++){ <tr>
+                                            <td class="text-center">
+                                                <div class="form-check conter-content">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" />
+                                                </div>
+                                            </td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center bg-gray7"></td>
+                                            <td class="text-center">
+                                                CSK-UL10
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="hstack gap-2">
+                                                    <span>UBS Port Lock</span>
+                                                    <button type="button" class="btn btn-outline-gray p-1"
+                                                        aria-label="검색" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-order-product">
+                                                        <i class="icon-search"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">AB</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center bg-gray7">800</td>
+                                            <td class="text-center">200</td>
+                                            <td class="text-center bg-gray7"></td>
+                                            <td class="text-center">NL</td>
+                                            <td class="text-center">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>NEW</option>
+                                                    <option value="1">NEW</option>
+                                                    <option value="2">NEW</option>
+                                                    <option value="3">NEW</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="hstack gap-2">
+                                                    <span></span>
+                                                    <button type="button" class="btn btn-outline-gray p-1"
+                                                        aria-label="검색" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-new-distributor-registration">
+                                                        <i class="icon-search"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="hstack gap-2">
+                                                    <span>NN Group</span>
+                                                    <button type="button" class="btn btn-outline-gray p-1"
+                                                        aria-label="검색" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-final-customer">
+                                                        <i class="icon-search"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">
+                                                <div class="hstack gap-2">
+                                                    <span></span>
+                                                    <button type="button" class="btn btn-outline-gray p-1"
+                                                        aria-label="검색" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-serial-registration">
+                                                        <i class="icon-search"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="text-center"></td>
+                                            </tr>
+                                            }
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td class="text-center">합계</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center">127</td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- //container -->
+                        </div>
+                        @@include('@@webRoot/html/_components/_pagination.html')
+                        <div class="btn-groups d-flex justify-content-end gap-2 mt-4">
+                            <button type="button" class="btn btn-primary">정산등록</button>
+                            <button type="button" class="btn btn-green">Excel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //main -->
+        </main>
+        @@include('@@webRoot/html/_layouts/_footer.html')
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_guide/_modal.html')
+</body>
+
+</html>
