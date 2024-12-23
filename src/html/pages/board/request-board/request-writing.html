@@ -2,133 +2,130 @@
 <html lang="ko">
 
 <head>
-    @@include('@@webRoot/html/_include/_head.html')
+  @@include('@@webRoot/html/_include/_head.html')
 </head>
 
 <body class="dashboard-body"> <!-- Dashboard에서만 클래스 추가 -->
-    <div id="wrap">
-        @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "요청 게시판", "dep2":"영업관련 요청"})
-        <main id="main">
-            @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "요청 게시판", "dep2":"영업관련 요청"})
-            <div id="container">
-                <div class="main-content">
-                    <!-- 단독 페이지 일때만 detail-page를 줘서 최소값 맞추기 -->
-                    <div class="contents detail-page">
-                        <div class="page-top">
-                            <h1 class="page-title d-none d-lg-block">영업관련 요청</h1>
-                        </div>
-                        <table class="table table-bordered table-sticky">
-                            <colgroup>
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                                <col width="11%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th class="text-center">메뉴</th>
-                                    <td class="text-center" colspan="2">
-                                        요청 게시판
-                                    </td>
-                                    <th class="text-center">게시판 소분류</th>
-                                    <td class="text-center" colspan="2">
-                                        영업관련 요청
-                                    </td>
-                                    <th class="text-center">작성자</th>
-                                    <td class="text-center" colspan="2">
-                                        엄완식
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-center">제목 </th>
-                                    <td class="text-center" colspan="5">
-                                        <input type="text" class="form-control">
-                                    </td>
-                                    <th class="text-center">등록일(수정일)</th>
-                                    <td class="text-center" colspan="2">
-                                        24/01/16
+  <div id="wrap">
+    @@include('@@webRoot/html/_layouts/_header.html', {"dep1": "요청 게시판", "dep2":"영업관련 요청"})
+    <main id="main">
+      @@include('@@webRoot/html/_layouts/_sidebar.html', { "dep1" : "요청 게시판", "dep2":"영업관련 요청"})
+      <div id="container">
+        <div class="main-content">
+          <!-- 단독 페이지 일때만 detail-page를 줘서 최소값 맞추기 -->
+          <div class="contents detail-page">
+            <table class="table table-bordered table-sticky">
+              <colgroup>
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+                <col width="11%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="text-center">메뉴</th>
+                  <td class="text-center" colspan="2">
+                    요청 게시판
+                  </td>
+                  <th class="text-center">게시판 소분류</th>
+                  <td class="text-center" colspan="2">
+                    영업관련 요청
+                  </td>
+                  <th class="text-center">작성자</th>
+                  <td class="text-center" colspan="2">
+                    엄완식
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">제목 </th>
+                  <td class="text-center" colspan="5">
+                    <input type="text" class="form-control">
+                  </td>
+                  <th class="text-center">등록일(수정일)</th>
+                  <td class="text-center" colspan="2">
+                    24/01/16
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="" colspan="9">
-                                        <div class="editor-wrap">
-                                            에디터영역
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="" colspan="9">
-                                        <div id="fileDropArea" class="file-drop-area">
-                                            <div class="d-flex align-items-center gap-4">
-                                                <i class="icon-file"></i>
-                                                <p>여기로 파일을 드래그하거나 클릭하여 업로드하세요.</p>
-                                            </div>
-                                            <input type="file" id="fileInput" class="file-input" multiple>
-                                            <ul id="fileList" class="file-list"></ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
-                            <button type="button" class="btn btn-primary">저장</button>
-                            <button type="button" class="btn btn-dark">취소</button>
-                        </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="" colspan="9">
+                    <div class="editor-wrap">
+                      에디터영역
                     </div>
-                </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="" colspan="9">
+                    <div id="fileDropArea" class="file-drop-area">
+                      <div class="d-flex align-items-center gap-4">
+                        <i class="icon-file"></i>
+                        <p>여기로 파일을 드래그하거나 클릭하여 업로드하세요.</p>
+                      </div>
+                      <input type="file" id="fileInput" class="file-input" multiple>
+                      <ul id="fileList" class="file-list"></ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex pt-6 align-items-center justify-content-end gap-2">
+              <button type="button" class="btn btn-primary">저장</button>
+              <button type="button" class="btn btn-dark">취소</button>
             </div>
-            <!-- //main -->
-        </main>
-        @@include('@@webRoot/html/_layouts/_footer.html')
-    </div>
-    <!-- //wrap -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropArea = document.getElementById("fileDropArea");
-            const fileInput = document.getElementById("fileInput");
-            const fileList = document.getElementById("fileList");
+          </div>
+        </div>
+      </div>
+      <!-- //main -->
+    </main>
+    @@include('@@webRoot/html/_layouts/_footer.html')
+  </div>
+  <!-- //wrap -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropArea = document.getElementById("fileDropArea");
+      const fileInput = document.getElementById("fileInput");
+      const fileList = document.getElementById("fileList");
 
-            // 드래그 이벤트
-            dropArea.addEventListener("dragover", (e) => {
-                e.preventDefault();
-                dropArea.classList.add("hover");
-            });
+      // 드래그 이벤트
+      dropArea.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropArea.classList.add("hover");
+      });
 
-            dropArea.addEventListener("dragleave", () => {
-                dropArea.classList.remove("hover");
-            });
+      dropArea.addEventListener("dragleave", () => {
+        dropArea.classList.remove("hover");
+      });
 
-            dropArea.addEventListener("drop", (e) => {
-                e.preventDefault();
-                dropArea.classList.remove("hover");
+      dropArea.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropArea.classList.remove("hover");
 
-                const files = e.dataTransfer.files;
-                handleFiles(files);
-            });
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+      });
 
-            // 클릭을 통한 파일 선택
-            fileInput.addEventListener("change", (e) => {
-                const files = e.target.files;
-                handleFiles(files);
-            });
+      // 클릭을 통한 파일 선택
+      fileInput.addEventListener("change", (e) => {
+        const files = e.target.files;
+        handleFiles(files);
+      });
 
-            // 파일 처리
-            function handleFiles(files) {
-                Array.from(files).forEach((file) => {
-                    const li = document.createElement("li");
-                    li.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
-                    fileList.appendChild(li);
-                });
-            }
+      // 파일 처리
+      function handleFiles(files) {
+        Array.from(files).forEach((file) => {
+          const li = document.createElement("li");
+          li.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+          fileList.appendChild(li);
         });
-    </script>
-    @@include('@@webRoot/html/_guide/_modal.html')
+      }
+    });
+  </script>
+  @@include('@@webRoot/html/_guide/_modal.html')
 </body>
 
 </html>

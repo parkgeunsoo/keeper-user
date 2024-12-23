@@ -13,9 +13,6 @@
             <div id="container">
                 <div class="main-content">
                     <div class="contents">
-                        <div class="page-top">
-                            <h1 class="page-title d-none d-lg-block">발주 조회&수정</h1>
-                        </div>
                         <div class="filter-wrap">
                             <table class="table table-bordered table-sticky">
                                 <colgroup>
@@ -150,13 +147,20 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="d-flex mt-2 align-items-center justify-content-end">
-                                <div class="hstack gap-2">
-                                    <button type="button" class="btn btn-gray">검색</button>
-                                </div>
+                            <div>
+                                <button type="button" class="btn btn-dark">검색</button>
                             </div>
                         </div>
-                        <div class="scroll-layout">
+                        <div class="d-flex align-items-center justify-content-between mb-4 mt-10">
+                            @@include('@@webRoot/html/_components/_pagination.html')
+                            <div class="btn-groups d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#modal-temporary-save">발주 삭제</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modal-order-cancel">발주 취소 요청</button>
+                            </div>
+                        </div>
+                        <div class="scroll-layout" style="max-height:500px">
                             <div class="scroll-content">
                                 <table class="table table-hover">
                                     <thead>
@@ -266,13 +270,7 @@
                             </div>
                             <!-- //container -->
                         </div>
-                        @@include('@@webRoot/html/_components/_pagination.html')
-                        <div class="btn-groups d-flex justify-content-end gap-2 mt-4">
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                                data-bs-target="#modal-temporary-save">발주 삭제</button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#modal-order-cancel">발주 취소 요청</button>
-                        </div>
+
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
   background-color: #fff;
   border-radius: 14px;
   padding: 24px 32px;
-  
+  min-height: calc(100vh - 170px);
   & + .contents {
     margin-top: 24px;
   }

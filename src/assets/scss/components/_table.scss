@@ -150,6 +150,9 @@
   border-radius: 8px;
   border: 1px solid $gray6;
   margin-bottom: 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
   .table {
     border-top: $border-color;
   }

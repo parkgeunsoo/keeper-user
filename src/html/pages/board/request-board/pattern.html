@@ -14,95 +14,92 @@
         <div class="main-content">
           <div class="contents">
             <div class="page-top">
-              <div class="w-100 hstack justify-content-between">
-                <h1 class="page-title d-none d-lg-block">패턴 및 제품 추가요청</h1>
+              <div class="w-100 hstack justify-content-end">
                 <button type="button" class="btn btn-primary"
                   onclick="document.location.href='pattern-writing.html'">글쓰기</button>
               </div>
             </div>
-            <div class="scroll-layout">
-              <div class="scroll-content">
-                <div class="table-top mb-10 gap-2 justify-content-end">
-                  <div class="hstack gap-2">
-                    <select class="form-select w-auto">
-                      <option selected="">제목</option>
-                      <option value="1"></option>
-                      <option value="2"></option>
-                    </select>
-                  </div>
-                  <div class="form-field search d-flex gap-2">
-                    <div class="input-form">
-                      <i class="icon-search"></i>
-                      <input type="text" class="form-control search-form" placeholder="제목">
-                      <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
-                    </div>
-                    <button type="button" class="btn btn-dark">검색</button>
-                  </div>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              @@include('@@webRoot/html/_components/_pagination.html')
+              <div class="table-top mb-0 gap-2 justify-content-end">
+                <div class="hstack gap-2">
+                  <select class="form-select w-auto">
+                    <option selected="">제목</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                  </select>
                 </div>
-                <table class="table table-hover table-sticky">
-                  <colgroup>
-                    <col>
-                    <col>
-                    <col width="30%">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th class="text-center">번호</th>
-                      <th class="text-center">구분</th>
-                      <th class="text-center">제목</th>
-                      <th class="text-center">첨부파일</th>
-                      <th class="text-center">요청자</th>
-                      <th class="text-center">등록일</th>
-                      <th class="text-center">답변자</th>
-                      <th class="text-center">댓글수</th>
-                      <th class="text-center">완료여부</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="cursor-pointer" onclick="document.location.href='.html'">
-                      <td class="text-center">1</td>
-                      <td class="text-center text-danger">패턴 및 제품 추가요청</td>
-                      <td class="text-start">Saint-Gobain 관련 Big Deal 할인 요청</td>
-                      <td class="text-center"><i class="icon-file"></i></td>
-                      <td class="text-center">엄완식</td>
-                      <td class="text-center">22/03/10</td>
-                      <td class="text-center">오진욱</td>
-                      <td class="text-center">
-                        <span class="text-danger">(3)</span>
-                      </td>
-                      <td class="text-center">완료</td>
-                    </tr>
-                    <tr class="cursor-pointer" onclick="document.location.href='.html'">
-                      <td class="text-center">2</td>
-                      <td class="text-center text-danger">패턴 및 제품 추가요청</td>
-                      <td class="text-start">Saint-Gobain 관련 Big Deal 할인 요청</td>
-                      <td class="text-center"><i class="icon-file"></i></td>
-                      <td class="text-center">엄완식</td>
-                      <td class="text-center">22/03/10</td>
-                      <td class="text-center">오진욱</td>
-                      <td class="text-center">
-                        <span class="text-gray">답변대기</span>
-                      </td>
-                      <td class="text-center">진행 중</td>
-                    </tr>
-                    <tr class="cursor-pointer" onclick="document.location.href='.html'">
-                      <td class="text-center">3</td>
-                      <td class="text-center text-danger">패턴 및 제품 추가요청</td>
-                      <td class="text-start">Saint-Gobain 관련 Big Deal 할인 요청</td>
-                      <td class="text-center"><i class="icon-file"></i></td>
-                      <td class="text-center">엄완식</td>
-                      <td class="text-center">22/03/10</td>
-                      <td class="text-center">오진욱</td>
-                      <td class="text-center">
-                        <span class="text-gray">답변대기</span>
-                      </td>
-                      <td class="text-center">완료</td>
-                    </tr>
-                  </tbody>
-                </table>
-                @@include('@@webRoot/html/_components/_pagination.html')
+                <div class="form-field search d-flex gap-2">
+                  <div class="input-form">
+                    <i class="icon-search"></i>
+                    <input type="text" class="form-control search-form" placeholder="제목">
+                    <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
+                  </div>
+                  <button type="button" class="btn btn-dark">검색</button>
+                </div>
               </div>
             </div>
+            <table class="table table-hover table-sticky">
+              <colgroup>
+                <col>
+                <col>
+                <col width="30%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">구분</th>
+                  <th class="text-center">제목</th>
+                  <th class="text-center">첨부파일</th>
+                  <th class="text-center">요청자</th>
+                  <th class="text-center">등록일</th>
+                  <th class="text-center">답변자</th>
+                  <th class="text-center">댓글수</th>
+                  <th class="text-center">완료여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="cursor-pointer" onclick="document.location.href='.html'">
+                  <td class="text-center">1</td>
+                  <td class="text-center text-danger">패턴 및 제품 추가요청</td>
+                  <td class="text-start">Saint-Gobain 관련 Big Deal 할인 요청</td>
+                  <td class="text-center"><i class="icon-file"></i></td>
+                  <td class="text-center">엄완식</td>
+                  <td class="text-center">22/03/10</td>
+                  <td class="text-center">오진욱</td>
+                  <td class="text-center">
+                    <span class="text-danger">(3)</span>
+                  </td>
+                  <td class="text-center">완료</td>
+                </tr>
+                <tr class="cursor-pointer" onclick="document.location.href='.html'">
+                  <td class="text-center">2</td>
+                  <td class="text-center text-danger">패턴 및 제품 추가요청</td>
+                  <td class="text-start">Saint-Gobain 관련 Big Deal 할인 요청</td>
+                  <td class="text-center"><i class="icon-file"></i></td>
+                  <td class="text-center">엄완식</td>
+                  <td class="text-center">22/03/10</td>
+                  <td class="text-center">오진욱</td>
+                  <td class="text-center">
+                    <span class="text-gray">답변대기</span>
+                  </td>
+                  <td class="text-center">진행 중</td>
+                </tr>
+                <tr class="cursor-pointer" onclick="document.location.href='.html'">
+                  <td class="text-center">3</td>
+                  <td class="text-center text-danger">패턴 및 제품 추가요청</td>
+                  <td class="text-start">Saint-Gobain 관련 Big Deal 할인 요청</td>
+                  <td class="text-center"><i class="icon-file"></i></td>
+                  <td class="text-center">엄완식</td>
+                  <td class="text-center">22/03/10</td>
+                  <td class="text-center">오진욱</td>
+                  <td class="text-center">
+                    <span class="text-gray">답변대기</span>
+                  </td>
+                  <td class="text-center">완료</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

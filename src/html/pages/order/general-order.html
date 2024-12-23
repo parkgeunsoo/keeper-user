@@ -91,7 +91,10 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="scroll-layout">
+                        <div class="mb-4 mt-10">
+                            @@include('@@webRoot/html/_components/_pagination.html')
+                        </div>
+                        <div class="scroll-layout" style="max-height: 500px;">
                             <div class="scroll-content">
                                 <table class="table table-hover">
                                     <thead>
@@ -121,7 +124,7 @@
                                         <th class="text-center">비고</th>
                                     </thead>
                                     <tbody>
-                                        @@for( i=1; i < 4; i++){ <tr>
+                                        @@for( i=1; i < 10; i++){ <tr>
                                             <td class="text-center">
                                                 <div class="form-check conter-content">
                                                     <input class="form-check-input" type="checkbox" value=""
@@ -194,7 +197,7 @@
                             </div>
                             <!-- //container -->
                         </div>
-                        @@include('@@webRoot/html/_components/_pagination.html')
+
                         <div class="btn-groups d-flex justify-content-end gap-2 mt-4">
                             <button type="button" class="btn btn-dark" data-bs-toggle="modal"
                                 data-bs-target="#modal-temporary-save">임시 저장</button>

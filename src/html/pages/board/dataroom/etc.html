@@ -13,64 +13,58 @@
       <div id="container">
         <div class="main-content">
           <div class="contents">
-            <div class="page-top">
-              <h1 class="page-title d-none d-lg-block">기타</h1>
-            </div>
-            <div class="scroll-layout">
-              <div class="scroll-content">
-                <div class="table-top mb-10 gap-2 justify-content-end">
-                  <div class="hstack gap-2">
-                    <select class="form-select w-auto">
-                      <option selected="">제목</option>
-                      <option value="1"></option>
-                      <option value="2"></option>
-                    </select>
-                  </div>
-                  <div class="form-field search d-flex gap-2">
-                    <div class="input-form">
-                      <i class="icon-search"></i>
-                      <input type="text" class="form-control search-form" placeholder="제목">
-                      <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
-                    </div>
-                    <button type="button" class="btn btn-dark">검색</button>
-                  </div>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              @@include('@@webRoot/html/_components/_pagination.html')
+              <div class="table-top mb-0 gap-2 justify-content-end">
+                <div class="hstack gap-2">
+                  <select class="form-select w-auto">
+                    <option selected="">제목</option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                  </select>
                 </div>
-                <table class="table table-hover table-sticky">
-                  <colgroup>
-                    <col>
-                    <col>
-                    <col width="15%">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th class="text-center">번호</th>
-                      <th class="text-center">구분</th>
-                      <th class="text-center">제품 분류</th>
-                      <th class="text-center">제목</th>
-                      <th class="text-center">첨부파일</th>
-                      <th class="text-center">글쓴이</th>
-                      <th class="text-center">작성일</th>
-                      <th class="text-center">조회</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @@for(i=1; i < 10; i++){ <tr class="cursor-pointer"
-                      onclick="document.location.href='etc-detail.html'">
-                      <td class="text-center">`+ i +`</td>
-                      <td class="text-center text-danger">기타</td>
-                      <td class="text-center">USB Security</td>
-                      <td class="text-start">USB Port Lock</td>
-                      <td class="text-center"><i class="icon-file"></i></td>
-                      <td class="text-center">오진욱</td>
-                      <td class="text-center">22/03/10</td>
-                      <td class="text-center">10</td>
-                      </tr>
-                      }
-                  </tbody>
-                </table>
-                @@include('@@webRoot/html/_components/_pagination.html')
+                <div class="form-field search d-flex gap-2">
+                  <div class="input-form">
+                    <i class="icon-search"></i>
+                    <input type="text" class="form-control search-form" placeholder="제목">
+                    <button type="button" class="clear-button"><i class="icon-input-close"></i></button>
+                  </div>
+                  <button type="button" class="btn btn-dark">검색</button>
+                </div>
               </div>
             </div>
+            <table class="table table-hover table-sticky">
+              <colgroup>
+                <col>
+                <col>
+                <col width="15%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="text-center">번호</th>
+                  <th class="text-center">구분</th>
+                  <th class="text-center">제품 분류</th>
+                  <th class="text-center">제목</th>
+                  <th class="text-center">첨부파일</th>
+                  <th class="text-center">글쓴이</th>
+                  <th class="text-center">작성일</th>
+                  <th class="text-center">조회</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(i=1; i < 10; i++){ <tr class="cursor-pointer" onclick="document.location.href='etc-detail.html'">
+                  <td class="text-center">`+ i +`</td>
+                  <td class="text-center text-danger">기타</td>
+                  <td class="text-center">USB Security</td>
+                  <td class="text-start">USB Port Lock</td>
+                  <td class="text-center"><i class="icon-file"></i></td>
+                  <td class="text-center">오진욱</td>
+                  <td class="text-center">22/03/10</td>
+                  <td class="text-center">10</td>
+                  </tr>
+                  }
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
