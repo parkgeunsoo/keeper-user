@@ -27,8 +27,14 @@
         opacity: 1;
         transform: .5s;
       }
+      .icon-menu{
+        background-image: url('../images/icon-w-close.svg');
+      }
     }
   }
+}
+.accordion-collapse {
+  transition: none !important;
 }
 .menu-bar{
   height: 27px; // 펼쳤을 때 title hide/show 때문에 꿀렁거림 방지 height 값 지정
