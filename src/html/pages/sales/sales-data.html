@@ -238,9 +238,31 @@
                 </div>
             </div>
             <!-- //main -->
+
         </main>
         @@include('@@webRoot/html/_layouts/_footer.html')
         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const firstModal = document.getElementById("modal-final-customer");
+                const secondModal = document.getElementById("modal-sales-status");
+
+                // 첫 번째 모달 내부 버튼으로 두 번째 모달 열기
+                document.querySelector(".open-second-modal").addEventListener("click", function () {
+                    // 첫 번째 모달의 z-index 낮춤
+                    firstModal.style.zIndex = "1040";
+
+                    // 두 번째 모달 열기
+                    const secondModalInstance = new bootstrap.Modal(secondModal, {
+                        backdrop: "static",
+                    });
+                    secondModalInstance.show();
+                });
+
+                // 두 번째 모달이 닫힐 때 첫 번째 모달 복구
+                secondModal.addEventListener("hidden.bs.modal", function () {
+                    firstModal.style.zIndex = "1055"; // Bootstrap 기본 z-index 복구
+                });
+            });
             $(document).ready(function () {
                 $(".show-select-box").hide();
                 $(".btn-show-select").click(function () {

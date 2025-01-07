@@ -176,11 +176,33 @@ let Common = {
     });
   },
   search: function (){
+    document.addEventListener("DOMContentLoaded", function () {
+      const firstModal = document.getElementById("modal-final-customer");
+      const secondModal = document.getElementById("modal-sales-status");
+    
+      // 첫 번째 모달 유지 설정
+      document.querySelector(".open-second-modal").addEventListener("click", function () {
+        // 첫 번째 모달이 display: none 되지 않도록 제어
+        firstModal.classList.add("modal-static");
+    
+        // 두 번째 모달 열기
+        const secondModalInstance = new bootstrap.Modal(secondModal, {
+          backdrop: "static",
+        });
+        secondModalInstance.show();
+      });
+    
+      // 두 번째 모달 닫힐 때 첫 번째 모달 복구
+      secondModal.addEventListener("hidden.bs.modal", function () {
+        firstModal.classList.remove("modal-static");
+      });
+    });
     $(document).ready(function () {
       $(".product-content").click(function () {
         $(this)
           .toggleClass("active")
       });
+   
     });
     $(document).ready(function () {
       const $searchInput = $('.search-form');

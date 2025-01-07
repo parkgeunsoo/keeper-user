@@ -8,7 +8,10 @@
   }
   &.detail-page{min-height: calc(100vh - 170px);}
 }
-
+.modal-static {
+  display: block !important; /* Bootstrap의 기본 동작 무시 */
+  z-index: 1040; /* 두 번째 모달보다 낮은 z-index 설정 */
+}
 .contents-header {
   display: flex;
   align-items: center;

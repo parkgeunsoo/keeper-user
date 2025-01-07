@@ -99,3 +99,11 @@
   right: 0;
   bottom: 2px;
 }
+
+.modal-backdrop ~ .modal-backdrop{
+  z-index: 1051;
+  ~ .modal-backdrop{z-index: 1053;}
+}
+.modal[data-overlap=true]{
+  z-index: 1052;
+}

@@ -19,6 +19,9 @@
     @include typography(14px, 500);
   }
   thead th {
+    position: sticky;
+    top: 0; /* 스크롤할 때 테이블 상단에 고정 */
+    background-color: #f9f9f9;
   }
   &.normal {
     th,
