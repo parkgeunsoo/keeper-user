@@ -1,6 +1,6 @@
 .table {
   margin-bottom: 0;
-  border-top: 1px solid $dark;
+
   @include media-breakpoint-down(md) {
     @include typography(13px);
   }
@@ -13,6 +13,7 @@
     line-height: 1.4;
     white-space: nowrap;
     color: #21282F;
+    
   }
   td {
     color: $text-secondary;
@@ -20,8 +21,10 @@
   }
   thead th {
     position: sticky;
-    top: 0; /* 스크롤할 때 테이블 상단에 고정 */
+    top: -1px; /* 스크롤할 때 테이블 상단에 고정 */
     background-color: #f9f9f9;
+    border-top: 1px solid $dark;
+    z-index: 10;
   }
   &.normal {
     th,

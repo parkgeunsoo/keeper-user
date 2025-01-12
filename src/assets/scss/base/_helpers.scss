@@ -35,3 +35,41 @@
   align-items: center;
   justify-content: center;
 }
+
+.checkbox-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  border: 1px solid #abb1b9;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+}
+
+.custom-checkbox input {
+  display: none; /* 체크박스 숨김 */
+}
+
+.custom-checkbox .checkbox-content {
+  font-size: 12px;
+  color: #333;
+  font-weight: 400;
+}
+
+.custom-checkbox input:checked + .checkbox-content {
+  background-color: $primary;
+  color: #fff;
+  border-radius: 4px;
+  min-width: 20px;
+  height: 20px;
+  outline: 1px solid #0f65d3;
+}

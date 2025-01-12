@@ -100,15 +100,16 @@
                                     data-bs-target="#modal-alert-order">발주</button>
                             </div>
                         </div>
-                        <div class="scroll-layout" style="max-height: 500px;">
+                        <div class="scroll-layout" style="height: 700px;">
                             <div class="scroll-content">
                                 <table class="table table-hover">
                                     <thead>
                                         <th class="text-center">
-                                            <div class="form-check conter-content">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">1</label>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" />
+                                                    <span class="checkbox-content"></span>
+                                                </label>
                                             </div>
                                         </th>
                                         <th class="text-center"></th>
@@ -130,12 +131,12 @@
                                         <th class="text-center">비고</th>
                                     </thead>
                                     <tbody>
-                                        @@for( i=1; i < 10; i++){ <tr>
+                                        @@for( i=1; i < 20; i++){ <tr>
                                             <td class="text-center">
-                                                <div class="form-check conter-content">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="flexCheckDefault" />
-                                                </div>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" />
+                                                    <span class="checkbox-content">`+ i +`</span>
+                                                </label>
                                             </td>
                                             <td class="text-center"></td>
                                             <td class="text-center">일반</td>
