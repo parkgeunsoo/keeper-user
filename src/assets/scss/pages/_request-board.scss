@@ -141,3 +141,114 @@
     }
   }
 }
+
+.request-desc{
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  p{
+    width: 85%;
+  }
+  .d-flex{
+    flex-shrink: 0;
+  }
+}
+.answer{
+  background-color: #F5F7F9;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  .answer-head{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    .title{
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 22.1px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: $primary;
+    }
+    .desc{
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background-color: #fff;
+      border: 1px solid #77808A;
+      border-radius: 16px;
+      height: 24px;
+      padding: 2px 12px;
+      p{
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20.4px;
+        color: #77808A;
+      }
+    }
+  }
+  .answer-content{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    p{
+      width: 85%;
+    }
+    .d-flex{
+      flex-shrink: 0;
+    }
+  }
+}
+.add-request-wrap{
+  border: 1px solid #DFE3E8;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  .add-request{
+    border-radius: 8px;
+    .answer-head{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      .title{
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 22.1px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: $primary;
+      }
+      .desc{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background-color: #fff;
+        border: 1px solid #77808A;
+        border-radius: 16px;
+        height: 24px;
+        padding: 2px 12px;
+        p{
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 20.4px;
+          color: #77808A;
+        }
+      }
+    }
+    .answer-content{
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      p{
+        width: 85%;
+      }
+      .d-flex{
+        flex-shrink: 0;
+      }
+    }
+  }
+}

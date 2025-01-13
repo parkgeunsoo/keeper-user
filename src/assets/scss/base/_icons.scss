@@ -68,7 +68,7 @@ $icons-16px: input-mail, input-key, check, inf, reply, more-arrow;
 }
 
 /* 20px 아이콘 */
-$icons-20px: input-close, error, reset, edit, minus, plus,  image, trash, file, new-window, up, down;
+$icons-20px: input-close, error, reset, edit, minus, plus,  image, trash, file, new-window, up, down, add-request, answer;
 @each $icon in $icons-20px {
   .icon-#{$icon} {
     background-image: url("../images/icon-#{$icon}.svg");
